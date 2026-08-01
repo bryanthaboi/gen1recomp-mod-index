@@ -1,0 +1,1 @@
+Stacks the world pass (top) and UI pass (bottom) as two Game Boy screens via the engine's render.compose seam, with a DS-native battle split (battlefield on top, command/move/text window on bottom); drives the bottom screen onto a second physical display on multi-display Android.
