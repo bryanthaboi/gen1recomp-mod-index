@@ -1,0 +1,24 @@
+{
+  "id": "widescreen_battle_intro",
+  "title": "Widescreen Battle Intro",
+  "author": "ShaneMcGovernIE",
+  "summary": "Extends the battle intro's flash effect across the whole window, so on non-4:3 displays it no longer plays inside a centered 4:3 square.",
+  "version": "1.0.0",
+  "categories": [
+    "QOL"
+  ],
+  "tags": [
+    "battle",
+    "visual",
+    "widescreen"
+  ],
+  "repo": "https://github.com/ShaneMcGovernIE/gen1recomp-widescreen-battle-intro",
+  "github": "ShaneMcGovernIE/gen1recomp-widescreen-battle-intro",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.1.53 <2.0.0",
+  "profile": "content",
+  "permissions": [
+    "engine_internals"
+  ]
+}
