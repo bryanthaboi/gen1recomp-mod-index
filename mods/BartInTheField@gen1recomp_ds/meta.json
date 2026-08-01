@@ -1,0 +1,22 @@
+{
+  "id": "gen1recomp_ds",
+  "title": "Dual Screen (DS-style)",
+  "author": "BartInTheField",
+  "version": "2026.8.1+1",
+  "categories": [
+    "UI"
+  ],
+  "repo": "https://github.com/BartInTheField/gen1recomp-ds-mod",
+  "summary": "Stacks the world and UI as two separated screens.",
+  "tags": [
+    "ds",
+    "dual screen",
+    "ayn thor"
+  ],
+  "github": "BartInTheField/gen1recomp-ds-mod",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
