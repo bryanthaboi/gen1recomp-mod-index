@@ -1,0 +1,16 @@
+[card]
+id = "gen1online"
+title = "Gen1Online"
+version = "0.1.0"
+author = "Antigravity & User"
+category = "CONTENT"
+tags = ["multiplayer", "coop", "online", "pvp", "voxel"]
+description = "Multiplayer online co-op overworld exploration, room code hosting/joining over project server relay, live player movement sync, 3D Voxel diorama support, and real-time PVP battles."
+
+[features]
+- Real-time overworld co-op movement sync (Human Trainer RED + Follower Pokemon)
+- Online server relay hosting (6-character Room Codes) & 12-digit LAN IP entry
+- Distance-based PVP Link Battles (integrated native LinkBattle engine)
+- Pre-battle background Pokemon Center auto-heal
+- Forced pre-connection save & seamless single-player map reload on disconnect
+- 3D Voxel diorama compatibility
