@@ -2,23 +2,15 @@
   "id": "yellow_legacy_changes",
   "title": "Yellow Legacy Changes",
   "author": "ShaneMcGovernIE",
-  "summary": "Applies the move and stat rebalances from Yellow Legacy by TSP: buffed/nerfed moves, new types and effects, rebalanced base stats.",
+  "summary": "Move, stat, learnset, TM/HM and encounter changes from Pokémon Yellow Legacy by SmithPlaysPokemon.",
   "version": "1.1.0",
-  "categories": [
-    "BALANCE"
-  ],
-  "tags": [
-    "balance",
-    "yellow legacy",
-    "moves",
-    "stats"
-  ],
+  "categories": ["BALANCE"],
+  "tags": ["balance", "ruleset", "yellow-legacy"],
   "repo": "https://github.com/ShaneMcGovernIE/yellow_legacy_changes",
   "github": "ShaneMcGovernIE/yellow_legacy_changes",
+  "automatic_version_check": true,
   "api": 2,
-  "game_version": ">=0.0.0-0 <2.0.0",
+  "game_version": ">=1.0.0 <2.0.0",
   "profile": "content",
-  "permissions": [
-    "engine_internals"
-  ]
+  "permissions": ["engine_internals"]
 }
