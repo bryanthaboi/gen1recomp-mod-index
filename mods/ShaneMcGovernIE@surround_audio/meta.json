@@ -1,0 +1,21 @@
+{
+  "id": "surround_audio",
+  "title": "Stereo & 5.1 Audio",
+  "author": "ShaneMcGovernIE",
+  "summary": "Crystal's SOUND option: MONO sums every music channel into both speakers, STEREO splits channels 1-2 left and 3-4 right — with every sound effect routed to the center channel. Toggle with L.",
+  "version": "1.5.0",
+  "categories": [
+    "AUDIO"
+  ],
+  "tags": [
+    "audio",
+    "stereo",
+    "surround"
+  ],
+  "repo": "https://github.com/ShaneMcGovernIE/surround-audio",
+  "github": "ShaneMcGovernIE/surround-audio",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "profile": "content"
+}
