@@ -1,0 +1,15 @@
+{
+  "id": "bag_999_fill",
+  "title": "999 Bag Slots - Test Fill",
+  "author": "ShaneMcGovernIE",
+  "summary": "Test build: bag holds 999 slots and is pre-filled with every item on boot.",
+  "version": "1.0.1",
+  "categories": ["TOOL"],
+  "tags": ["bag", "test", "quality-of-life"],
+  "repo": "https://github.com/ShaneMcGovernIE/bag_999_fill",
+  "github": "ShaneMcGovernIE/bag_999_fill",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "profile": "content"
+}

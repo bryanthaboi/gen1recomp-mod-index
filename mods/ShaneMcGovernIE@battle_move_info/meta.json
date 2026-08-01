@@ -2,23 +2,15 @@
   "id": "battle_move_info",
   "title": "Battle Move Info",
   "author": "ShaneMcGovernIE",
-  "summary": "In battle, press L (Q on keyboard) while a move is highlighted to see its type, power, accuracy and effect.",
+  "summary": "Press L (or Q) on a highlighted battle move to see its type, power, accuracy and effect.",
   "version": "1.1.2",
-  "categories": [
-    "UI",
-    "QOL"
-  ],
-  "tags": [
-    "battle",
-    "moves",
-    "info"
-  ],
+  "categories": ["UI"],
+  "tags": ["battle", "ui", "quality-of-life"],
   "repo": "https://github.com/ShaneMcGovernIE/battle_move_info",
   "github": "ShaneMcGovernIE/battle_move_info",
+  "automatic_version_check": true,
   "api": 2,
-  "game_version": ">=0.0.0-0 <2.0.0",
+  "game_version": ">=1.0.0 <2.0.0",
   "profile": "content",
-  "permissions": [
-    "engine_internals"
-  ]
+  "permissions": ["engine_internals"]
 }
