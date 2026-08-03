@@ -1,0 +1,18 @@
+{
+  "id": "exp_share",
+  "title": "Exp Share",
+  "author": "madramdesign",
+  "version": "1.0.2",
+  "categories": ["QOL", "GAMEPLAY"],
+  "repo": "https://github.com/madramdesign/gen1recomp-exp-share",
+  "github": "madramdesign/gen1recomp-exp-share",
+  "summary": "Always-on party Exp Share: modern undivided EXP or classic Gen 1 EXP.ALL math without needing the item.",
+  "tags": ["quality-of-life", "experience", "exp-share", "exp-all", "party"],
+  "permissions": [],
+  "api": 2,
+  "profile": "content",
+  "game_version": ">=0.1.0 <2.0.0",
+  "affects_link": false,
+  "license": "MIT",
+  "automatic_version_check": true
+}
