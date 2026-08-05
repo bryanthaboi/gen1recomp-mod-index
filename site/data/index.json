@@ -623,6 +623,31 @@
       "update_check": "pending"
     },
     {
+      "folder": "DarioMelo@Music_HGSS",
+      "id": "Music_HGSS",
+      "title": "Music-HGSS",
+      "author": "DarioMelo",
+      "version": "26.08.04",
+      "categories": [
+        "AUDIO"
+      ],
+      "repo": "https://github.com/DarioMelo/Gen1Recomp-MusicMods",
+      "tags": [
+        "audio",
+		"music"
+      ],
+      "github": "DarioMelo/Gen1Recomp-MusicMods",
+      "game_version": ">=0.1.68",
+      "api": 2,
+      "profile": "content",
+	  "thumbnail": "data/mods/DarioMelo@Music_HGSS/thumbnail.png",
+      "thumbnail": null,
+      "description_url": "data/mods/DarioMelo@Music_LGPE/description.md",
+      "summary": "Music from HeartGold / SoulSilver",
+      "latest": null,
+      "update_check": "pending"
+    },
+    {
       "folder": "DarioMelo@Music_LGPE",
       "id": "Music_LGPE",
       "title": "Music-LGPE",
