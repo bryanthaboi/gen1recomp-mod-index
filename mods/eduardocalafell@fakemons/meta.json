@@ -1,0 +1,19 @@
+{
+  "id": "fakemons",
+  "title": "Fakémons",
+  "author": "eduardocalafell",
+  "summary": "Original fan-made Fakémons as real catchable species — full stats, moves, learnsets, dex entries and original art, spawning in themed habitats.",
+  "version": "0.1.1",
+  "categories": ["CONTENT", "GAMEPLAY"],
+  "tags": ["fakemon", "pokemon", "species", "content"],
+  "repo": "https://github.com/eduardocalafell/gen1recomp-fakemons",
+  "github": "eduardocalafell/gen1recomp-fakemons",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.1.37 <2.0.0",
+  "profile": "content",
+  "permissions": [],
+  "dependencies": [],
+  "conflicts": [],
+  "license": "MIT"
+}
