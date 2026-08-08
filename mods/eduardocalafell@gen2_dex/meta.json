@@ -1,0 +1,19 @@
+{
+  "id": "gen2_dex",
+  "title": "Gen 2 Dex",
+  "author": "eduardocalafell",
+  "summary": "The complete Johto Pokedex (#152-251) as real, catchable species: real Gen 2 stats/types, Crystal sprites, and thematic wild placement across Kanto.",
+  "version": "1.1.0",
+  "categories": ["CONTENT", "GAMEPLAY"],
+  "tags": ["gen2", "johto", "pokedex", "new species", "encounters"],
+  "repo": "https://github.com/eduardocalafell/gen1recomp-gen2-dex",
+  "github": "eduardocalafell/gen1recomp-gen2-dex",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.1.37 <2.0.0",
+  "profile": "content",
+  "permissions": [],
+  "dependencies": [],
+  "conflicts": ["gen2_starters"],
+  "license": "MIT"
+}
