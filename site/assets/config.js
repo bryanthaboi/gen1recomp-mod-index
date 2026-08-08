@@ -6,8 +6,8 @@ export const CONFIG = {
   branch: 'main',
 
   // Where the mod API itself is documented.
-  wiki: 'https://github.com/DramaticShape/pokemon-gen1-recomp-project/wiki',
-  engine: 'https://github.com/DramaticShape/pokemon-gen1-recomp-project',
+  wiki: 'https://github.com/bryanthaboi/gen1recomp/wiki',
+  engine: 'https://github.com/bryanthaboi/gen1recomp',
 
   // Optional. A GitHub OAuth code->token exchange endpoint, because the
   // exchange needs a client secret and a static page cannot hold one.
