@@ -2,8 +2,8 @@
   "id": "DRAMATIC_SKY_RIDE",
   "title": "Dramatic Sky Ride",
   "author": "MFR TechConsult",
-  "summary": "Ride Gen 1 Pokémon on land, water and in the air with Battle Art Voxel Fork, PokéPC sprites and story-aware progression.",
-  "version": "0.1.1",
+  "summary": "Ride Gen 1 Pokémon on land, water and in the air with Battle Art Voxel Fork, PokéPC sprites, story-aware progression and Wild Skies integration.",
+  "version": "0.1.2",
   "categories": [
     "GAMEPLAY",
     "CONTENT",
@@ -15,11 +15,12 @@
     "ground ride",
     "surf",
     "voxel",
-    "exploration"
+    "exploration",
+    "wild skies"
   ],
   "repo": "https://github.com/mfrtechconsult/dramatic-sky-ride",
   "github": "mfrtechconsult/dramatic-sky-ride",
-  "downloadURL": "https://github.com/mfrtechconsult/dramatic-sky-ride/releases/download/v0.1.1/dramatic_sky_ride-0.1.1.zip",
+  "downloadURL": "https://github.com/mfrtechconsult/dramatic-sky-ride/releases/download/v0.1.2/dramatic_sky_ride-0.1.2.zip",
   "automatic_version_check": true,
   "api": 2,
   "game_version": "0.0.0-dev || >=0.1.69 <2.0.0",

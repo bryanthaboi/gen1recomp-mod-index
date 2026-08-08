@@ -12,7 +12,8 @@ Dramatic Sky Ride adds controllable Pokémon mounts to Gen1Recomp, with dedicate
 - Story-aware progression and discovery gates for mount access.
 - Safe battle and connected-map restoration for mounted states.
 - Native NPC, sign, collision, encounter and field-action behavior retained wherever possible.
-- Optional Wild Skies integration.
+- Wild Skies integration with aerial interceptions; version 1.4.1 or newer is strongly recommended.
+- Surf-specific Battle Art 3RD camera compatibility keeps the trainer and Surf mount visible over water.
 - Keyboard and controller shortcuts for ground riding and flight.
 
 ## Requirements
@@ -20,15 +21,17 @@ Dramatic Sky Ride adds controllable Pokémon mounts to Gen1Recomp, with dedicate
 - Gen1Recomp with Mod API 2 support, compatible with `>=0.1.69 <2.0.0`.
 - Battle Art Voxel Fork `>=1.7.6 <2.0.0`.
 - `PokePCFollowers_VoxelMerge` for the required overworld Pokémon sprites.
-- Wild Skies `>=1.3.1 <2.0.0` is optional.
+- Wild Skies `>=1.4.1 <2.0.0` is optional but strongly recommended.
 
 Dramatic Sky Ride conflicts with `free_fly`.
 
 ## Controls
 
 - Ground Ride: `G` or `SELECT + L1`.
-- Flight / takeoff: `F` or `SELECT + R1`.
+- Flight / takeoff: `H` or `SELECT + R1`.
 - Boost / gallop: the configured in-game `B` action.
 - Ascend / descend in flight: `Page Up` / `Page Down` or `R2` / `L2`.
 
-The Mod Index entry now follows GitHub Releases automatically, so future stable version bumps can be picked up by the index's nightly refresh without a dedicated version-bump PR.
+## Updates
+
+The Mod Index entry tracks `mfrtechconsult/dramatic-sky-ride` with `automatic_version_check` enabled. Future stable GitHub Releases are therefore picked up by the index's nightly refresh without requiring a dedicated version-bump pull request.
