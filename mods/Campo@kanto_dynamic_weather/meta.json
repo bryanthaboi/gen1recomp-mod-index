@@ -1,0 +1,28 @@
+{
+  "id": "kanto_dynamic_weather",
+  "title": "Kanto Dynamic Weather",
+  "author": "Campo",
+  "version": "1.0.3",
+  "categories": [
+    "ART"
+  ],
+  "repo": "https://github.com/1-Camp0-1/Kanto-Dynamic-Weather",
+  "summary": "Dynamic 3D weather and atmospheric effects for Dramatic Shape, including clouds, fog, rain, thunderstorms, lightning, puddles and distant scenery.",
+  "tags": [
+    "weather",
+    "atmosphere",
+    "voxel",
+    "dramatic shape",
+    "graphics"
+  ],
+  "github": "1-Camp0-1/Kanto-Dynamic-Weather",
+  "game_version": "0.0.0-dev || >=0.1.37 <2.0.0",
+  "dependencies": [
+    "DRAMATIC_SHAPE@>=1.7.2 <1.8.0"
+  ],
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
