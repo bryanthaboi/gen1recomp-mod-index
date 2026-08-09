@@ -3,7 +3,7 @@
   "title": "Gen1 KR",
   "author": "adrian",
   "summary": "Drive KITT across Kanto.",
-  "version": "0.2.0",
+  "version": "3.0.2",
   "categories": [
     "GAMEPLAY",
     "AUDIO",
@@ -15,12 +15,13 @@
     "kitt"
   ],
   "github": "castdrian/gen1-kr",
+  "downloadURL": "https://github.com/castdrian/gen1-kr/releases/download/v3.0.2/gen1-kr-3.0.2.zip",
   "game_version": "0.0.0-dev || >=0.1.37 <2.0.0",
   "permissions": [
     "engine_internals"
   ],
   "dependencies": [
-    "DRAMATIC_SHAPE@>=1.6.0 <2.0.0"
+    "DRAMALESS_SHAPE@>=1.6.3 <2.0.0"
   ],
   "conflicts": [],
   "api": 2,
