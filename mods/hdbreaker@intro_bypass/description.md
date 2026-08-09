@@ -13,7 +13,7 @@ not, and level, then jump straight into the overworld.
 
 ## Install
 
-Download the zip from the [releases page](https://github.com/hdbreaker/intro_bypass/releases)
+Download the zip from the [releases page](https://github.com/hdbreaker/gen1recomp-mod-intro_bypass/releases)
 and import it with **F10** in-game, or unzip it into your `mods/` folder.
 
 ## Usage
@@ -29,4 +29,4 @@ starter.
 
 ## Source
 
-https://github.com/hdbreaker/intro_bypass
+https://github.com/hdbreaker/gen1recomp-mod-intro_bypass

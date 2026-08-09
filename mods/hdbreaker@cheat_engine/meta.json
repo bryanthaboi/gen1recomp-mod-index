@@ -12,8 +12,8 @@
     "tool",
     "quality-of-life"
   ],
-  "repo": "https://github.com/hdbreaker/cheat_engine",
-  "github": "hdbreaker/cheat_engine",
+  "repo": "https://github.com/hdbreaker/gen1recomp-mod-cheat_engine",
+  "github": "hdbreaker/gen1recomp-mod-cheat_engine",
   "api": 2,
   "game_version": ">=0.0.0-dev <1.0.0",
   "profile": "content",

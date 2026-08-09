@@ -15,7 +15,7 @@ mod manager.
 
 ## Install
 
-Download the zip from the [releases page](https://github.com/hdbreaker/cheat_engine/releases)
+Download the zip from the [releases page](https://github.com/hdbreaker/gen1recomp-mod-cheat_engine/releases)
 and import it with **F10** in-game, or unzip it into your `mods/` folder.
 
 ## Usage
@@ -31,4 +31,4 @@ battles.
 
 ## Source
 
-https://github.com/hdbreaker/cheat_engine
+https://github.com/hdbreaker/gen1recomp-mod-cheat_engine
