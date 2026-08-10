@@ -2,8 +2,8 @@
   "id": "DRAMATIC_SKY_RIDE",
   "title": "Dramatic Sky Ride",
   "author": "MFR TechConsult",
-  "summary": "Ride Gen 1 Pokémon on land, water and in the air with Battle Art Voxel Fork or Dramaless Shape, PokéPC sprites, speed controls and Wild Skies integration.",
-  "version": "0.1.5",
+  "summary": "Ride Gen 1 and Gen 2 Pokémon on land, water and in the air with native 2D flight, Battle Art voxel cameras, Wilds/PokéPC sprites and Wild Skies integration.",
+  "version": "0.1.6",
   "categories": [
     "GAMEPLAY",
     "CONTENT",
@@ -15,13 +15,16 @@
     "ground ride",
     "surf",
     "voxel",
+    "battle art",
     "dramaless",
+    "wilds of kanto",
     "wild skies",
+    "gen2",
     "exploration"
   ],
   "repo": "https://github.com/mfrtechconsult/dramatic-sky-ride",
   "github": "mfrtechconsult/dramatic-sky-ride",
-  "downloadURL": "https://github.com/mfrtechconsult/dramatic-sky-ride/releases/download/v0.1.5/dramatic_sky_ride-0.1.5.zip",
+  "downloadURL": "https://github.com/mfrtechconsult/dramatic-sky-ride/releases/download/v0.1.6/dramatic-sky-ride-0.1.6.zip",
   "automatic_version_check": true,
   "api": 2,
   "game_version": "0.0.0-dev || >=0.1.69 <2.0.0",
@@ -32,9 +35,7 @@
     "engine_internals",
     "filesystem"
   ],
-  "dependencies": [
-    "PokePCFollowers_VoxelMerge"
-  ],
+  "dependencies": [],
   "conflicts": [
     "free_fly"
   ],
