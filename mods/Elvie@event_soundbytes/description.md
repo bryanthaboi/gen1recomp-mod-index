@@ -1,4 +1,4 @@
-# Event Soundbytes
+# Trainer Talk
 
 A [Gen1Recomp](https://github.com/bryanthaboi/gen1recomp) mod that plays a voice line when the player starts a New Game or Continues an existing save, with the music briefly ducking underneath each line.
 
