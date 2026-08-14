@@ -1,0 +1,53 @@
+{
+  
+  "id": "gym_leader_shuffle",
+  
+  "title": "Gym Leader Shuffle",
+  
+  "author": "inmento",
+  
+  "summary": "Shuffles the eight Kanto Gym Leaders per save while preserving each physical gym’s badge, TM, rewards, and progression.",
+  
+  "version": "0.0.1",
+  
+  "categories": ["GAMEPLAY"],
+  
+  "tags": ["kanto", "gym leaders", "shuffle", "trainer teams", "spoiler log"],
+  
+  "repo": "https://github.com/inmento/Gym-Leader-Shuffle",
+  
+  "github": "inmento/Gym-Leader-Shuffle",
+  
+  "automatic_version_check": true,
+  
+  "api": 2,
+  
+  "games": ["gen1"],
+  
+  "profile": "content",
+  
+  "affects_link": false,
+  
+  "permissions": ["engine_internals"],
+  
+  "license": "MIT"
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
