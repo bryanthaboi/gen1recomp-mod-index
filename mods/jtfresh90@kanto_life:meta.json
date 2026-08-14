@@ -1,0 +1,32 @@
+{
+  "id": "kanto_life",
+  "title": "Kanto Life",
+  "author": "jtfresh90",
+  "version": "0.7.0",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT"
+  ],
+  "repo": "https://github.com/jtfresh90/Kanto-Life-Mod",
+  "github": "jtfresh90/Kanto-Life-Mod",
+  "summary": "Ambient town and route crowds, optional Pokemon NPCs, sleep toggle with rate control, and Common Courtesy knocking \u2014 for every gen1recomp game.",
+  "tags": [
+    "npc",
+    "town",
+    "sleep",
+    "knock",
+    "atmosphere",
+    "kanto"
+  ],
+  "api": 2,
+  "game_version": ">=0.0.0 <10.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "experimental": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "dependencies": [],
+  "conflicts": [],
+  "automatic_version_check": true
+}
