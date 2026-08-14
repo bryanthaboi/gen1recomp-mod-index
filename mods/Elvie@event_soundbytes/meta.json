@@ -1,22 +1,22 @@
 {
-  "id": "event_soundbytes",
-  "title": "Event Soundbytes",
+  "id": "trainer_talk",
+  "title": "Trainer Talk",
   "author": "Elvie",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "categories": [
     "CONTENT",
     "AUDIO",
     "OTHER"
   ],
-  "repo": "https://github.com/ElvieBlooms/Event_Soundbytes",
+  "repo": "https://github.com/ElvieBlooms/trainer_talk",
   "summary": "Plays a voice line when the player triggers an event such as a New Game or Continues an existing save, with the music briefly ducking underneath each line.",
   "tags": [
     "voice lines",
     "soundbytes",
     "character"
   ],
-  "github": "ElvieBlooms/Event_Soundbytes",
-  "downloadURL": "https://github.com/ElvieBlooms/Event_Soundbytes/releases/download/v0.2.4/Event_Soundbytes_0.2.4.zip",
+  "github": "ElvieBlooms/trainer_talk",
+  "downloadURL": "https://github.com/ElvieBlooms/trainer_talk/releases/download/v0.2.5/trainer_talk-0.2.5.zip",
   "api": 2,
   "profile": "content"
 }
