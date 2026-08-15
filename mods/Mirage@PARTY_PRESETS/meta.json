@@ -1,0 +1,26 @@
+{
+  "id": "PARTY_PRESETS",
+  "title": "Party Presets",
+  "author": "Mirage",
+  "version": "1.1.0",
+  "categories": [
+    "GAMEPLAY",
+    "QOL"
+  ],
+  "repo": "https://github.com/RadekHM/party_presets_gen1recomp",
+  "summary": "Save three unrestricted teams plus a preset for every Gen 1 type, and switch without depositing and withdrawing by hand.",
+  "tags": [
+    "party",
+    "teams",
+    "pc",
+    "presets"
+  ],
+  "github": "RadekHM/party_presets_gen1recomp",
+  "game_version": ">=0.1.0 <2.0.0",
+  "license": "MIT",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
