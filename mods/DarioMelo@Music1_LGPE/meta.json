@@ -1,0 +1,20 @@
+{
+  "id": "Music1_LGPE",
+  "title": "Music1-LGPE",
+  "author": "Darío Melo",
+  "summary": "Music from Let's Go Pikachu / Let's Go Eevee",
+  "version": "26.08.14",
+  "categories": [
+    "AUDIO"
+  ],
+  "repo": "https://github.com/DarioMelo/Gen1Recomp-Music1-LGPE",
+  "tags": [
+    "audio",
+	"music"
+  ],
+  "github": "DarioMelo/Gen1Recomp-Music1-LGPE",
+  "game_version": ">=0.1.83",
+  "games": ["gen1"],
+  "api": 2,
+  "profile": "content"
+}

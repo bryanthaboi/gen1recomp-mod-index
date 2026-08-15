@@ -1,10 +1,10 @@
 {
   "id": "Music2_HGSS",
   "title": "Music2-HGSS",
-  "author": "DaríoMelo",
-  "version": "26.08.11",
+  "author": "Darío Melo",
+  "summary": "Music from HeartGold / SoulSilver",
+  "version": "26.08.14",
   "categories": [
-    "CONTENT",
     "AUDIO"
   ],
   "repo": "https://github.com/DarioMelo/Gen1Recomp-Music2-HGSS",
@@ -13,7 +13,8 @@
     "music"
   ],
   "github": "DarioMelo/Gen1Recomp-Music2-HGSS",
-  "game_version": ">=0.1.78",
+  "game_version": ">=0.1.83",
+  "games": ["gen2"],
   "api": 2,
   "profile": "content"
 }

@@ -2119,106 +2119,145 @@
       "update_check": "ok"
     },
     {
-      "folder": "DarioMelo@Music_FRLG",
-      "id": "Music_FRLG",
-      "title": "Music-FRLG",
-      "author": "DarioMelo",
-      "version": "26.08.04",
+      "folder": "DarioMelo@Music1_FRLG",
+      "id": "Music1_FRLG",
+      "title": "Music1-FRLG",
+      "author": "Darío Melo",
+      "version": "26.08.14",
       "categories": [
         "AUDIO"
       ],
-      "repo": "https://github.com/DarioMelo/Gen1Recomp-MusicMods",
+      "repo": "https://github.com/DarioMelo/Gen1Recomp-Music1-FRLG",
       "tags": [
         "audio",
         "music"
       ],
-      "github": "DarioMelo/Gen1Recomp-MusicMods",
-      "game_version": ">=0.1.68",
+      "github": "DarioMelo/Gen1Recomp-Music1-FRLG",
+      "game_version": ">=0.1.83",
+	  "games": ["gen1"],
       "api": 2,
       "profile": "content",
-      "thumbnail": "data/mods/DarioMelo@Music_FRLG/thumbnail.png",
-      "description_url": "data/mods/DarioMelo@Music_FRLG/description.md",
+      "thumbnail": "data/mods/DarioMelo@Music1_FRLG/thumbnail.png",
+      "description_url": "data/mods/DarioMelo@Music1_FRLG/description.md",
       "summary": "Music from FireRed / LeafGreen",
       "latest": {
-        "version": "26.08.04",
-        "tag": "26.08.04",
-        "name": "26.08.04",
+        "version": "26.08.14",
+        "tag": "26.08.14",
+        "name": "26.08.14",
         "prerelease": false,
         "published_at": "2026-08-04T07:08:01Z",
         "zip": {
-          "name": "Music_FRLG-26.08.04.zip",
-          "url": "https://github.com/DarioMelo/Gen1Recomp-MusicMods/releases/download/26.08.04/Music_FRLG-26.08.04.zip",
-          "size": 127411848
+          "name": "Music1_FRLG-26.08.14.zip",
+          "url": "https://github.com/DarioMelo/Gen1Recomp-Music1-FRLG/releases/download/26.08.14/Music1_FRLG-26.08.14.zip",
+          "size": 161800192
         }
       },
       "update_check": "ok"
     },
     {
-      "folder": "DarioMelo@Music_HGSS",
-      "id": "Music_HGSS",
-      "title": "Music-HGSS",
-      "author": "DarioMelo",
-      "version": "26.08.04",
+      "folder": "DarioMelo@Music1_HGSS",
+      "id": "Music1_HGSS",
+      "title": "Music1-HGSS",
+      "author": "Darío Melo",
+      "version": "26.08.14",
       "categories": [
         "AUDIO"
       ],
-      "repo": "https://github.com/DarioMelo/Gen1Recomp-MusicMods",
+      "repo": "https://github.com/DarioMelo/Gen1Recomp-Music1-HGSS",
       "tags": [
         "audio",
         "music"
       ],
-      "github": "DarioMelo/Gen1Recomp-MusicMods",
-      "game_version": ">=0.1.68",
+      "github": "DarioMelo/Gen1Recomp-Music1-HGSS",
+      "game_version": ">=0.1.83",
+	  "games": ["gen1"],
       "api": 2,
       "profile": "content",
-      "thumbnail": "data/mods/DarioMelo@Music_HGSS/thumbnail.png",
-      "description_url": "data/mods/DarioMelo@Music_HGSS/description.md",
+      "thumbnail": "data/mods/DarioMelo@Music1_HGSS/thumbnail.png",
+      "description_url": "data/mods/DarioMelo@Music1_HGSS/description.md",
       "summary": "Music from HeartGold / SoulSilver",
       "latest": {
-        "version": "26.08.04",
-        "tag": "26.08.04",
-        "name": "26.08.04",
+        "version": "26.08.14",
+        "tag": "26.08.14",
+        "name": "26.08.14",
         "prerelease": false,
         "published_at": "2026-08-04T07:08:01Z",
         "zip": {
-          "name": "Music_HGSS-26.08.04.zip",
-          "url": "https://github.com/DarioMelo/Gen1Recomp-MusicMods/releases/download/26.08.04/Music_HGSS-26.08.04.zip",
-          "size": 138488632
+          "name": "Music1_HGSS-26.08.14.zip",
+          "url": "https://github.com/DarioMelo/Gen1Recomp-Music1-HGSS/releases/download/26.08.14/Music1_HGSS-26.08.14.zip",
+          "size": 205619200
         }
       },
       "update_check": "ok"
     },
     {
-      "folder": "DarioMelo@Music_LGPE",
-      "id": "Music_LGPE",
-      "title": "Music-LGPE",
-      "author": "DarioMelo",
-      "version": "26.08.04",
+      "folder": "DarioMelo@Music1_LGPE",
+      "id": "Music1_LGPE",
+      "title": "Music1-LGPE",
+      "author": "Darío Melo",
+      "version": "26.08.14",
       "categories": [
         "AUDIO"
       ],
-      "repo": "https://github.com/DarioMelo/Gen1Recomp-MusicMods",
+      "repo": "https://github.com/DarioMelo/Gen1Recomp-Music1-LGPE",
       "tags": [
         "audio",
         "music"
       ],
-      "github": "DarioMelo/Gen1Recomp-MusicMods",
-      "game_version": ">=0.1.68",
+      "github": "DarioMelo/Gen1Recomp-Music1-LGPE",
+      "game_version": ">=0.1.83",
+	  "games": ["gen1"],
       "api": 2,
       "profile": "content",
-      "thumbnail": "data/mods/DarioMelo@Music_LGPE/thumbnail.png",
-      "description_url": "data/mods/DarioMelo@Music_LGPE/description.md",
+      "thumbnail": "data/mods/DarioMelo@Music1_LGPE/thumbnail.png",
+      "description_url": "data/mods/DarioMelo@Music1_LGPE/description.md",
       "summary": "Music from Let's Go Pikachu / Let's Go Eevee",
       "latest": {
-        "version": "26.08.04",
-        "tag": "26.08.04",
-        "name": "26.08.04",
+        "version": "26.08.14",
+        "tag": "26.08.14",
+        "name": "26.08.14",
         "prerelease": false,
         "published_at": "2026-08-04T07:08:01Z",
         "zip": {
-          "name": "Music_LGPE-26.08.04.zip",
-          "url": "https://github.com/DarioMelo/Gen1Recomp-MusicMods/releases/download/26.08.04/Music_LGPE-26.08.04.zip",
-          "size": 142822966
+          "name": "Music1_LGPE-26.08.14.zip",
+          "url": "https://github.com/DarioMelo/Gen1Recomp-Music1-LGPE/releases/download/26.08.14/Music1_LGPE-26.08.14.zip",
+          "size": 161841152
+        }
+      },
+      "update_check": "ok"
+    },
+    {
+      "folder": "DarioMelo@Music2_HGSS",
+      "id": "Music2_HGSS",
+      "title": "Music2-HGSS",
+      "author": "Darío Melo",
+      "version": "26.08.14",
+      "categories": [
+        "AUDIO"
+      ],
+      "repo": "https://github.com/DarioMelo/Gen1Recomp-Music2-HGSS",
+      "tags": [
+        "audio",
+        "music"
+      ],
+      "github": "DarioMelo/Gen1Recomp-Music2-HGSS",
+      "game_version": ">=0.1.83",
+	  "games": ["gen2"],
+      "api": 2,
+      "profile": "content",
+      "thumbnail": "data/mods/DarioMelo@Music2_HGSS/thumbnail.png",
+      "description_url": "data/mods/DarioMelo@Music2_HGSS/description.md",
+      "summary": "Music from HeartGold / SoulSilver",
+      "latest": {
+        "version": "26.08.14",
+        "tag": "26.08.14",
+        "name": "26.08.14",
+        "prerelease": false,
+        "published_at": "2026-08-14T07:08:01Z",
+        "zip": {
+          "name": "Music2_HGSS-26.08.14.zip",
+          "url": "https://github.com/DarioMelo/Gen1Recomp-Music2-HGSS/releases/download/26.08.14/Music2_HGSS-26.08.14.zip",
+          "size": 305938432
         }
       },
       "update_check": "ok"
