@@ -1,0 +1,25 @@
+{
+  "id": "EXP_MULTIPLIER",
+  "title": "Exp Multiplier",
+  "author": "Mirage",
+  "version": "1.0.0",
+  "categories": [
+    "GAMEPLAY",
+    "QOL"
+  ],
+  "repo": "https://github.com/RadekHM/xp_multiplier_gen1recomp",
+  "summary": "OPTIONS EXP multiplier (1.5× / 2× / 3× / SCALED). Stacks with Exp Share; OFF is vanilla.",
+  "tags": [
+    "exp",
+    "xp",
+    "leveling"
+  ],
+  "github": "RadekHM/xp_multiplier_gen1recomp",
+  "game_version": ">=0.1.0 <2.0.0",
+  "license": "MIT",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
