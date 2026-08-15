@@ -1,0 +1,16 @@
+{
+  "id": "item_randomizer",
+  "title": "Item Randomizer",
+  "author": "inmento",
+  "summary": "Create a safe persistent item mapping for pickups, hidden finds, berries, gifts, eligible held items, and the New Game PC item.",
+  "version": "1.0.0",
+  "categories": ["GAMEPLAY"],
+  "tags": ["items", "randomizer", "loot", "gold"],
+  "repo": "https://github.com/inmento/Item-Randomizer",
+  "github": "inmento/Item-Randomizer",
+  "automatic_version_check": true,
+  "api": 2,
+  "games": ["gen1", "gen2"],
+  "profile": "content",
+  "affects_link": false
+}

@@ -1,0 +1,17 @@
+{
+  "id": "starter_picker",
+  "title": "Starter Picker",
+  "author": "inmento",
+  "summary": "Choose player starters by ball position in Gen 1 and Gold, with rival counter-picks, Gold held items, and player-only DV modes.",
+  "version": "1.0.0",
+  "categories": ["GAMEPLAY", "QOL"],
+  "tags": ["starters", "pokemon", "randomizer", "gold"],
+  "repo": "https://github.com/inmento/Starter-Picker",
+  "github": "inmento/Starter-Picker",
+  "automatic_version_check": true,
+  "api": 2,
+  "games": ["gen1", "gen2"],
+  "profile": "content",
+  "affects_link": false,
+  "permissions": ["engine_internals"]
+}

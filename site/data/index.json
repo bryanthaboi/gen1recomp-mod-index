@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-11T12:15:34.164Z",
-  "count": 90,
+  "generated_at": "2026-08-15T08:19:56.050Z",
+  "count": 111,
   "categories": [
     "GAMEPLAY",
     "CONTENT",
@@ -40,19 +40,8 @@
       "profile": "content",
       "thumbnail": "data/mods/liminal@no_exp_challenge/thumbnail.png",
       "description_url": "data/mods/liminal@no_exp_challenge/description.md",
-      "latest": {
-        "version": "1.0.0",
-        "tag": "v1.0.0",
-        "name": "1.0.0",
-        "prerelease": false,
-        "published_at": "2026-08-08T03:20:26Z",
-        "zip": {
-          "name": "no_exp_challenge-1.0.0.zip",
-          "url": "https://github.com/1iminal/gen1recomp-no-exp-challenge/releases/download/v1.0.0/no_exp_challenge-1.0.0.zip",
-          "size": 2069
-        }
-      },
-      "update_check": "ok"
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "masterwebx@ACCESS_PC_ANYWHERE",
@@ -75,16 +64,39 @@
       "profile": "content",
       "thumbnail": "data/mods/masterwebx@ACCESS_PC_ANYWHERE/thumbnail.png",
       "description_url": "data/mods/masterwebx@ACCESS_PC_ANYWHERE/description.md",
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
+    },
+    {
+      "folder": "ty-mcdk@additional_story_healers",
+      "id": "additional_story_healers",
+      "title": "Additional Story Healers",
+      "author": "ty-mcdk",
+      "version": "0.2.1",
+      "categories": [
+        "QOL"
+      ],
+      "repo": "https://github.com/ty-mcdk/additional-story-healers",
+      "summary": "Adds NPC healers throughout the story",
+      "tags": [
+        "qol",
+        "healer"
+      ],
+      "github": "ty-mcdk/additional-story-healers",
+      "api": 2,
+      "profile": "content",
+      "thumbnail": "data/mods/ty-mcdk@additional_story_healers/thumbnail.png",
+      "description_url": "data/mods/ty-mcdk@additional_story_healers/description.md",
       "latest": {
-        "version": "1.0.1",
-        "tag": "v1.0.1",
-        "name": "v1.0.1",
+        "version": "0.2.1",
+        "tag": "v0.2.1",
+        "name": "0.2.1",
         "prerelease": false,
-        "published_at": "2026-08-02T08:08:49Z",
+        "published_at": "2026-08-12T20:35:59Z",
         "zip": {
-          "name": "ACCESS_PC_ANYWHERE-1.0.1.zip",
-          "url": "https://github.com/masterwebx/gen1recomp-access-pc-anywhere/releases/download/v1.0.1/ACCESS_PC_ANYWHERE-1.0.1.zip",
-          "size": 3584
+          "name": "additional_story_healers-0.2.1.zip",
+          "url": "https://github.com/ty-mcdk/additional-story-healers/releases/download/v0.2.1/additional_story_healers-0.2.1.zip",
+          "size": 3786
         }
       },
       "update_check": "ok"
@@ -121,19 +133,8 @@
       "license": "MIT",
       "thumbnail": null,
       "description_url": "data/mods/eduardocalafell@auto_battle/description.md",
-      "latest": {
-        "version": "0.1.9",
-        "tag": "v0.1.9",
-        "name": "Auto Battle v0.1.9",
-        "prerelease": false,
-        "published_at": "2026-08-07T19:05:52Z",
-        "zip": {
-          "name": "auto_battle-0.1.9.zip",
-          "url": "https://github.com/eduardocalafell/gen1recomp-auto-battle/releases/download/v0.1.9/auto_battle-0.1.9.zip",
-          "size": 13412
-        }
-      },
-      "update_check": "ok"
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "eduardocalafell@bag_sort",
@@ -211,19 +212,8 @@
       "affects_link": false,
       "thumbnail": "data/mods/absol89@BATTLE_ART_VOXEL_FORK/thumbnail.png",
       "description_url": "data/mods/absol89@BATTLE_ART_VOXEL_FORK/description.md",
-      "latest": {
-        "version": "1.7.9",
-        "tag": "1.7.9",
-        "name": "1.7.9 BATTLE ART",
-        "prerelease": false,
-        "published_at": "2026-08-10T02:49:09Z",
-        "zip": {
-          "name": "BATTLE_ART_VOXEL_FORK-1.7.9.zip",
-          "url": "https://github.com/absol89/DramaticShapeVoxelMod/releases/download/1.7.9/BATTLE_ART_VOXEL_FORK-1.7.9.zip",
-          "size": 21284483
-        }
-      },
-      "update_check": "ok"
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "masterwebx@MOVE_MATCHUP",
@@ -252,19 +242,8 @@
       "profile": "content",
       "thumbnail": "data/mods/masterwebx@MOVE_MATCHUP/thumbnail.png",
       "description_url": "data/mods/masterwebx@MOVE_MATCHUP/description.md",
-      "latest": {
-        "version": "1.0.7",
-        "tag": "v1.0.7",
-        "name": "v1.0.7",
-        "prerelease": false,
-        "published_at": "2026-08-02T04:34:23Z",
-        "zip": {
-          "name": "MOVE_MATCHUP-1.0.7.zip",
-          "url": "https://github.com/masterwebx/gen1recomp-battle-move-info/releases/download/v1.0.7/MOVE_MATCHUP-1.0.7.zip",
-          "size": 9728
-        }
-      },
-      "update_check": "ok"
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "eduardocalafell@better_battle_ui",
@@ -297,19 +276,8 @@
       "license": "MIT",
       "thumbnail": "data/mods/eduardocalafell@better_battle_ui/thumbnail.png",
       "description_url": "data/mods/eduardocalafell@better_battle_ui/description.md",
-      "latest": {
-        "version": "0.2.1",
-        "tag": "v0.2.1",
-        "name": "Better Battle UI v0.2.1",
-        "prerelease": false,
-        "published_at": "2026-08-08T17:18:52Z",
-        "zip": {
-          "name": "better_battle_ui-0.2.1.zip",
-          "url": "https://github.com/eduardocalafell/gen1recomp-better-battle-ui/releases/download/v0.2.1/better_battle_ui-0.2.1.zip",
-          "size": 10101
-        }
-      },
-      "update_check": "ok"
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "eduardocalafell@bike_anywhere",
@@ -358,6 +326,56 @@
       "update_check": "ok"
     },
     {
+      "folder": "martin2844@blackjack_corner",
+      "id": "blackjack_corner",
+      "title": "Blackjack Corner",
+      "author": "martin2844",
+      "summary": "A Kanto-wide casino campaign with eight games, random starters, themed Gym and mixed ACE cases, local prize counters, two-way coin exchange, High Roller progression, and a Rocket battle arena.",
+      "version": "0.7.4",
+      "categories": [
+        "GAMEPLAY",
+        "CONTENT"
+      ],
+      "tags": [
+        "casino",
+        "gambling",
+        "blackjack",
+        "shiny pokemon",
+        "gym cases",
+        "coin exchange",
+        "battle arena",
+        "gamble mode"
+      ],
+      "repo": "https://github.com/martin2844/gen1recomp-blackjack-corner",
+      "github": "martin2844/gen1recomp-blackjack-corner",
+      "automatic_version_check": true,
+      "api": 2,
+      "game_version": ">=0.0.0-0 <2.0.0",
+      "profile": "content",
+      "permissions": [
+        "engine_internals",
+        "filesystem"
+      ],
+      "dependencies": [],
+      "conflicts": [],
+      "license": "MIT",
+      "thumbnail": null,
+      "description_url": "data/mods/martin2844@blackjack_corner/description.md",
+      "latest": {
+        "version": "0.7.4",
+        "tag": "v0.7.4",
+        "name": "0.7.4",
+        "prerelease": false,
+        "published_at": "2026-08-12T18:13:00Z",
+        "zip": {
+          "name": "blackjack_corner-0.7.4.zip",
+          "url": "https://github.com/martin2844/gen1recomp-blackjack-corner/releases/download/v0.7.4/blackjack_corner-0.7.4.zip",
+          "size": 179724
+        }
+      },
+      "update_check": "ok"
+    },
+    {
       "folder": "bryanthaboi@bookers_heaven",
       "id": "bookers_heaven",
       "title": "Booker's Heaven",
@@ -381,19 +399,8 @@
       ],
       "thumbnail": null,
       "description_url": "data/mods/bryanthaboi@bookers_heaven/description.md",
-      "latest": {
-        "version": "1.1.0",
-        "tag": "v1.1.0",
-        "name": "1.1.0",
-        "prerelease": false,
-        "published_at": "2026-07-29T10:11:48Z",
-        "zip": {
-          "name": "bookers_heaven-1.1.0.zip",
-          "url": "https://github.com/bryanthaboi/bookers_heaven/releases/download/v1.1.0/bookers_heaven-1.1.0.zip",
-          "size": 8346
-        }
-      },
-      "update_check": "ok"
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "Yukitty@oak_brief",
@@ -429,6 +436,41 @@
       "update_check": "ok"
     },
     {
+      "folder": "TanukiTooks@candy_jar",
+      "id": "candy_jar",
+      "title": "Candy Jar",
+      "author": "TanukiTooks",
+      "version": "1.5.0",
+      "categories": [
+        "UI",
+        "QOL",
+        "TOOL"
+      ],
+      "repo": "https://github.com/TanukiTooks/Candy-Jar",
+      "summary": "Adds a research quest and a Candy Jar that converts excess level-100 EXP into Rare Candy.",
+      "github": "TanukiTooks/Candy-Jar",
+      "permissions": [
+        "engine_internals"
+      ],
+      "api": 2,
+      "profile": "content",
+      "thumbnail": null,
+      "description_url": "data/mods/TanukiTooks@candy_jar/description.md",
+      "latest": {
+        "version": "1.5.0",
+        "tag": "v1.5.0",
+        "name": "Candy Jar 1.5.0",
+        "prerelease": false,
+        "published_at": "2026-08-13T09:14:44Z",
+        "zip": {
+          "name": "CandyJar-1.5.0.zip",
+          "url": "https://github.com/TanukiTooks/Candy-Jar/releases/download/v1.5.0/CandyJar-1.5.0.zip",
+          "size": 8783
+        }
+      },
+      "update_check": "ok"
+    },
+    {
       "folder": "hdbreaker@cheat_engine",
       "id": "cheat_engine",
       "title": "Cheat Engine",
@@ -456,16 +498,48 @@
       "conflicts": [],
       "thumbnail": "data/mods/hdbreaker@cheat_engine/thumbnail.png",
       "description_url": "data/mods/hdbreaker@cheat_engine/description.md",
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
+    },
+    {
+      "folder": "MadeinTaly@childhood_myths_are_real",
+      "id": "childhood_myths_are_real",
+      "title": "Childhood Myths Are Real",
+      "author": "MadeinTaly",
+      "version": "0.2.0",
+      "categories": [
+        "GAMEPLAY",
+        "CONTENT"
+      ],
+      "repo": "https://github.com/MadeinTaly/gen1recomp-childhood-myths-are-real",
+      "github": "MadeinTaly/gen1recomp-childhood-myths-are-real",
+      "summary": "The playground rumours of 1998, made true: the schoolyard legends every Gen 1 player swore were real, as opt-in switches.",
+      "tags": [
+        "myths",
+        "legends",
+        "gameplay",
+        "secrets"
+      ],
+      "permissions": [
+        "engine_internals"
+      ],
+      "api": 2,
+      "profile": "content",
+      "game_version": ">=0.0.0-0 <2.0.0",
+      "license": "MIT",
+      "automatic_version_check": true,
+      "thumbnail": null,
+      "description_url": "data/mods/MadeinTaly@childhood_myths_are_real/description.md",
       "latest": {
-        "version": "1.0.0",
-        "tag": "v1.0.0",
-        "name": "v1.0.0",
+        "version": "0.2.0",
+        "tag": "v0.2.0",
+        "name": "Childhood Mythos Are Real 0.2.0",
         "prerelease": false,
-        "published_at": "2026-08-09T16:40:05Z",
+        "published_at": "2026-08-11T20:07:10Z",
         "zip": {
-          "name": "cheat_engine-1.0.0.zip",
-          "url": "https://github.com/hdbreaker/gen1recomp-mod-cheat_engine/releases/download/v1.0.0/cheat_engine-1.0.0.zip",
-          "size": 14141
+          "name": "childhood_myths_are_real-0.2.0.zip",
+          "url": "https://github.com/MadeinTaly/gen1recomp-childhood-myths-are-real/releases/download/v0.2.0/childhood_myths_are_real-0.2.0.zip",
+          "size": 15532
         }
       },
       "update_check": "ok"
@@ -495,15 +569,15 @@
       "thumbnail": null,
       "description_url": "data/mods/MrKrisSatan@leaf_avatar/description.md",
       "latest": {
-        "version": "1.2.0",
-        "tag": "1.2.0",
-        "name": "Leaf avatar",
+        "version": "2.0.0",
+        "tag": "2.0.0",
+        "name": "2.0.0",
         "prerelease": false,
-        "published_at": "2026-07-31T15:27:45Z",
+        "published_at": "2026-08-12T11:55:05Z",
         "zip": {
-          "name": "leaf_avatar-1.2.0.zip",
-          "url": "https://github.com/MrKrisSatan/Leaf/releases/download/1.2.0/leaf_avatar-1.2.0.zip",
-          "size": 35949
+          "name": "leaf_avatar-2.0.0.zip",
+          "url": "https://github.com/MrKrisSatan/Leaf/releases/download/2.0.0/leaf_avatar-2.0.0.zip",
+          "size": 38474
         }
       },
       "update_check": "ok"
@@ -665,19 +739,8 @@
       "license": "MIT",
       "thumbnail": null,
       "description_url": "data/mods/eduardocalafell@damage_numbers/description.md",
-      "latest": {
-        "version": "0.4.0",
-        "tag": "v0.4.0",
-        "name": "Damage Numbers v0.4.0",
-        "prerelease": false,
-        "published_at": "2026-08-06T18:44:34Z",
-        "zip": {
-          "name": "damage_numbers-0.4.0.zip",
-          "url": "https://github.com/eduardocalafell/gen1recomp-damage-numbers/releases/download/v0.4.0/damage_numbers-0.4.0.zip",
-          "size": 6306
-        }
-      },
-      "update_check": "ok"
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "Roxas2712@deutsch-blau",
@@ -897,6 +960,42 @@
       "update_check": "ok"
     },
     {
+      "folder": "scottcandy34@DRAMATIC_SHAPE",
+      "id": "DRAMATIC_SHAPE",
+      "title": "Dramatic Shape Voxel Mod",
+      "author": "scottcandy34",
+      "version": "1.8.2",
+      "categories": [
+        "ART",
+        "UI"
+      ],
+      "repo": "https://github.com/scottcandy34/DramaticShapeVoxelMod-latest",
+      "summary": "The overworld as a 3D voxel diorama: extruded terrain, cast shadows, tilt-shift, and battles fought on the map itself.",
+      "tags": [
+        "voxel",
+        "3d",
+        "graphics",
+        "diorama",
+        "fork"
+      ],
+      "github": "scottcandy34/DramaticShapeVoxelMod-latest",
+      "game_version": "0.0.0-dev || >=0.1.37 <2.0.0",
+      "conflicts": [
+        "potato_voxel",
+        "BATTLE_ART_VOXEL_FORK",
+        "TERRARIUM"
+      ],
+      "permissions": [
+        "engine_internals"
+      ],
+      "api": 2,
+      "profile": "content",
+      "thumbnail": null,
+      "description_url": "data/mods/scottcandy34@DRAMATIC_SHAPE/description.md",
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
+    },
+    {
       "folder": "MFRTechConsult@DRAMATIC_SKY_RIDE",
       "id": "DRAMATIC_SKY_RIDE",
       "title": "Dramatic Sky Ride",
@@ -941,15 +1040,15 @@
       "thumbnail": null,
       "description_url": "data/mods/MFRTechConsult@DRAMATIC_SKY_RIDE/description.md",
       "latest": {
-        "version": "0.1.7",
-        "tag": "v0.1.7",
-        "name": "Dramatic Sky Ride 0.1.7",
+        "version": "0.2.13",
+        "tag": "v0.2.13",
+        "name": "Dramatic Sky Ride 0.2.13",
         "prerelease": false,
-        "published_at": "2026-08-10T19:54:51Z",
+        "published_at": "2026-08-14T20:16:43Z",
         "zip": {
-          "name": "dramatic-sky-ride-0.1.7.zip",
-          "url": "https://github.com/mfrtechconsult/dramatic-sky-ride/releases/download/v0.1.7/dramatic-sky-ride-0.1.7.zip",
-          "size": 145140
+          "name": "dramatic-sky-ride-0.2.13.zip",
+          "url": "https://github.com/mfrtechconsult/dramatic-sky-ride/releases/download/v0.2.13/dramatic-sky-ride-0.2.13.zip",
+          "size": 255420
         }
       },
       "update_check": "ok"
@@ -1028,6 +1127,49 @@
       "update_check": "ok"
     },
     {
+      "folder": "Illan@wills_mod",
+      "id": "wills_mod",
+      "title": "Encounters Guide",
+      "author": "Illan",
+      "version": "1.0.1",
+      "categories": [
+        "QOL",
+        "UI",
+        "TOOL"
+      ],
+      "repo": "https://github.com/illanrego/wills-mod",
+      "github": "illanrego/wills-mod",
+      "summary": "Map-first wild-encounter guide: browse the real Kanto Town Map and drill into exact routes, floors, and buildings with truthful level ranges and per-step odds.",
+      "tags": [
+        "encounters",
+        "map",
+        "pokemon",
+        "quality-of-life",
+        "ui",
+        "tool"
+      ],
+      "api": 2,
+      "profile": "content",
+      "game_version": ">=0.0.0-0 <2.0.0",
+      "license": "MIT",
+      "automatic_version_check": true,
+      "thumbnail": null,
+      "description_url": "data/mods/Illan@wills_mod/description.md",
+      "latest": {
+        "version": "1.0.1",
+        "tag": "v1.0.1",
+        "name": "Encounters Guide 1.0.1",
+        "prerelease": false,
+        "published_at": "2026-08-13T13:33:57Z",
+        "zip": {
+          "name": "wills_mod-1.0.1.zip",
+          "url": "https://github.com/illanrego/wills-mod/releases/download/v1.0.1/wills_mod-1.0.1.zip",
+          "size": 13492
+        }
+      },
+      "update_check": "ok"
+    },
+    {
       "folder": "ShaneMcGovernIE@exp_share",
       "id": "exp_share",
       "title": "Exp Share (Gen 1 / Gen 5+ styles)",
@@ -1054,15 +1196,15 @@
       "thumbnail": null,
       "description_url": "data/mods/ShaneMcGovernIE@exp_share/description.md",
       "latest": {
-        "version": "0.1.5",
-        "tag": "v0.1.5",
-        "name": "0.1.5",
+        "version": "0.1.7",
+        "tag": "v0.1.7",
+        "name": "0.1.7",
         "prerelease": false,
-        "published_at": "2026-08-05T21:10:19Z",
+        "published_at": "2026-08-11T17:07:28Z",
         "zip": {
-          "name": "exp_share-0.1.5.zip",
-          "url": "https://github.com/ShaneMcGovernIE/exp_share/releases/download/v0.1.5/exp_share-0.1.5.zip",
-          "size": 12432
+          "name": "exp_share-0.1.7.zip",
+          "url": "https://github.com/ShaneMcGovernIE/exp_share/releases/download/v0.1.7/exp_share-0.1.7.zip",
+          "size": 14182
         }
       },
       "update_check": "ok"
@@ -1134,19 +1276,8 @@
       "profile": "content",
       "thumbnail": "data/mods/masterwebx@FOLLOWERS_EX/thumbnail.png",
       "description_url": "data/mods/masterwebx@FOLLOWERS_EX/description.md",
-      "latest": {
-        "version": "1.0.19",
-        "tag": "v1.0.19",
-        "name": "Followers EX 1.0.19",
-        "prerelease": false,
-        "published_at": "2026-08-03T03:29:52Z",
-        "zip": {
-          "name": "FOLLOWERS_EX-1.0.19.zip",
-          "url": "https://github.com/masterwebx/gen1recomp-followers-ex/releases/download/v1.0.19/FOLLOWERS_EX-1.0.19.zip",
-          "size": 29759
-        }
-      },
-      "update_check": "ok"
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "ShaneHudson@free_fly",
@@ -1178,15 +1309,15 @@
       "thumbnail": "data/mods/ShaneHudson@free_fly/thumbnail.png",
       "description_url": "data/mods/ShaneHudson@free_fly/description.md",
       "latest": {
-        "version": "1.5.5",
-        "tag": "v1.5.5",
-        "name": "1.5.5",
+        "version": "1.6.1",
+        "tag": "v1.6.1",
+        "name": "1.6.1",
         "prerelease": false,
-        "published_at": "2026-08-10T21:43:56Z",
+        "published_at": "2026-08-13T22:46:09Z",
         "zip": {
-          "name": "free_fly-1.5.5.zip",
-          "url": "https://github.com/shanehudson-gen1recomp-mods/free_fly/releases/download/v1.5.5/free_fly-1.5.5.zip",
-          "size": 56912
+          "name": "free_fly-1.6.1.zip",
+          "url": "https://github.com/shanehudson-gen1recomp-mods/free_fly/releases/download/v1.6.1/free_fly-1.6.1.zip",
+          "size": 83314
         }
       },
       "update_check": "ok"
@@ -1223,39 +1354,30 @@
       "license": "MIT",
       "thumbnail": "data/mods/eduardocalafell@gen2_dex/thumbnail.png",
       "description_url": "data/mods/eduardocalafell@gen2_dex/description.md",
-      "latest": {
-        "version": "1.2.2",
-        "tag": "v1.2.2",
-        "name": "v1.2.2",
-        "prerelease": false,
-        "published_at": "2026-08-09T16:21:19Z",
-        "zip": {
-          "name": "gen2_dex-1.2.2.zip",
-          "url": "https://github.com/eduardocalafell/gen1recomp-gen2-dex/releases/download/v1.2.2/gen2_dex-1.2.2.zip",
-          "size": 242091
-        }
-      },
-      "update_check": "ok"
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "MadeinTaly@gen3_box",
       "id": "gen3_box",
       "title": "Gen 3 Box",
       "author": "MadeinTaly",
-      "version": "1.5.2",
+      "version": "1.8.0",
       "categories": [
         "UI",
         "QOL"
       ],
       "repo": "https://github.com/MadeinTaly/gen1recomp-gen3-boxes",
       "github": "MadeinTaly/gen1recomp-gen3-boxes",
-      "summary": "A Gen 3-style storage screen: a 5x4 grid, a cursor that picks a Pokemon up and puts it down, and one button between box and party.",
+      "summary": "A Gen 3-style storage screen: a 5x4 grid, a cursor that picks a Pokemon up and puts it down, and one button between box and party. Runs on Gold too.",
       "tags": [
         "boxes",
         "storage",
         "pc",
         "qol",
-        "ui"
+        "ui",
+        "gold",
+        "gen-2"
       ],
       "permissions": [
         "engine_internals"
@@ -1268,15 +1390,15 @@
       "thumbnail": null,
       "description_url": "data/mods/MadeinTaly@gen3_box/description.md",
       "latest": {
-        "version": "1.5.2",
-        "tag": "v1.5.2",
-        "name": "gen3_box 1.5.2",
+        "version": "1.8.0",
+        "tag": "v1.8.0",
+        "name": "gen3_box 1.8.0",
         "prerelease": false,
-        "published_at": "2026-08-05T21:51:40Z",
+        "published_at": "2026-08-12T13:31:52Z",
         "zip": {
-          "name": "gen3_box-1.5.2.zip",
-          "url": "https://github.com/MadeinTaly/gen1recomp-gen3-boxes/releases/download/v1.5.2/gen3_box-1.5.2.zip",
-          "size": 20808
+          "name": "gen3_box-1.8.0.zip",
+          "url": "https://github.com/MadeinTaly/gen1recomp-gen3-boxes/releases/download/v1.8.0/gen3_box-1.8.0.zip",
+          "size": 45910
         }
       },
       "update_check": "ok"
@@ -1286,20 +1408,21 @@
       "id": "gen3_dex",
       "title": "Gen 3 Dex",
       "author": "MadeinTaly",
-      "version": "0.1.0",
+      "version": "0.5.0",
       "categories": [
         "UI",
         "ART"
       ],
       "repo": "https://github.com/MadeinTaly/gen1recomp-gen3-dex",
       "github": "MadeinTaly/gen1recomp-gen3-dex",
-      "summary": "The Pokedex as a grid of pictures, each owned species in its own colours, with ALL/OWNED/MISSING filters.",
+      "summary": "The Pokedex as a grid of pictures instead of a list of names, with owned species in their own colours. Covers Johto on Gold, where the big grid works too.",
       "tags": [
         "pokedex",
+        "dex",
         "ui",
-        "grid",
-        "cosmetic",
-        "qol"
+        "qol",
+        "gold",
+        "gen-2"
       ],
       "permissions": [
         "engine_internals"
@@ -1312,63 +1435,15 @@
       "thumbnail": null,
       "description_url": "data/mods/MadeinTaly@gen3_dex/description.md",
       "latest": {
-        "version": "0.2.2",
-        "tag": "v0.2.2",
-        "name": "Gen 3 Dex 0.2.2",
+        "version": "0.5.0",
+        "tag": "v0.5.0",
+        "name": "Gen 3 Dex 0.5.0",
         "prerelease": false,
-        "published_at": "2026-08-06T12:47:10Z",
+        "published_at": "2026-08-12T20:04:54Z",
         "zip": {
-          "name": "gen3_dex-0.2.2.zip",
-          "url": "https://github.com/MadeinTaly/gen1recomp-gen3-dex/releases/download/v0.2.2/gen3_dex-0.2.2.zip",
-          "size": 15066
-        }
-      },
-      "update_check": "ok"
-    },
-    {
-      "folder": "adrian@recomp-rider",
-      "id": "recomp-rider",
-      "title": "Recomp Rider",
-      "author": "adrian",
-      "summary": "Drive KITT across the Pokémon world.",
-      "version": "0.4.0",
-      "categories": [
-        "GAMEPLAY",
-        "AUDIO",
-        "OTHER"
-      ],
-      "repo": "https://github.com/castdrian/recomp-rider",
-      "tags": [
-        "knight rider",
-        "kitt"
-      ],
-      "github": "castdrian/recomp-rider",
-      "game_version": "0.0.0-dev || >=0.1.37 <2.0.0",
-      "permissions": [
-        "engine_internals"
-      ],
-      "games": [
-        "gen1",
-        "gen2"
-      ],
-      "dependencies": [
-        "DRAMALESS_SHAPE@>=1.6.3 <2.0.0"
-      ],
-      "conflicts": [],
-      "api": 2,
-      "profile": "content",
-      "thumbnail": null,
-      "description_url": "data/mods/adrian@recomp-rider/description.md",
-      "latest": {
-        "version": "0.4.0",
-        "tag": "v0.4.0",
-        "name": "0.4.0",
-        "prerelease": false,
-        "published_at": "2026-08-11T20:29:07Z",
-        "zip": {
-          "name": "recomp-rider-0.4.0.zip",
-          "url": "https://github.com/castdrian/recomp-rider/releases/download/v0.4.0/recomp-rider-0.4.0.zip",
-          "size": 6975086
+          "name": "gen3_dex-0.5.0.zip",
+          "url": "https://github.com/MadeinTaly/gen1recomp-gen3-dex/releases/download/v0.5.0/gen3_dex-0.5.0.zip",
+          "size": 25092
         }
       },
       "update_check": "ok"
@@ -1404,15 +1479,15 @@
       "thumbnail": null,
       "description_url": "data/mods/ArmstrongThomas@gen1_modern_ui/description.md",
       "latest": {
-        "version": "0.8.4",
-        "tag": "v0.8.4",
-        "name": "Gen1 Modern UI v0.8.4",
+        "version": "0.9.1",
+        "tag": "v0.9.1",
+        "name": "Gen1 Modern UI v0.9.1",
         "prerelease": false,
-        "published_at": "2026-08-09T12:44:42Z",
+        "published_at": "2026-08-12T13:32:45Z",
         "zip": {
-          "name": "gen1_modern_ui-0.8.4.zip",
-          "url": "https://github.com/ArmstrongThomas/gen1-modern-ui/releases/download/v0.8.4/gen1_modern_ui-0.8.4.zip",
-          "size": 140686
+          "name": "gen1_modern_ui-0.9.1.zip",
+          "url": "https://github.com/ArmstrongThomas/gen1-modern-ui/releases/download/v0.9.1/gen1_modern_ui-0.9.1.zip",
+          "size": 187044
         }
       },
       "update_check": "ok"
@@ -1422,7 +1497,7 @@
       "id": "gen1mmo",
       "title": "Gen1MMO",
       "author": "tebwritescode",
-      "version": "1.3.0",
+      "version": "1.5.1",
       "categories": [
         "GAMEPLAY",
         "CONTENT",
@@ -1449,15 +1524,15 @@
       "thumbnail": "data/mods/tebwritescode@gen1mmo/thumbnail.png",
       "description_url": "data/mods/tebwritescode@gen1mmo/description.md",
       "latest": {
-        "version": "1.5.0",
-        "tag": "v1.5.0",
-        "name": "Gen1MMO 1.5.0 - Make History",
+        "version": "1.6.2",
+        "tag": "v1.6.2",
+        "name": "v1.6.2",
         "prerelease": false,
-        "published_at": "2026-08-09T09:52:03Z",
+        "published_at": "2026-08-12T02:44:57Z",
         "zip": {
-          "name": "gen1mmo-1.5.0.zip",
-          "url": "https://github.com/tebwritescode/gen1mmo/releases/download/v1.5.0/gen1mmo-1.5.0.zip",
-          "size": 383996
+          "name": "gen1mmo-1.6.2.zip",
+          "url": "https://github.com/tebwritescode/gen1mmo/releases/download/v1.6.2/gen1mmo-1.6.2.zip",
+          "size": 408707
         }
       },
       "update_check": "ok"
@@ -1483,15 +1558,15 @@
       "description_url": "data/mods/Gamecorner_033@gen1online/description.md",
       "summary": "online overworld with battles and trading with up to 2 Players",
       "latest": {
-        "version": "0.3.4",
-        "tag": "v0.3.4.3",
-        "name": ".3.4.3",
+        "version": "0.3.5",
+        "tag": "v0.3.5.59",
+        "name": "Release v0.3.5.59",
         "prerelease": false,
-        "published_at": "2026-08-10T22:18:12Z",
+        "published_at": "2026-08-14T00:12:19Z",
         "zip": {
           "name": "mod.zip",
-          "url": "https://github.com/gamecorner-033/Gen1Online/releases/download/v0.3.4.3/mod.zip",
-          "size": 2130446
+          "url": "https://github.com/gamecorner-033/Gen1Online/releases/download/v0.3.5.59/mod.zip",
+          "size": 397076
         }
       },
       "update_check": "ok"
@@ -1540,20 +1615,22 @@
       "id": "groovy_palette",
       "title": "Groovy Palette & Frames",
       "author": "MadeinTaly",
-      "version": "0.5.0",
+      "version": "0.7.0",
       "categories": [
         "ART",
         "UI"
       ],
       "repo": "https://github.com/MadeinTaly/gen1recomp-groovy-palette-frames",
       "github": "MadeinTaly/gen1recomp-groovy-palette-frames",
-      "summary": "Thirty more COLORS palettes and eight text-box borders, previewed on the running game from the COLORS row itself.",
+      "summary": "Thirty extra colour palettes and nine text-box frames, with a live preview. Both halves work on Gold.",
       "tags": [
         "palette",
         "colours",
         "borders",
         "cosmetic",
-        "retro"
+        "retro",
+        "gold",
+        "gen-2"
       ],
       "permissions": [
         "engine_internals"
@@ -1566,18 +1643,54 @@
       "thumbnail": null,
       "description_url": "data/mods/MadeinTaly@groovy_palette/description.md",
       "latest": {
-        "version": "0.4.1",
-        "tag": "v0.4.1",
-        "name": "Groovy Palette & Frames 0.4.1",
+        "version": "0.7.0",
+        "tag": "v0.7.0",
+        "name": "Groovy Palette & Frames 0.7.0",
         "prerelease": false,
-        "published_at": "2026-08-02T20:49:38Z",
+        "published_at": "2026-08-12T20:12:55Z",
         "zip": {
-          "name": "groovy_palette-0.4.1.zip",
-          "url": "https://github.com/MadeinTaly/gen1recomp-groovy-palette-frames/releases/download/v0.4.1/groovy_palette-0.4.1.zip",
-          "size": 24561
+          "name": "groovy_palette-0.7.0.zip",
+          "url": "https://github.com/MadeinTaly/gen1recomp-groovy-palette-frames/releases/download/v0.7.0/groovy_palette-0.7.0.zip",
+          "size": 34674
         }
       },
       "update_check": "ok"
+    },
+    {
+      "folder": "inmento@gym_leader_shuffle",
+      "id": "gym_leader_shuffle",
+      "title": "Gym Leader Shuffle",
+      "author": "inmento",
+      "summary": "Shuffle Gym Leaders across Kanto and Johto while each physical gym keeps its badge, rewards, and level curve.",
+      "version": "1.0.0",
+      "categories": [
+        "GAMEPLAY",
+        "QOL"
+      ],
+      "tags": [
+        "gym leaders",
+        "randomizer",
+        "kanto",
+        "johto",
+        "gold"
+      ],
+      "repo": "https://github.com/inmento/Gym-Leader-Shuffle",
+      "github": "inmento/Gym-Leader-Shuffle",
+      "automatic_version_check": true,
+      "api": 2,
+      "games": [
+        "gen1",
+        "gen2"
+      ],
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/inmento@gym_leader_shuffle/description.md",
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "masterwebx@HEAL_ANYWHERE",
@@ -1661,6 +1774,48 @@
       "update_check": "ok"
     },
     {
+      "folder": "inmento@item_randomizer",
+      "id": "item_randomizer",
+      "title": "Item Randomizer",
+      "author": "inmento",
+      "summary": "Create a safe persistent item mapping for pickups, hidden finds, berries, gifts, eligible held items, and the New Game PC item.",
+      "version": "1.0.0",
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "tags": [
+        "items",
+        "randomizer",
+        "loot",
+        "gold"
+      ],
+      "repo": "https://github.com/inmento/Item-Randomizer",
+      "github": "inmento/Item-Randomizer",
+      "automatic_version_check": true,
+      "api": 2,
+      "games": [
+        "gen1",
+        "gen2"
+      ],
+      "profile": "content",
+      "affects_link": false,
+      "thumbnail": null,
+      "description_url": "data/mods/inmento@item_randomizer/description.md",
+      "latest": {
+        "version": "1.0.0",
+        "tag": "1.0.0",
+        "name": "Item Randomizer 1.0.0",
+        "prerelease": false,
+        "published_at": "2026-08-15T08:18:14Z",
+        "zip": {
+          "name": "item_randomizer-1.0.0.zip",
+          "url": "https://github.com/inmento/Item-Randomizer/releases/download/1.0.0/item_randomizer-1.0.0.zip",
+          "size": 10755
+        }
+      },
+      "update_check": "ok"
+    },
+    {
       "folder": "bryanthaboi@translation-ja-hrkt",
       "id": "translation-ja-hrkt",
       "title": "JP GREEN - Poketto Monsutā Midori",
@@ -1682,19 +1837,8 @@
       "profile": "content",
       "thumbnail": null,
       "description_url": "data/mods/bryanthaboi@translation-ja-hrkt/description.md",
-      "latest": {
-        "version": "0.4.4",
-        "tag": "v0.4.4",
-        "name": "0.4.4",
-        "prerelease": false,
-        "published_at": "2026-08-04T14:07:19Z",
-        "zip": {
-          "name": "translation-ja-hrkt-0.4.4.zip",
-          "url": "https://github.com/bryanthaboi/JP-GREEN-Poketto-Monsuta-Midori/releases/download/v0.4.4/translation-ja-hrkt-0.4.4.zip",
-          "size": 130473
-        }
-      },
-      "update_check": "ok"
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "redelpedron@kanto_companion_lite",
@@ -1716,15 +1860,15 @@
       "thumbnail": null,
       "description_url": "data/mods/redelpedron@kanto_companion_lite/description.md",
       "latest": {
-        "version": "2.2.0",
-        "tag": "v2.2.0",
-        "name": "v2.2.0",
+        "version": "2.2.27",
+        "tag": "v2.2.27",
+        "name": "v2.2.27",
         "prerelease": false,
-        "published_at": "2026-08-11T03:29:58Z",
+        "published_at": "2026-08-14T01:00:54Z",
         "zip": {
           "name": "Kanto.Companion.Lite.zip",
-          "url": "https://github.com/redelpedron/Kanto-Companion-Lite/releases/download/v2.2.0/Kanto.Companion.Lite.zip",
-          "size": 78112
+          "url": "https://github.com/redelpedron/Kanto-Companion-Lite/releases/download/v2.2.27/Kanto.Companion.Lite.zip",
+          "size": 54051
         }
       },
       "update_check": "ok"
@@ -1766,15 +1910,15 @@
       "thumbnail": null,
       "description_url": "data/mods/MraYT@kanto_dive/description.md",
       "latest": {
-        "version": "1.6.0",
-        "tag": "v1.6.0",
-        "name": "Kanto Dive 1.6.0",
+        "version": "1.6.1",
+        "tag": "v1.6.1",
+        "name": "Kanto Dive 1.6.1",
         "prerelease": false,
-        "published_at": "2026-08-11T08:47:23Z",
+        "published_at": "2026-08-11T14:53:58Z",
         "zip": {
-          "name": "kanto_dive-1.6.0.zip",
-          "url": "https://github.com/mfrtechconsult/Kanto-gen1-dive/releases/download/v1.6.0/kanto_dive-1.6.0.zip",
-          "size": 81338
+          "name": "kanto_dive-1.6.1.zip",
+          "url": "https://github.com/mfrtechconsult/Kanto-gen1-dive/releases/download/v1.6.1/kanto_dive-1.6.1.zip",
+          "size": 82864
         }
       },
       "update_check": "ok"
@@ -1819,6 +1963,48 @@
           "name": "kanto_dynamic_weather-1.0.3.zip",
           "url": "https://github.com/1-Camp0-1/Kanto-Dynamic-Weather/releases/download/v1.0.3/kanto_dynamic_weather-1.0.3.zip",
           "size": 67817
+        }
+      },
+      "update_check": "ok"
+    },
+    {
+      "folder": "Maaggel@mew_under_the_truck",
+      "id": "mew_under_the_truck",
+      "title": "Mew Under the Truck",
+      "author": "Maaggel",
+      "version": "0.8.3",
+      "categories": [
+        "CONTENT",
+        "GAMEPLAY"
+      ],
+      "repo": "https://github.com/Maaggel/mew-under-the-truck",
+      "github": "Maaggel/mew-under-the-truck",
+      "summary": "The schoolyard rumour, made real. Get back to the dock after the S.S. Anne sails, use STRENGTH on the truck, and something stirs underneath.",
+      "tags": [
+        "mew",
+        "legend",
+        "quest",
+        "encounter",
+        "strength"
+      ],
+      "permissions": [],
+      "api": 2,
+      "profile": "content",
+      "game_version": ">=0.0.0-0 <2.0.0",
+      "license": "MIT",
+      "automatic_version_check": true,
+      "thumbnail": "data/mods/Maaggel@mew_under_the_truck/thumbnail.jpg",
+      "description_url": "data/mods/Maaggel@mew_under_the_truck/description.md",
+      "latest": {
+        "version": "0.8.3",
+        "tag": "v0.8.3",
+        "name": "0.8.3",
+        "prerelease": false,
+        "published_at": "2026-08-13T10:13:43Z",
+        "zip": {
+          "name": "mew_under_the_truck-0.8.3.zip",
+          "url": "https://github.com/Maaggel/mew-under-the-truck/releases/download/v0.8.3/mew_under_the_truck-0.8.3.zip",
+          "size": 239963
         }
       },
       "update_check": "ok"
@@ -1902,16 +2088,49 @@
       "license": "MIT",
       "thumbnail": "data/mods/eduardocalafell@modern_dialog/thumbnail.png",
       "description_url": "data/mods/eduardocalafell@modern_dialog/description.md",
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
+    },
+    {
+      "folder": "MadeinTaly@modern_johto",
+      "id": "modern_johto",
+      "title": "Modern Johto",
+      "author": "MadeinTaly",
+      "version": "0.2.0",
+      "categories": [
+        "GAMEPLAY",
+        "BALANCE"
+      ],
+      "repo": "https://github.com/MadeinTaly/gen1recomp-modern-johto",
+      "github": "MadeinTaly/gen1recomp-modern-johto",
+      "summary": "The Gen 4 physical/special split for Pokemon Gold, decided per move instead of per type, plus an AI that reads type effectiveness where Gold left trainers type-blind.",
+      "tags": [
+        "split",
+        "physical-special",
+        "battle",
+        "gold",
+        "gen-2"
+      ],
+      "permissions": [
+        "engine_internals"
+      ],
+      "api": 2,
+      "profile": "content",
+      "game_version": ">=0.0.0-0 <2.0.0",
+      "license": "MIT",
+      "automatic_version_check": true,
+      "thumbnail": null,
+      "description_url": "data/mods/MadeinTaly@modern_johto/description.md",
       "latest": {
-        "version": "0.4.1",
-        "tag": "v0.4.1",
-        "name": "Modern Dialogue Boxes v0.4.1",
+        "version": "0.2.0",
+        "tag": "v0.2.0",
+        "name": "modern_johto 0.2.0",
         "prerelease": false,
-        "published_at": "2026-08-08T17:18:17Z",
+        "published_at": "2026-08-12T20:11:50Z",
         "zip": {
-          "name": "modern_dialog-0.4.1.zip",
-          "url": "https://github.com/eduardocalafell/gen1recomp-modern-dialog/releases/download/v0.4.1/modern_dialog-0.4.1.zip",
-          "size": 7754
+          "name": "modern_johto-0.2.0.zip",
+          "url": "https://github.com/MadeinTaly/gen1recomp-modern-johto/releases/download/v0.2.0/modern_johto-0.2.0.zip",
+          "size": 17153
         }
       },
       "update_check": "ok"
@@ -1921,7 +2140,7 @@
       "id": "modern_kanto",
       "title": "Modern Kanto",
       "author": "MadeinTaly",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "categories": [
         "GAMEPLAY",
         "BALANCE",
@@ -1948,18 +2167,37 @@
       "thumbnail": null,
       "description_url": "data/mods/MadeinTaly@modern_kanto/description.md",
       "latest": {
-        "version": "0.2.0",
-        "tag": "v0.2.0",
-        "name": "modern_kanto 0.2.0",
+        "version": "0.3.0",
+        "tag": "v0.3.0",
+        "name": "modern_kanto 0.3.0",
         "prerelease": false,
-        "published_at": "2026-08-02T10:08:47Z",
+        "published_at": "2026-08-11T20:07:10Z",
         "zip": {
-          "name": "modern_kanto-0.2.0.zip",
-          "url": "https://github.com/MadeinTaly/gen1recomp-modern-kanto/releases/download/v0.2.0/modern_kanto-0.2.0.zip",
-          "size": 13687
+          "name": "modern_kanto-0.3.0.zip",
+          "url": "https://github.com/MadeinTaly/gen1recomp-modern-kanto/releases/download/v0.3.0/modern_kanto-0.3.0.zip",
+          "size": 18663
         }
       },
       "update_check": "ok"
+    },
+    {
+      "folder": "MaybeGreg@modern_type_framework",
+      "id": "modern_type_framework",
+      "title": "Modern Type Framework",
+      "author": "MaybeGreg",
+      "version": "1.0.0",
+      "categories": [
+        "LIBRARY"
+      ],
+      "repo": "https://github.com/MaybeGreg/modern_type_framework",
+      "github": "MaybeGreg/modern_type_framework",
+      "api": 2,
+      "profile": "content",
+      "thumbnail": null,
+      "description_url": "data/mods/MaybeGreg@modern_type_framework/description.md",
+      "summary": "Updates the type chart to modern chart. Does not edit Pokémon or moves.",
+      "latest": null,
+      "update_check": "no installable release"
     },
     {
       "folder": "ShaneMcGovernIE@mods_hotkeys",
@@ -1999,6 +2237,48 @@
           "name": "mods_hotkeys-0.1.10.zip",
           "url": "https://github.com/ShaneMcGovernIE/mods_hotkeys/releases/download/v0.1.10/mods_hotkeys-0.1.10.zip",
           "size": 30463
+        }
+      },
+      "update_check": "ok"
+    },
+    {
+      "folder": "Maaggel@move_descriptions",
+      "id": "move_descriptions",
+      "title": "Move Descriptions",
+      "author": "Maaggel",
+      "version": "0.5.1",
+      "categories": [
+        "UI",
+        "QOL"
+      ],
+      "repo": "https://github.com/Maaggel/move-descriptions",
+      "github": "Maaggel/move-descriptions",
+      "summary": "Press START on a move to see what it does. Gen 1 never told you; Gen 2 did. Battle, status, learning, TMs and HMs.",
+      "tags": [
+        "quality-of-life",
+        "ui",
+        "moves",
+        "battle",
+        "information"
+      ],
+      "permissions": [],
+      "api": 2,
+      "profile": "content",
+      "game_version": ">=0.0.0-0 <2.0.0",
+      "license": "MIT",
+      "automatic_version_check": true,
+      "thumbnail": "data/mods/Maaggel@move_descriptions/thumbnail.jpg",
+      "description_url": "data/mods/Maaggel@move_descriptions/description.md",
+      "latest": {
+        "version": "0.5.1",
+        "tag": "0.5.1",
+        "name": "v0.5.1",
+        "prerelease": false,
+        "published_at": "2026-08-13T10:46:09Z",
+        "zip": {
+          "name": "move_descriptions-0.5.1.zip",
+          "url": "https://github.com/Maaggel/move-descriptions/releases/download/0.5.1/move_descriptions-0.5.1.zip",
+          "size": 9258
         }
       },
       "update_check": "ok"
@@ -2104,19 +2384,8 @@
       "profile": "content",
       "thumbnail": "data/mods/masterwebx@MUSIC_PLAYER/thumbnail.png",
       "description_url": "data/mods/masterwebx@MUSIC_PLAYER/description.md",
-      "latest": {
-        "version": "1.2.5",
-        "tag": "v1.2.5",
-        "name": "v1.2.5",
-        "prerelease": false,
-        "published_at": "2026-08-02T04:34:12Z",
-        "zip": {
-          "name": "MUSIC_PLAYER-1.2.5.zip",
-          "url": "https://github.com/masterwebx/gen1recomp-music-player/releases/download/v1.2.5/MUSIC_PLAYER-1.2.5.zip",
-          "size": 6508
-        }
-      },
-      "update_check": "ok"
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "DarioMelo@Music_FRLG",
@@ -2224,6 +2493,88 @@
       "update_check": "ok"
     },
     {
+      "folder": "DaroMelo@Music2_HGSS",
+      "id": "Music2_HGSS",
+      "title": "Music2-HGSS",
+      "author": "DaríoMelo",
+      "version": "26.08.11",
+      "categories": [
+        "CONTENT",
+        "AUDIO"
+      ],
+      "repo": "https://github.com/DarioMelo/Gen1Recomp-Music2-HGSS",
+      "tags": [
+        "audio",
+        "music"
+      ],
+      "github": "DarioMelo/Gen1Recomp-Music2-HGSS",
+      "game_version": ">=0.1.78",
+      "api": 2,
+      "profile": "content",
+      "thumbnail": null,
+      "description_url": "data/mods/DaroMelo@Music2_HGSS/description.md",
+      "summary": "Music from HeartGold / SoulSilver",
+      "latest": {
+        "version": "26.08.14",
+        "tag": "26.08.14",
+        "name": "26.08.14",
+        "prerelease": false,
+        "published_at": "2026-08-15T02:41:13Z",
+        "zip": {
+          "name": "Music2_HGSS-26.08.14.zip",
+          "url": "https://github.com/DarioMelo/Gen1Recomp-Music2-HGSS/releases/download/26.08.14/Music2_HGSS-26.08.14.zip",
+          "size": 305934395
+        }
+      },
+      "update_check": "ok"
+    },
+    {
+      "folder": "ddagent@npc_bubbles",
+      "id": "npc_bubbles",
+      "title": "NPC Bubbles",
+      "author": "ddagent",
+      "version": "2.3.10",
+      "summary": "Puts a bubble over the NPCs who actually do something, so the person holding a free TM does not look like the person who wants to tell you about ledges.",
+      "categories": [
+        "UI",
+        "QOL"
+      ],
+      "tags": [
+        "npc",
+        "markers",
+        "quality of life",
+        "checklist",
+        "completion",
+        "overworld"
+      ],
+      "repo": "https://github.com/ddagent/gen1recomp-npc-bubbles",
+      "github": "ddagent/gen1recomp-npc-bubbles",
+      "api": 2,
+      "game_version": ">=0.0.0-0 <2.0.0",
+      "profile": "content",
+      "experimental": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "dependencies": [],
+      "conflicts": [],
+      "thumbnail": "data/mods/ddagent@npc_bubbles/thumbnail.png",
+      "description_url": "data/mods/ddagent@npc_bubbles/description.md",
+      "latest": {
+        "version": "2.3.10",
+        "tag": "v2.3.10",
+        "name": "2.3.10",
+        "prerelease": false,
+        "published_at": "2026-08-11T02:39:45Z",
+        "zip": {
+          "name": "npc_bubbles-2.3.10.zip",
+          "url": "https://github.com/ddagent/gen1recomp-npc-bubbles/releases/download/v2.3.10/npc_bubbles-2.3.10.zip",
+          "size": 65617
+        }
+      },
+      "update_check": "ok"
+    },
+    {
       "folder": "TheRhysWyrill@instant_heal_pc_rest",
       "id": "instant_heal_pc_rest",
       "title": "Nurse Speed Heal & PC Rest",
@@ -2247,19 +2598,8 @@
       "thumbnail": null,
       "description_url": "data/mods/TheRhysWyrill@instant_heal_pc_rest/description.md",
       "summary": "Instantly heals your party when talking to Nurse Joy, auto-advances the heal dialog, turns the player around to prevent accidental re-dialogue, and automatically heals Pokémon deposited into PC storag",
-      "latest": {
-        "version": "1.1.2",
-        "tag": "v1.1.2",
-        "name": "v1.1.2",
-        "prerelease": false,
-        "published_at": "2026-08-07T02:14:58Z",
-        "zip": {
-          "name": "instant_heal_pc_rest.zip",
-          "url": "https://github.com/TheRhysWyrill/instant_heal_pc_rest/releases/download/v1.1.2/instant_heal_pc_rest.zip",
-          "size": 3757
-        }
-      },
-      "update_check": "ok"
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "bryanthaboi@nuzlocke",
@@ -2287,15 +2627,15 @@
       "thumbnail": "data/mods/bryanthaboi@nuzlocke/thumbnail.png",
       "description_url": "data/mods/bryanthaboi@nuzlocke/description.md",
       "latest": {
-        "version": "1.0.1",
-        "tag": "v1.0.1",
-        "name": "1.0.1",
+        "version": "1.0.2",
+        "tag": "v1.0.2",
+        "name": "1.0.2",
         "prerelease": false,
-        "published_at": "2026-07-31T14:17:23Z",
+        "published_at": "2026-08-12T00:05:54Z",
         "zip": {
-          "name": "nuzlocke-1.0.1.zip",
-          "url": "https://github.com/bryanthaboi/nuzlocke/releases/download/v1.0.1/nuzlocke-1.0.1.zip",
-          "size": 4396
+          "name": "nuzlocke-1.0.2.zip",
+          "url": "https://github.com/bryanthaboi/nuzlocke/releases/download/v1.0.2/nuzlocke-1.0.2.zip",
+          "size": 98524
         }
       },
       "update_check": "ok"
@@ -2398,15 +2738,15 @@
       "thumbnail": null,
       "description_url": "data/mods/MisterMiracle@snag_quest/description.md",
       "latest": {
-        "version": "0.14.11",
-        "tag": "v0.14.11",
-        "name": "v0.14.11",
+        "version": "0.15.9",
+        "tag": "v0.15.9",
+        "name": "v0.15.9",
         "prerelease": false,
-        "published_at": "2026-08-11T02:02:33Z",
+        "published_at": "2026-08-14T21:55:35Z",
         "zip": {
-          "name": "snag_quest-0.14.11.zip",
-          "url": "https://github.com/mistermiracle3036/Pokemon-Snag/releases/download/v0.14.11/snag_quest-0.14.11.zip",
-          "size": 66449
+          "name": "snag_quest-0.15.9.zip",
+          "url": "https://github.com/mistermiracle3036/Pokemon-Snag/releases/download/v0.15.9/snag_quest-0.15.9.zip",
+          "size": 108040
         }
       },
       "update_check": "ok"
@@ -2460,19 +2800,8 @@
       "profile": "content",
       "thumbnail": "data/mods/mresnick67@pokewalker/thumbnail.jpg",
       "description_url": "data/mods/mresnick67@pokewalker/description.md",
-      "latest": {
-        "version": "0.3.2",
-        "tag": "v0.3.2",
-        "name": "Pokéwalker 0.3.2",
-        "prerelease": false,
-        "published_at": "2026-08-01T15:47:32Z",
-        "zip": {
-          "name": "pokewalker-0.3.2.zip",
-          "url": "https://github.com/mresnick67/Gen1ReComp-Pokewalker/releases/download/v0.3.2/pokewalker-0.3.2.zip",
-          "size": 24747
-        }
-      },
-      "update_check": "ok"
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "ShaneMcGovernIE@potato_voxel",
@@ -2511,15 +2840,15 @@
       "thumbnail": null,
       "description_url": "data/mods/ShaneMcGovernIE@potato_voxel/description.md",
       "latest": {
-        "version": "1.3.7",
-        "tag": "v1.3.7",
-        "name": "PotatoVoxel 1.3.7",
+        "version": "1.6.0",
+        "tag": "v1.6.0",
+        "name": "PotatoVoxel 1.6.0",
         "prerelease": false,
-        "published_at": "2026-08-11T09:32:07Z",
+        "published_at": "2026-08-14T19:24:50Z",
         "zip": {
-          "name": "potato_voxel-1.3.7.zip",
-          "url": "https://github.com/ShaneMcGovernIE/potato_voxel/releases/download/v1.3.7/potato_voxel-1.3.7.zip",
-          "size": 3317692
+          "name": "potato_voxel-1.6.0.zip",
+          "url": "https://github.com/ShaneMcGovernIE/potato_voxel/releases/download/v1.6.0/potato_voxel-1.6.0.zip",
+          "size": 710255
         }
       },
       "update_check": "ok"
@@ -2551,15 +2880,15 @@
       "thumbnail": null,
       "description_url": "data/mods/ShaneMcGovernIE@qol_toggles/description.md",
       "latest": {
-        "version": "1.17.3",
-        "tag": "v1.17.3",
-        "name": "1.17.3",
+        "version": "1.20.0",
+        "tag": "v1.20.0",
+        "name": "v1.20.0",
         "prerelease": false,
-        "published_at": "2026-08-08T23:11:24Z",
+        "published_at": "2026-08-14T12:25:49Z",
         "zip": {
-          "name": "qol_toggles-1.17.3.zip",
-          "url": "https://github.com/ShaneMcGovernIE/qol_toggles/releases/download/v1.17.3/qol_toggles-1.17.3.zip",
-          "size": 68990
+          "name": "qol_toggles-1.20.0.zip",
+          "url": "https://github.com/ShaneMcGovernIE/qol_toggles/releases/download/v1.20.0/qol_toggles-1.20.0.zip",
+          "size": 107673
         }
       },
       "update_check": "ok"
@@ -2587,16 +2916,40 @@
       "profile": "content",
       "thumbnail": "data/mods/unxpected-uxp@quality_of_life/thumbnail.png",
       "description_url": "data/mods/unxpected-uxp@quality_of_life/description.md",
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
+    },
+    {
+      "folder": "TanukiTooks@quest_menu",
+      "id": "quest_menu",
+      "title": "Quest Menu",
+      "author": "TanukiTooks",
+      "summary": "A side-quest journal and immersive NPC trade tracker for Red, Blue, Yellow and Gold.",
+      "version": "1.1.0",
+      "categories": [
+        "UI",
+        "QOL",
+        "TOOL"
+      ],
+      "repo": "https://github.com/TanukiTooks/Quest-Menu",
+      "github": "tanukitooks/quest-menu",
+      "permissions": [
+        "engine_internals"
+      ],
+      "api": 2,
+      "profile": "content",
+      "thumbnail": null,
+      "description_url": "data/mods/TanukiTooks@quest_menu/description.md",
       "latest": {
-        "version": "1.2.7",
-        "tag": "v1.2.7",
-        "name": "1.2.7",
+        "version": "1.1.0",
+        "tag": "v1.1.0",
+        "name": "Quest Menu 1.1.0",
         "prerelease": false,
-        "published_at": "2026-08-08T07:23:16Z",
+        "published_at": "2026-08-13T09:14:43Z",
         "zip": {
-          "name": "quality_of_life-1.2.7.zip",
-          "url": "https://github.com/unxpected-uxp/pokemon-gen1-recomp-mod-qol/releases/download/v1.2.7/quality_of_life-1.2.7.zip",
-          "size": 17522
+          "name": "QuestMenu-1.1.0.zip",
+          "url": "https://github.com/TanukiTooks/Quest-Menu/releases/download/v1.1.0/QuestMenu-1.1.0.zip",
+          "size": 18620
         }
       },
       "update_check": "ok"
@@ -2624,19 +2977,8 @@
       "experimental": true,
       "thumbnail": "data/mods/ciddmandude@pokemon_randomizer/thumbnail.png",
       "description_url": "data/mods/ciddmandude@pokemon_randomizer/description.md",
-      "latest": {
-        "version": "0.46.4",
-        "tag": "v0.46.4",
-        "name": "Pokemon Randomizer 0.46.4",
-        "prerelease": false,
-        "published_at": "2026-08-07T00:59:01Z",
-        "zip": {
-          "name": "pokemon_randomizer-0.46.4.zip",
-          "url": "https://github.com/ciddmandude/PokemonRecompRandomizer/releases/download/v0.46.4/pokemon_randomizer-0.46.4.zip",
-          "size": 160204
-        }
-      },
-      "update_check": "ok"
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "Razor1993@FLYING_OVERHAUL",
@@ -2719,19 +3061,8 @@
       "conflicts": [],
       "thumbnail": "data/mods/alamops@rby_mmo/thumbnail.png",
       "description_url": "data/mods/alamops@rby_mmo/description.md",
-      "latest": {
-        "version": "1.0.3",
-        "tag": "v1.0.3",
-        "name": "1.0.3",
-        "prerelease": false,
-        "published_at": "2026-08-11T05:48:49Z",
-        "zip": {
-          "name": "rby_mmo-1.0.3.zip",
-          "url": "https://github.com/alamops/RBYMMOMod/releases/download/v1.0.3/rby_mmo-1.0.3.zip",
-          "size": 1236329
-        }
-      },
-      "update_check": "ok"
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "Sedatb23@recomp_cartographer",
@@ -2759,6 +3090,55 @@
           "name": "recomp_cartographer-0.2.0.zip",
           "url": "https://github.com/Sedatb23/recomp_cartographer/releases/download/v0.2.0/recomp_cartographer-0.2.0.zip",
           "size": 28936
+        }
+      },
+      "update_check": "ok"
+    },
+    {
+      "folder": "adrian@recomp-rider",
+      "id": "recomp-rider",
+      "title": "Recomp Rider",
+      "author": "adrian",
+      "summary": "Drive KITT across the Pokémon world.",
+      "version": "0.4.0",
+      "categories": [
+        "GAMEPLAY",
+        "AUDIO",
+        "OTHER"
+      ],
+      "repo": "https://github.com/castdrian/recomp-rider",
+      "tags": [
+        "knight rider",
+        "kitt"
+      ],
+      "github": "castdrian/recomp-rider",
+      "downloadURL": "https://github.com/castdrian/recomp-rider/releases/download/v0.4.0/recomp-rider-0.4.0.zip",
+      "game_version": "0.0.0-dev || >=0.1.37 <2.0.0",
+      "permissions": [
+        "engine_internals"
+      ],
+      "games": [
+        "gen1",
+        "gen2"
+      ],
+      "dependencies": [
+        "DRAMALESS_SHAPE@>=1.6.3 <2.0.0"
+      ],
+      "conflicts": [],
+      "api": 2,
+      "profile": "content",
+      "thumbnail": null,
+      "description_url": "data/mods/adrian@recomp-rider/description.md",
+      "latest": {
+        "version": "0.4.0",
+        "tag": "v0.4.0",
+        "name": "0.4.0",
+        "prerelease": false,
+        "published_at": "2026-08-11T20:29:07Z",
+        "zip": {
+          "name": "recomp-rider-0.4.0.zip",
+          "url": "https://github.com/castdrian/recomp-rider/releases/download/v0.4.0/recomp-rider-0.4.0.zip",
+          "size": 6975086
         }
       },
       "update_check": "ok"
@@ -2809,19 +3189,20 @@
       "id": "running_shoes",
       "title": "Running Shoes",
       "author": "MadeinTaly",
-      "version": "1.1.0",
+      "version": "1.6.0",
       "categories": [
         "QOL",
         "GAMEPLAY"
       ],
       "repo": "https://github.com/MadeinTaly/gen1recomp-running-shoes",
       "github": "MadeinTaly/gen1recomp-running-shoes",
-      "summary": "Hold B to walk faster, at a speed you pick. Gen 3 gave you these in five minutes; Gen 1 made you earn a bicycle.",
+      "summary": "Hold B to walk faster, at a speed you pick, with an optional trail and grass that really gets cut. Everything works on Gold.",
       "tags": [
-        "quality-of-life",
-        "movement",
         "running",
-        "beginner"
+        "speed",
+        "qol",
+        "gold",
+        "gen-2"
       ],
       "permissions": [],
       "api": 2,
@@ -2832,18 +3213,100 @@
       "thumbnail": null,
       "description_url": "data/mods/MadeinTaly@running_shoes/description.md",
       "latest": {
-        "version": "1.4.1",
-        "tag": "v1.4.1",
-        "name": "running_shoes 1.4.1",
+        "version": "1.7.0",
+        "tag": "v1.7.0",
+        "name": "running_shoes 1.7.0",
         "prerelease": false,
-        "published_at": "2026-08-08T00:22:32Z",
+        "published_at": "2026-08-13T14:04:08Z",
         "zip": {
-          "name": "running_shoes-1.4.1.zip",
-          "url": "https://github.com/MadeinTaly/gen1recomp-running-shoes/releases/download/v1.4.1/running_shoes-1.4.1.zip",
-          "size": 28091
+          "name": "running_shoes-1.7.0.zip",
+          "url": "https://github.com/MadeinTaly/gen1recomp-running-shoes/releases/download/v1.7.0/running_shoes-1.7.0.zip",
+          "size": 43680
         }
       },
       "update_check": "ok"
+    },
+    {
+      "folder": "MaxTomahawk@savestates",
+      "id": "savestates",
+      "title": "Save States",
+      "author": "MaxTomahawk",
+      "version": "0.1.0",
+      "categories": [
+        "QOL",
+        "UI",
+        "TOOL"
+      ],
+      "repo": "https://github.com/MaxTomahawk/gen1recomp-savestates",
+      "github": "MaxTomahawk/gen1recomp-savestates",
+      "summary": "Native quicksaves, event autosaves, permanent slots, deterministic battle states, and undo-load recovery.",
+      "tags": [
+        "save states",
+        "quicksave",
+        "autosave",
+        "recovery",
+        "battle",
+        "quality of life"
+      ],
+      "automatic_version_check": true,
+      "api": 2,
+      "game_version": ">=0.1.80 <1.0.0",
+      "profile": "content",
+      "experimental": false,
+      "dependencies": [],
+      "conflicts": [],
+      "license": "MIT",
+      "thumbnail": null,
+      "description_url": "data/mods/MaxTomahawk@savestates/description.md",
+      "latest": {
+        "version": "0.1.0",
+        "tag": "v0.1.0",
+        "name": "0.1.0",
+        "prerelease": false,
+        "published_at": "2026-08-12T21:56:44Z",
+        "zip": {
+          "name": "savestates-0.1.0.zip",
+          "url": "https://github.com/MaxTomahawk/gen1recomp-savestates/releases/download/v0.1.0/savestates-0.1.0.zip",
+          "size": 68534
+        }
+      },
+      "update_check": "ok"
+    },
+    {
+      "folder": "tebwritescode@savesync",
+      "id": "savesync",
+      "title": "SaveSync",
+      "author": "tebwritescode",
+      "summary": "Automatic cross-device saves for Gen1Recomp - your save follows you to every device you play on, stored on free space that belongs to you.",
+      "version": "1.6.1",
+      "categories": [
+        "TOOL",
+        "QOL"
+      ],
+      "tags": [
+        "saves",
+        "backup",
+        "cloud",
+        "sync",
+        "cross-device",
+        "github",
+        "dropbox"
+      ],
+      "repo": "https://github.com/tebwritescode/savesync",
+      "github": "tebwritescode/savesync",
+      "automatic_version_check": true,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.1.37 <2.0.0",
+      "permissions": [
+        "network",
+        "filesystem",
+        "engine_internals"
+      ],
+      "license": "MIT",
+      "thumbnail": "data/mods/tebwritescode@savesync/thumbnail.png",
+      "description_url": "data/mods/tebwritescode@savesync/description.md",
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "Satori7Kensho@shiny_starters_gifts",
@@ -2913,19 +3376,153 @@
       "profile": "content",
       "thumbnail": "data/mods/masterwebx@SHINY_POKEMON/thumbnail.png",
       "description_url": "data/mods/masterwebx@SHINY_POKEMON/description.md",
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
+    },
+    {
+      "folder": "Nezara@silphscope_network",
+      "id": "silphscope_network",
+      "title": "Silph Scope Network",
+      "author": "Nezara",
+      "version": "0.12.1",
+      "categories": [
+        "GAMEPLAY",
+        "CONTENT",
+        "OTHER"
+      ],
+      "repo": "https://github.com/Nezara/silph-scope-network",
+      "summary": "online invasion mechanic with players across the world.",
+      "tags": [
+        "multiplayer",
+        "pvp",
+        "online",
+        "versus",
+        "dark souls",
+        "friends",
+        "streaming"
+      ],
+      "github": "Nezara/silph-scope-network",
+      "downloadURL": "https://github.com/Nezara/silph-scope-network/releases/download/v0.12.1/silphscope_network-0.12.1.zip",
+      "api": 2,
+      "profile": "content",
+      "thumbnail": null,
+      "description_url": "data/mods/Nezara@silphscope_network/description.md",
       "latest": {
-        "version": "1.0.1",
-        "tag": "v1.0.1",
-        "name": "v1.0.1",
+        "version": "0.14.1",
+        "tag": "v0.14.1",
+        "name": "v0.14.1 - Fix repeatable ghost money duplication",
         "prerelease": false,
-        "published_at": "2026-08-02T11:28:34Z",
+        "published_at": "2026-08-14T11:29:48Z",
         "zip": {
-          "name": "SHINY_POKEMON-1.0.1.zip",
-          "url": "https://github.com/masterwebx/gen1recomp-shiny-pokemon/releases/download/v1.0.1/SHINY_POKEMON-1.0.1.zip",
-          "size": 23768
+          "name": "silphscope_network-0.14.1.zip",
+          "url": "https://github.com/Nezara/silph-scope-network/releases/download/v0.14.1/silphscope_network-0.14.1.zip",
+          "size": 64280
         }
       },
       "update_check": "ok"
+    },
+    {
+      "folder": "AshJam@silphnet",
+      "id": "silphnet",
+      "title": "SilphNet",
+      "author": "AshJam",
+      "version": "1.1.8",
+      "categories": [
+        "GAMEPLAY",
+        "TOOL"
+      ],
+      "repo": "https://github.com/AshJamB/SilphNet",
+      "summary": "See where your friends were last, in-game, with no live server or 24/7 process required.",
+      "tags": [
+        "multiplayer",
+        "friends",
+        "online",
+        "presence"
+      ],
+      "github": "AshJamB/SilphNet",
+      "license": "MIT",
+      "permissions": [
+        "network"
+      ],
+      "api": 2,
+      "profile": "content",
+      "thumbnail": "data/mods/AshJam@silphnet/thumbnail.png",
+      "description_url": "data/mods/AshJam@silphnet/description.md",
+      "latest": {
+        "version": "1.8.2",
+        "tag": "v1.8.2",
+        "name": "SilphNet 1.8.2",
+        "prerelease": false,
+        "published_at": "2026-08-14T00:36:00Z",
+        "zip": {
+          "name": "silphnet-1.8.2.zip",
+          "url": "https://github.com/AshJamB/SilphNet/releases/download/v1.8.2/silphnet-1.8.2.zip",
+          "size": 54117
+        }
+      },
+      "update_check": "ok"
+    },
+    {
+      "folder": "YukitaMayako@simple_girl",
+      "id": "simple_girl",
+      "title": "Simple Girl mod",
+      "author": "Yukita Mayako",
+      "version": "1.0.0",
+      "categories": [
+        "ART"
+      ],
+      "repo": "https://github.com/Yukitty/gen1mod-simple_girl",
+      "summary": "Content patch replacing the main character's sprites and pronouns.",
+      "tags": [
+        "player character",
+        "sprites"
+      ],
+      "github": "Yukitty/gen1mod-simple_girl",
+      "game_version": "0.0.0-dev || >=0.1.76 <1.0.0",
+      "conflicts": [
+        "leaf_avatar"
+      ],
+      "api": 2,
+      "profile": "content",
+      "thumbnail": "data/mods/YukitaMayako@simple_girl/thumbnail.png",
+      "description_url": "data/mods/YukitaMayako@simple_girl/description.md",
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
+    },
+    {
+      "folder": "inmento@starter_picker",
+      "id": "starter_picker",
+      "title": "Starter Picker",
+      "author": "inmento",
+      "summary": "Choose player starters by ball position in Gen 1 and Gold, with rival counter-picks, Gold held items, and player-only DV modes.",
+      "version": "1.0.0",
+      "categories": [
+        "GAMEPLAY",
+        "QOL"
+      ],
+      "tags": [
+        "starters",
+        "pokemon",
+        "randomizer",
+        "gold"
+      ],
+      "repo": "https://github.com/inmento/Starter-Picker",
+      "github": "inmento/Starter-Picker",
+      "automatic_version_check": true,
+      "api": 2,
+      "games": [
+        "gen1",
+        "gen2"
+      ],
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/inmento@starter_picker/description.md",
+      "latest": null,
+      "update_check": "error: GitHub rate limit reached (set GITHUB_TOKEN)"
     },
     {
       "folder": "ShaneMcGovernIE@surround_audio",
@@ -3249,15 +3846,15 @@
       "thumbnail": "data/mods/menyas@unique_menu_icons/thumbnail.png",
       "description_url": "data/mods/menyas@unique_menu_icons/description.md",
       "latest": {
-        "version": "1.4.0",
-        "tag": "1.4.0",
-        "name": "Adds support to Gen 2 sprites for certain mods",
+        "version": "1.5.0",
+        "tag": "1.5.0",
+        "name": "Adds compatibility with Pokemon Gold (and PC Followers ig)",
         "prerelease": false,
-        "published_at": "2026-08-10T05:19:42Z",
+        "published_at": "2026-08-13T20:02:21Z",
         "zip": {
-          "name": "unique_menu_icons-1.4.0.zip",
-          "url": "https://github.com/menyas/unique-menu-icons/releases/download/1.4.0/unique_menu_icons-1.4.0.zip",
-          "size": 372121
+          "name": "unique_menu_icons_1.5.0.zip",
+          "url": "https://github.com/menyas/unique-menu-icons/releases/download/1.5.0/unique_menu_icons_1.5.0.zip",
+          "size": 411769
         }
       },
       "update_check": "ok"
@@ -3447,15 +4044,15 @@
       "thumbnail": null,
       "description_url": "data/mods/bryanthaboi@versaovermelha/description.md",
       "latest": {
-        "version": "0.2.4",
-        "tag": "v0.2.4",
-        "name": "0.2.4",
+        "version": "0.2.5",
+        "tag": "v0.2.5",
+        "name": "0.2.5",
         "prerelease": false,
-        "published_at": "2026-08-08T10:14:17Z",
+        "published_at": "2026-08-14T10:01:09Z",
         "zip": {
-          "name": "versaovermelha-0.2.4.zip",
-          "url": "https://github.com/bryanthaboi/versaovermelha/releases/download/v0.2.4/versaovermelha-0.2.4.zip",
-          "size": 125465
+          "name": "versaovermelha-0.2.5.zip",
+          "url": "https://github.com/bryanthaboi/versaovermelha/releases/download/v0.2.5/versaovermelha-0.2.5.zip",
+          "size": 125964
         }
       },
       "update_check": "ok"
@@ -3624,15 +4221,15 @@
       "thumbnail": "data/mods/ShaneHudson@wild_skies/thumbnail.png",
       "description_url": "data/mods/ShaneHudson@wild_skies/description.md",
       "latest": {
-        "version": "1.8.0",
-        "tag": "v1.8.0",
-        "name": "1.8.0",
+        "version": "1.10.0",
+        "tag": "v1.10.0",
+        "name": "1.10.0",
         "prerelease": false,
-        "published_at": "2026-08-10T21:44:01Z",
+        "published_at": "2026-08-13T22:46:13Z",
         "zip": {
-          "name": "wild_skies-1.8.0.zip",
-          "url": "https://github.com/shanehudson-gen1recomp-mods/wild_skies/releases/download/v1.8.0/wild_skies-1.8.0.zip",
-          "size": 48010
+          "name": "wild_skies-1.10.0.zip",
+          "url": "https://github.com/shanehudson-gen1recomp-mods/wild_skies/releases/download/v1.10.0/wild_skies-1.10.0.zip",
+          "size": 96665
         }
       },
       "update_check": "ok"
@@ -3670,15 +4267,15 @@
       "thumbnail": "data/mods/YoDrehDenSwagAuf@overworld_wild_spawns/thumbnail.png",
       "description_url": "data/mods/YoDrehDenSwagAuf@overworld_wild_spawns/description.md",
       "latest": {
-        "version": "1.12.2",
-        "tag": "v1.12.2",
-        "name": "Wilds of Kanto v1.12.2",
+        "version": "2.1.0",
+        "tag": "v2.1.0",
+        "name": "Wilds of Kanto v2.1.0",
         "prerelease": false,
-        "published_at": "2026-08-10T13:47:08Z",
+        "published_at": "2026-08-13T20:34:50Z",
         "zip": {
-          "name": "Wilds.of.Kanto.v1.12.2.zip",
-          "url": "https://github.com/YoDrehDenSwagAuf/overworld-spawn-mod/releases/download/v1.12.2/Wilds.of.Kanto.v1.12.2.zip",
-          "size": 13745457
+          "name": "Wilds.of.Kanto.v2.1.0.zip",
+          "url": "https://github.com/YoDrehDenSwagAuf/overworld-spawn-mod/releases/download/v2.1.0/Wilds.of.Kanto.v2.1.0.zip",
+          "size": 16324956
         }
       },
       "update_check": "ok"
