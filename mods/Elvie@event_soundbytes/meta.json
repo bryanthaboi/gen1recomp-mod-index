@@ -2,7 +2,7 @@
   "id": "trainer_talk",
   "title": "Trainer Talk",
   "author": "Elvie",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "categories": [
     "CONTENT",
     "AUDIO",
@@ -16,7 +16,7 @@
     "character"
   ],
   "github": "ElvieBlooms/trainer_talk",
-  "downloadURL": "https://github.com/ElvieBlooms/trainer_talk/releases/download/v0.2.5/trainer_talk-0.2.5.zip",
+  "downloadURL": "https://github.com/ElvieBlooms/trainer_talk/releases/download/v0.2.6/trainer_talk-0.2.6.zip",
   "api": 2,
   "profile": "content"
 }
