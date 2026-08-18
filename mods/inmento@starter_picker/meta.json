@@ -1,0 +1,18 @@
+{
+  "id": "starter_picker",
+  "title": "Starter Picker",
+  "author": "inmento",
+  "summary": "Choose player starters in Gen 1 and Gold while retaining rival counter-picks, in-game selection, safe held-item themes, and optional trade-evolution help.",
+  "version": "1.0.8",
+  "categories": ["GAMEPLAY", "QOL"],
+  "tags": ["starters", "oak lab", "elm lab", "dvs", "held items", "gold"],
+  "repo": "https://github.com/inmento/Starter-Picker",
+  "github": "inmento/Starter-Picker",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.1.99",
+  "games": ["gen1", "gen2"],
+  "profile": "content",
+  "affects_link": false,
+  "permissions": ["engine_internals"]
+}

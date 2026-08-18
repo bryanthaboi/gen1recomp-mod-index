@@ -1,0 +1,17 @@
+{
+  "id": "sound_effect_replacer",
+  "title": "Sound Effect Replacer",
+  "author": "inmento",
+  "summary": "Replace selected named effects, move sounds, evolution audio, cries, and Yellow Pikachu voice clips with player-supplied audio in Gen 1 and Gold.",
+  "version": "0.3.2",
+  "categories": ["AUDIO", "QOL"],
+  "tags": ["audio", "sound effects", "cries", "evolution", "moves", "gold"],
+  "repo": "https://github.com/inmento/Sound-Effect-Replacer",
+  "github": "inmento/Sound-Effect-Replacer",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.1.99",
+  "games": ["gen1", "gen2"],
+  "profile": "content",
+  "permissions": ["engine_internals"]
+}
