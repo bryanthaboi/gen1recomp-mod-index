@@ -1,0 +1,20 @@
+{
+  "id": "a_autofire",
+  "title": "Autofire AB",
+  "author": "ZyranCZ",
+  "version": "2.0.2",
+  "categories": [
+    "TOOL"
+  ],
+  "repo": "https://github.com/ZyranCZ/autofire",
+  "summary": "Configurable autofire for A, B and optional D-pad input, with adjustable hold delay, repeat rate, and battle/world scope for Gen1Recomp.",
+  "tags": [
+    "autofire",
+    "input",
+    "accessibility",
+    "qol"
+  ],
+  "github": "ZyranCZ/autofire",
+  "api": 2,
+  "profile": "content"
+}
