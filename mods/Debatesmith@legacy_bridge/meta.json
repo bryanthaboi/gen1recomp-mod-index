@@ -1,0 +1,26 @@
+{
+  "id": "legacy_bridge",
+  "title": "Project Celebi",
+  "author": "Debatesmith",
+  "version": "0.2.0",
+  "categories": [
+    "GAMEPLAY",
+    "BALANCE",
+    "QOL",
+    "TOTAL_CONVERSION"
+  ],
+  "repo": "https://github.com/Debatesmith/Project-Celebi",
+  "tags": [
+    "expansion",
+    "total conversion"
+  ],
+  "github": "Debatesmith/Project-Celebi",
+  "license": "MIT",
+  "permissions": [
+    "filesystem",
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content",
+  "experimental": true
+}
