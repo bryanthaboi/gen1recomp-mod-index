@@ -1,0 +1,30 @@
+{
+  "id": "FLOATING_BATTLE_HUD",
+  "title": "Floating Battle HUD",
+  "author": "Bass",
+  "version": "0.7.5",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "repo": "https://github.com/bass-dv/g1rFloatingBattleHUD/",
+  "summary": "Immersive floating battle HUD and menus for VOXEL mods.",
+  "tags": [
+    "ui",
+    "voxel",
+    "qol",
+    "battle"
+  ],
+  "github": "atingBatbass-dv/g1rFlotleHUD",
+  "game_version": ">=0.1.37",
+  "license": "MIT",
+  "dependencies": [
+    "DRAMATIC_SHAPE",
+    "POTATO_VOXEL"
+  ],
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "overhaul"
+}
