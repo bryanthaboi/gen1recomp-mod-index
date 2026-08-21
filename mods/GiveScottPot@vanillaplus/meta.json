@@ -1,0 +1,30 @@
+{
+  "id": "vanillaplus",
+  "title": "Vanilla+",
+  "author": "GiveScottPot",
+  "version": "1.1.0-beta",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT",
+    "QOL"
+  ],
+  "repo": "https://github.com/GiveScottPot/Vanilla-",
+  "summary": "Gen I expansion focused on QoL, encounters, field tools, and new interactions.",
+  "tags": [
+    "gen1",
+    "red blue yellow",
+    "qol",
+    "encounters",
+    "field tools",
+    "vanilla plus",
+    "postgame content",
+    "sprite"
+  ],
+  "github": "GiveScottPot/Vanilla-",
+  "game_version": ">=0.2.10 <2.0.0",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
