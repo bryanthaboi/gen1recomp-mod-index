@@ -1,0 +1,26 @@
+{
+  "id": "g9-battle-engine",
+  "title": "G9 Battle Engine",
+  "author": "Tekky",
+  "version": "1.2.0",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT",
+    "BALANCE",
+    "LIBRARY"
+  ],
+  "repo": "https://github.com/tectorifter/Gen9Dex",
+  "summary": "Gen 9 Battle Framework",
+  "github": "tectorifter/Gen9Dex",
+  "game_version": "0.1.45",
+  "license": "MIT",
+  "dependencies": [
+    "national_dex"
+  ],
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content",
+  "experimental": true
+}

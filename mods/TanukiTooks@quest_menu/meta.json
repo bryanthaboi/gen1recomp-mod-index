@@ -1,0 +1,19 @@
+{
+  "id": "quest_menu",
+  "title": "Quest Menu",
+  "author": "TanukiTooks",
+  "summary": "A side-quest journal and immersive NPC trade tracker for Red, Blue, Yellow and Gold.",
+  "version": "1.1.0",
+  "categories": [
+    "UI",
+    "QOL",
+    "TOOL"
+  ],
+  "repo": "https://github.com/TanukiTooks/Quest-Menu",
+  "github": "tanukitooks/quest-menu",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}

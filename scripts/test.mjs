@@ -13,6 +13,7 @@ import { fileURLToPath } from 'node:url';
 
 import { validate } from './lib/jsonschema.mjs';
 import { checkCollisions, checkModFolder, loadSchema } from './lib/index-rules.mjs';
+import { pruneDownloads, record, summarize, zipDownloadsByTag } from './lib/downloads.mjs';
 import { renderMarkdown } from '../site/assets/markdown.js';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -140,6 +141,81 @@ test('two folders cannot claim one mod id', () => {
     { folder: 'Gary@my_mod', meta: { ...GOOD_META, author: 'Gary' } },
   ]);
   assert.match(collisions.join(), /MI203/);
+});
+
+// ----------------------------------------------------------------- downloads
+
+const day = (n) => new Date(Date.UTC(2026, 0, 1 + n)).toISOString();
+
+test('every zip asset in a release counts, source zipballs do not', () => {
+  const byTag = zipDownloadsByTag([
+    {
+      tag_name: 'v1.1.0',
+      assets: [
+        { name: 'my_mod-1.1.0.zip', download_count: 40 },
+        { name: 'my_mod-assets.zip', download_count: 2 },
+        { name: 'notes.txt', download_count: 900 },
+      ],
+    },
+    { tag_name: 'v1.0.0', assets: [] },
+  ]);
+  assert.deepEqual(byTag, { 'v1.1.0': 42 });
+});
+
+test('a re-uploaded asset cannot make a total go backwards', () => {
+  const state = { version: 1, mods: {} };
+  record(state, 'Ash@my_mod', { 'v1.0.0': 500 }, day(0));
+  record(state, 'Ash@my_mod', { 'v1.0.0': 3 }, day(1));
+  assert.equal(state.mods['Ash@my_mod'].total, 500);
+});
+
+test('tags that fall off the releases page keep their last known count', () => {
+  const state = { version: 1, mods: {} };
+  record(state, 'Ash@my_mod', { 'v1.0.0': 100 }, day(0));
+  record(state, 'Ash@my_mod', { 'v1.1.0': 20 }, day(1));
+  assert.equal(state.mods['Ash@my_mod'].total, 120);
+});
+
+test('history keeps one sample a day and expires past the retention window', () => {
+  const state = { version: 1, mods: {} };
+  record(state, 'Ash@my_mod', { 'v1.0.0': 1 }, day(0));
+  record(state, 'Ash@my_mod', { 'v1.0.0': 2 }, '2026-01-01T18:00:00.000Z');
+  assert.equal(state.mods['Ash@my_mod'].history.length, 1);
+  record(state, 'Ash@my_mod', { 'v1.0.0': 3 }, day(40));
+  assert.deepEqual(state.mods['Ash@my_mod'].history.map((s) => s.total), [3]);
+});
+
+test('recent is the delta against the newest sample outside the window', () => {
+  const state = { version: 1, mods: {} };
+  record(state, 'Ash@my_mod', { 'v1.0.0': 100 }, day(0));
+  record(state, 'Ash@my_mod', { 'v1.0.0': 180 }, day(31));
+  const summary = summarize(state.mods['Ash@my_mod'], day(31));
+  assert.equal(summary.total, 180);
+  assert.equal(summary.recent, 80);
+  assert.equal(summary.window_days, 31);
+});
+
+test('one sample is not a window, so recent stays null rather than guessing', () => {
+  const state = { version: 1, mods: {} };
+  record(state, 'Ash@my_mod', { 'v1.0.0': 100 }, day(0));
+  assert.deepEqual(summarize(state.mods['Ash@my_mod'], day(0)), {
+    total: 100,
+    recent: null,
+    window_days: null,
+    as_of: day(0),
+  });
+});
+
+test('an entry with nothing to count summarizes to null, not zero', () => {
+  assert.equal(summarize(undefined, day(0)), null);
+});
+
+test('retired folders are dropped from the accumulator', () => {
+  const state = { version: 1, mods: {} };
+  record(state, 'Ash@my_mod', { 'v1.0.0': 1 }, day(0));
+  record(state, 'Gary@gone', { 'v1.0.0': 1 }, day(0));
+  pruneDownloads(state, ['Ash@my_mod']);
+  assert.deepEqual(Object.keys(state.mods), ['Ash@my_mod']);
 });
 
 // ------------------------------------------------------------------ markdown

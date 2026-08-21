@@ -1,0 +1,17 @@
+{
+  "id": "move_descriptions",
+  "title": "Move Descriptions",
+  "author": "Maaggel",
+  "version": "0.5.1",
+  "categories": ["UI", "QOL"],
+  "repo": "https://github.com/Maaggel/move-descriptions",
+  "github": "Maaggel/move-descriptions",
+  "summary": "Press START on a move to see what it does. Gen 1 never told you; Gen 2 did. Battle, status, learning, TMs and HMs.",
+  "tags": ["quality-of-life", "ui", "moves", "battle", "information"],
+  "permissions": [],
+  "api": 2,
+  "profile": "content",
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "license": "MIT",
+  "automatic_version_check": true
+}

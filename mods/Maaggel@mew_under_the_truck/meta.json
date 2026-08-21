@@ -1,0 +1,17 @@
+{
+  "id": "mew_under_the_truck",
+  "title": "Mew Under the Truck",
+  "author": "Maaggel",
+  "version": "0.8.3",
+  "categories": ["CONTENT", "GAMEPLAY"],
+  "repo": "https://github.com/Maaggel/mew-under-the-truck",
+  "github": "Maaggel/mew-under-the-truck",
+  "summary": "The schoolyard rumour, made real. Get back to the dock after the S.S. Anne sails, use STRENGTH on the truck, and something stirs underneath.",
+  "tags": ["mew", "legend", "quest", "encounter", "strength"],
+  "permissions": [],
+  "api": 2,
+  "profile": "content",
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "license": "MIT",
+  "automatic_version_check": true
+}

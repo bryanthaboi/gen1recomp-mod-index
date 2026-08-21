@@ -1,0 +1,31 @@
+{
+  "id": "savesync",
+  "title": "SaveSync",
+  "author": "tebwritescode",
+  "summary": "Automatic cross-device saves for Gen1Recomp - your save follows you to every device you play on, stored on free space that belongs to you.",
+  "version": "1.6.1",
+  "categories": [
+    "TOOL",
+    "QOL"
+  ],
+  "tags": [
+    "saves",
+    "backup",
+    "cloud",
+    "sync",
+    "cross-device",
+    "github",
+    "dropbox"
+  ],
+  "repo": "https://github.com/tebwritescode/savesync",
+  "github": "tebwritescode/savesync",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": "0.0.0-dev || >=0.1.37 <2.0.0",
+  "permissions": [
+    "network",
+    "filesystem",
+    "engine_internals"
+  ],
+  "license": "MIT"
+}

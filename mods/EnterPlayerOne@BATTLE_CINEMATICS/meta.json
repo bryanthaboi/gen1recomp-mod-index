@@ -1,0 +1,29 @@
+{
+  "id": "BATTLE_CINEMATICS",
+  "title": "Battle Cinematics - Dynamic 3D Battle Camera",
+  "author": "EnterPlayerOne",
+  "version": "1.0.10",
+  "categories": [
+    "ART",
+    "QOL"
+  ],
+  "repo": "https://github.com/EnterPlayerOne/Battle-Cinematics-Stadium-Camera",
+  "summary": "Dynamic 3D battle camera director with Stadium 64, DW3 Classic and Hero Portrait idle views, Pokémon intros, move aware attacks, faint shots, manual control, and Gen 1 + Gold support.",
+  "tags": [
+    "camera",
+    "battle-camera",
+    "cinematics",
+    "stadium",
+    "3d-battles",
+    "dw3",
+    "pokemon-intros",
+    "battle-presentation"
+  ],
+  "github": "EnterPlayerOne/Battle-Cinematics-Stadium-Camera",
+  "game_version": "0.0.0-dev || >=0.1.37 <2.0.0",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}

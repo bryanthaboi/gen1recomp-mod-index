@@ -89,6 +89,14 @@
       "maxLength": 64,
       "description": "Engine semver range the mod needs, same grammar as the manifest."
     },
+    "games": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": ["red", "blue", "yellow", "gold", "gen1", "gen2", "all"]
+      },
+      "description": "Game generations or version IDs this mod supports."
+    },
     "profile": { "enum": ["content", "overhaul", "total_conversion"] },
     "affects_link": {
       "type": "boolean",

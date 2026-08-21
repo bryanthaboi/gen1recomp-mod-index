@@ -1,0 +1,24 @@
+{
+  "id": "crystal",
+  "title": "Crystal Player Mod",
+  "author": "Dgray66",
+  "version": "0.7.6",
+  "categories": [
+    "CONTENT",
+    "ART"
+  ],
+  "repo": "https://github.com/dburton95/crystal",
+  "tags": [
+    "sprites",
+    "text",
+    "girl",
+    "crystal",
+    "teamkris"
+  ],
+  "github": "dburton95/crystal",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}

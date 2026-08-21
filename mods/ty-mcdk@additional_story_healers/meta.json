@@ -1,0 +1,18 @@
+{
+  "id": "additional_story_healers",
+  "title": "Additional Story Healers",
+  "author": "ty-mcdk",
+  "version": "0.2.1",
+  "categories": [
+    "QOL"
+  ],
+  "repo": "https://github.com/ty-mcdk/additional-story-healers",
+  "summary": "Adds NPC healers throughout the story",
+  "tags": [
+    "qol",
+    "healer"
+  ],
+  "github": "ty-mcdk/additional-story-healers",
+  "api": 2,
+  "profile": "content"
+}

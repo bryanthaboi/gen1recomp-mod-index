@@ -1,0 +1,18 @@
+{
+  "id": "item_randomizer",
+  "title": "Item Randomizer",
+  "author": "inmento",
+  "summary": "Persistent Crystal 251-safe item randomization for map pickups, hidden finds, shops, berries, gifts, eligible held items, and protected New Game PC items in Gen 1 and Gold.",
+  "version": "1.0.12",
+  "categories": ["GAMEPLAY", "QOL"],
+  "tags": ["items", "shops", "randomizer", "weighted loot", "gold"],
+  "repo": "https://github.com/inmento/Item-Randomizer",
+  "github": "inmento/Item-Randomizer",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.1.99",
+  "games": ["gen1", "gen2"],
+  "profile": "content",
+  "affects_link": false,
+  "permissions": ["engine_internals"]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "non-binary-mode",
+  "title": "Non-Binary Mode",
+  "author": "Dgray66",
+  "version": "2.0.2",
+  "categories": [
+    "CONTENT"
+  ],
+  "repo": "https://github.com/dburton95/non-binary-mode",
+  "tags": [
+    "text",
+    "enby",
+    "crystal",
+    "teamkris"
+  ],
+  "github": "dburton95/non-binary-mode",
+  "api": 2,
+  "profile": "content"
+}

@@ -2,13 +2,24 @@
   "id": "modern_kanto",
   "title": "Modern Kanto",
   "author": "MadeinTaly",
-  "version": "0.2.0",
-  "categories": ["GAMEPLAY", "BALANCE", "UI"],
+  "version": "0.3.0",
+  "categories": [
+    "GAMEPLAY",
+    "BALANCE",
+    "UI"
+  ],
   "repo": "https://github.com/MadeinTaly/gen1recomp-modern-kanto",
   "github": "MadeinTaly/gen1recomp-modern-kanto",
   "summary": "Four fixes Gen 1 never got: the move split, the corrected type rows, an AI that multiplies, and an encounter atlas.",
-  "tags": ["mechanic", "balance", "ui", "quality-of-life"],
-  "permissions": ["engine_internals"],
+  "tags": [
+    "mechanic",
+    "balance",
+    "ui",
+    "quality-of-life"
+  ],
+  "permissions": [
+    "engine_internals"
+  ],
   "api": 2,
   "profile": "overhaul",
   "game_version": ">=0.0.0-0 <2.0.0",

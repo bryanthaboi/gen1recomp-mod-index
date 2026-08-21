@@ -2,13 +2,25 @@
   "id": "gen3_dex",
   "title": "Gen 3 Dex",
   "author": "MadeinTaly",
-  "version": "0.1.0",
-  "categories": ["UI", "ART"],
+  "version": "0.5.0",
+  "categories": [
+    "UI",
+    "ART"
+  ],
   "repo": "https://github.com/MadeinTaly/gen1recomp-gen3-dex",
   "github": "MadeinTaly/gen1recomp-gen3-dex",
-  "summary": "The Pokedex as a grid of pictures, each owned species in its own colours, with ALL/OWNED/MISSING filters.",
-  "tags": ["pokedex", "ui", "grid", "cosmetic", "qol"],
-  "permissions": ["engine_internals"],
+  "summary": "The Pokedex as a grid of pictures instead of a list of names, with owned species in their own colours. Covers Johto on Gold, where the big grid works too.",
+  "tags": [
+    "pokedex",
+    "dex",
+    "ui",
+    "qol",
+    "gold",
+    "gen-2"
+  ],
+  "permissions": [
+    "engine_internals"
+  ],
   "api": 2,
   "profile": "content",
   "game_version": ">=0.0.0-0 <2.0.0",

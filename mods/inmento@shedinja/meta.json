@@ -1,0 +1,33 @@
+{
+  "id": "shedinja",
+  "title": "Shedinja",
+  "author": "inmento",
+  "summary": "R/B/Y and Gold Shedinja #292 with Wonder Guard, Gold rift progression, Electric Tera Orb, Air Balloon, credited art, and one optional Crystal 251 or Expanded Species bridge.",
+  "version": "0.3.1",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT"
+  ],
+  "tags": [
+    "shedinja",
+    "wonder guard",
+    "kanto",
+    "johto",
+    "gold",
+    "animated sprites"
+  ],
+  "repo": "https://github.com/inmento/Shedinja",
+  "github": "inmento/Shedinja",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.2.3 <1.0.0",
+  "games": [
+    "gen1",
+    "gen2"
+  ],
+  "profile": "overhaul",
+  "affects_link": true,
+  "permissions": [
+    "engine_internals"
+  ]
+}

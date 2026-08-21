@@ -1,0 +1,33 @@
+{
+  "id": "recomp-rider",
+  "title": "Recomp Rider",
+  "author": "adrian",
+  "summary": "Drive KITT across the Pokémon world.",
+  "version": "0.4.0",
+  "categories": [
+    "GAMEPLAY",
+    "AUDIO",
+    "OTHER"
+  ],
+  "repo": "https://github.com/castdrian/recomp-rider",
+  "tags": [
+    "knight rider",
+    "kitt"
+  ],
+  "github": "castdrian/recomp-rider",
+  "downloadURL": "https://github.com/castdrian/recomp-rider/releases/download/v0.4.0/recomp-rider-0.4.0.zip",
+  "game_version": "0.0.0-dev || >=0.1.37 <2.0.0",
+  "permissions": [
+    "engine_internals"
+  ],
+  "games": [
+    "gen1",
+    "gen2"
+  ],
+  "dependencies": [
+    "DRAMALESS_SHAPE@>=1.6.3 <2.0.0"
+  ],
+  "conflicts": [],
+  "api": 2,
+  "profile": "content"
+}

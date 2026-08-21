@@ -1,0 +1,32 @@
+{
+  "id": "battle_pad",
+  "title": "BattlePad",
+  "author": "tebwritescode",
+  "version": "0.6.3",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "repo": "https://github.com/tebwritescode/battlepad",
+  "summary": "Shortcuts for the battle menu: moves and battle actions mapped straight to your controller.",
+  "tags": [
+    "controller",
+    "gamepad",
+    "battle",
+    "ui",
+    "shortcuts",
+    "gold",
+    "gen2"
+  ],
+  "github": "tebwritescode/battlepad",
+  "license": "MIT",
+  "permissions": [
+    "engine_internals",
+    "filesystem"
+  ],
+  "conflicts": [
+    "USEFUL_BATTLE_CAM"
+  ],
+  "api": 2,
+  "profile": "content"
+}

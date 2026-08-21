@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "note": "Entries CI refuses to list. Matched case-insensitively against the folder's author half, meta.json \"author\", and the owner of \"github\". Removing a name here is all it takes to let a resubmission through.",
+  "authors": {
+    "hdbreaker": {
+      "since": "2026-08-18",
+      "reason": "Removed by the maintainer. The author published a mod-sandbox escape against this engine (gen1recomp#1496); the two submitted releases themselves scan clean."
+    }
+  },
+  "repos": {
+    "hdbreaker/gen1recomp-mod-cheat_engine": { "since": "2026-08-18", "reason": "See the hdbreaker author entry." },
+    "hdbreaker/gen1recomp-mod-intro_bypass": { "since": "2026-08-18", "reason": "See the hdbreaker author entry." }
+  }
+}

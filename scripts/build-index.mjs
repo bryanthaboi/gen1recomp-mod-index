@@ -12,11 +12,25 @@
 // installable release recorded, picked the same way the launcher's
 // ModUpdate.pickZipAsset does (prefer <id>-<version>.zip, then <id>*.zip,
 // then any .zip) so the site and the game agree on what "latest" means.
+//
+// The same response carries each asset's download_count, so cumulative
+// download totals cost no extra request. They accumulate in .health/, never
+// in mods/ -- an entry folder is contributor-owned and MI103 refuses anything
+// but the four allowed files.
 
 import { copyFileSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { checkModFolder, listModFolders, loadSchema } from './lib/index-rules.mjs';
+import {
+  downloadsStatePath,
+  loadDownloads,
+  pruneDownloads,
+  record,
+  saveDownloads,
+  summarize,
+  zipDownloadsByTag,
+} from './lib/downloads.mjs';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const modsDir = join(repoRoot, 'mods');
@@ -26,6 +40,9 @@ const token = process.env.GITHUB_TOKEN || '';
 
 const schema = loadSchema(repoRoot);
 const folders = listModFolders(modsDir);
+const downloadsPath = downloadsStatePath(repoRoot);
+const downloads = loadDownloads(downloadsPath);
+const now = new Date().toISOString();
 
 // The submission page validates against the same schema with the same checker
 // CI uses. Copying beats a second implementation drifting out of step.
@@ -67,6 +84,7 @@ for (const folder of folders) {
     summary: meta.summary || firstLine(description),
     latest: null,
     update_check: meta.github && meta.automatic_version_check !== false ? 'pending' : 'off',
+    downloads: null,
   });
 }
 
@@ -74,13 +92,21 @@ if (withReleases) {
   for (const mod of mods) {
     if (mod.update_check !== 'pending') continue;
     try {
-      mod.latest = await latestRelease(mod);
+      const releases = await fetchReleases(mod.github);
+      mod.latest = pickRelease(releases, mod);
       mod.update_check = mod.latest ? 'ok' : 'no installable release';
+      record(downloads, mod.folder, zipDownloadsByTag(releases), now);
     } catch (err) {
       mod.update_check = `error: ${err.message}`;
       console.error(`${mod.folder}: ${err.message}`);
     }
   }
+  pruneDownloads(downloads, mods.map((mod) => mod.folder));
+  saveDownloads(downloadsPath, downloads);
+}
+
+for (const mod of mods) {
+  mod.downloads = summarize(downloads.mods[mod.folder], now);
 }
 
 mods.sort((a, b) => a.title.localeCompare(b.title));
@@ -88,7 +114,7 @@ mods.sort((a, b) => a.title.localeCompare(b.title));
 const index = {
   // Bump when the shape changes in a way a consumer has to notice.
   schema_version: 1,
-  generated_at: new Date().toISOString(),
+  generated_at: now,
   count: mods.length,
   categories: schema.properties.categories.items.enum,
   mods,
@@ -159,9 +185,13 @@ function parseRelease(doc, modId) {
   };
 }
 
-async function latestRelease(mod) {
-  const releases = await ghJson(`https://api.github.com/repos/${mod.github}/releases?per_page=30`);
-  if (!Array.isArray(releases) || releases.length === 0) return null;
+async function fetchReleases(repo) {
+  const releases = await ghJson(`https://api.github.com/repos/${repo}/releases?per_page=30`);
+  return Array.isArray(releases) ? releases : [];
+}
+
+function pickRelease(releases, mod) {
+  if (releases.length === 0) return null;
 
   if (mod.fixed_release_tag) {
     const pinned = releases.find((r) => r.tag_name === mod.fixed_release_tag);

@@ -1,0 +1,154 @@
+name: Index cleanup
+
+on:
+  schedule:
+    # Every six hours: probe every entry, retire the ones that stayed dead,
+    # and commit the rebuilt index so anything reading the file out of the
+    # repo sees what the Pages site serves. Merges do not trigger this --
+    # Pages redeploys on its own, and the committed index catches up here or
+    # on demand.
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Report only — do not remove entries or push'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+  issues: write
+
+concurrency:
+  group: index-cleanup
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Probe every entry
+        id: health
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          HEALTH_STRIKES: '4'
+          HEALTH_MAX_REMOVALS: '5'
+          HEALTH_MAX_NEW_DEAD: '10'
+          HEALTH_MAX_NEW_DEAD_PCT: '10'
+          HEALTH_MAX_UNKNOWN_PCT: '25'
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            node scripts/health.mjs
+          else
+            node scripts/health.mjs --record --prune --removed-list "$RUNNER_TEMP/removed.txt"
+          fi
+
+      - name: Rebuild index
+        if: steps.health.outputs.skip_run != 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/build-index.mjs --releases
+
+      - name: Gate new releases
+        id: gate
+        if: steps.health.outputs.skip_run != 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/gate-releases.mjs
+
+      - name: Guard the rebuild
+        if: steps.health.outputs.skip_run != 'true'
+        run: node scripts/commit-guard.mjs
+
+      - name: Commit and push
+        id: commit
+        if: inputs.dry_run != true && steps.health.outputs.skip_run != 'true'
+        run: |
+          set -euo pipefail
+          git config user.name 'bryanthaboi'
+          git config user.email 'bryanthaboi@theboisclub.com'
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo 'nothing changed'
+            echo 'pushed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          removed="${RUNNER_TEMP}/removed.txt"
+          if [ -s "$removed" ]; then
+            n=$(wc -l < "$removed" | tr -d ' ')
+            [ "$n" -eq 1 ] && word='entry' || word='entries'
+            body=$(awk -F'\t' '{printf "- %s — %s (failing since %s)\n", $1, $2, $3}' "$removed")
+            git commit -m "chore: retire $n dead $word, refresh index.json" -m "$body"
+          else
+            git commit -m 'chore: refresh site/data/index.json'
+          fi
+
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo 'pushed=true' >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "push $attempt rejected — rebasing onto main"
+            git pull --rebase --no-tags origin main
+          done
+          echo 'pushed=false' >> "$GITHUB_OUTPUT"
+          exit 1
+
+      - name: Redeploy Pages
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main
+
+      - name: Open a review issue
+        if: >-
+          steps.health.outputs.needs_review == 'true' ||
+          (steps.gate.outputs.held_count != '' && steps.gate.outputs.held_count != '0')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh label create index-cleanup --color FBCA04 --description 'Automated index health' --force
+
+          removed="${RUNNER_TEMP}/removed.txt"
+          skipped='${{ steps.health.outputs.skip_run }}'
+          {
+            echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo
+            echo "- broken: ${{ steps.health.outputs.dead_count }} (${{ steps.health.outputs.new_dead_count }} new this run)"
+            echo "- inconclusive: ${{ steps.health.outputs.unknown_count }}"
+            echo "- removed: ${{ steps.health.outputs.removed_count }}"
+            echo "- releases held by the sandbox scan: ${{ steps.gate.outputs.held_count }}"
+            if [ "$skipped" = 'true' ]; then
+              echo
+              echo '> [!CAUTION]'
+              echo '> A safety ceiling tripped, so the whole run was skipped — no strikes recorded,'
+              echo '> nothing removed, nothing committed. The run summary says which ceiling and why.'
+              echo '>'
+              echo '> If it was a real outage, the next run clears it on its own. If the breakage is'
+              echo '> genuine, rerun this workflow with the matching HEALTH_* ceiling raised.'
+            fi
+            if [ -s "$removed" ]; then
+              echo
+              echo '### Removed'
+              echo
+              awk -F'\t' '{printf "- `%s` — %s (failing since %s)\n", $1, $2, $3}' "$removed"
+              echo
+              echo 'Authors: fix the repo or the download link and open a fresh submission.'
+            fi
+          } > "${RUNNER_TEMP}/issue.md"
+
+          title='Index cleanup'
+          if [ "$skipped" = 'true' ]; then
+            title='Index cleanup skipped — needs review'
+          fi
+          gh issue create --title "$title (run ${{ github.run_number }})" \
+            --body-file "${RUNNER_TEMP}/issue.md" --label index-cleanup

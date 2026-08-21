@@ -42,3 +42,5 @@ quickly. It rides the engine's own `movement.speed` hook — whose comment
 names running shoes as the reason it exists — calls the next handler first
 and multiplies its answer, so a mod that slows you in a swamp keeps its say.
 It declares no permissions at all.
+
+**On Gold.** Everything works: the speed, the bike and surf boosts, SAFE GRASS, the trail, and CUT GRASS -- Gold cuts grass through its own FieldMoves.CUT_BLOCKS, and the trail only ever looked absent because the overworld test was asking a Gen 1 question. The engine's own dust puff has no Gen 2 equivalent, so there the trail is the mod's own particles.

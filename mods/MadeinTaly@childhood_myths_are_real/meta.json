@@ -1,0 +1,27 @@
+{
+  "id": "childhood_myths_are_real",
+  "title": "Childhood Myths Are Real",
+  "author": "MadeinTaly",
+  "version": "0.2.0",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT"
+  ],
+  "repo": "https://github.com/MadeinTaly/gen1recomp-childhood-myths-are-real",
+  "github": "MadeinTaly/gen1recomp-childhood-myths-are-real",
+  "summary": "The playground rumours of 1998, made true: the schoolyard legends every Gen 1 player swore were real, as opt-in switches.",
+  "tags": [
+    "myths",
+    "legends",
+    "gameplay",
+    "secrets"
+  ],
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content",
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "license": "MIT",
+  "automatic_version_check": true
+}

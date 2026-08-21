@@ -1,0 +1,16 @@
+{
+  "id": "wills_mod",
+  "title": "Encounters Guide",
+  "author": "Illan",
+  "version": "1.0.1",
+  "categories": ["QOL", "UI", "TOOL"],
+  "repo": "https://github.com/illanrego/wills-mod",
+  "github": "illanrego/wills-mod",
+  "summary": "Map-first wild-encounter guide: browse the real Kanto Town Map and drill into exact routes, floors, and buildings with truthful level ranges and per-step odds.",
+  "tags": ["encounters", "map", "pokemon", "quality-of-life", "ui", "tool"],
+  "api": 2,
+  "profile": "content",
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "license": "MIT",
+  "automatic_version_check": true
+}

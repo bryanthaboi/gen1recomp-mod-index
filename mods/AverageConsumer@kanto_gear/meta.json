@@ -1,0 +1,31 @@
+{
+  "id": "kanto_gear",
+  "title": "Kanto Gear",
+  "author": "AverageConsumer",
+  "summary": "A second screen when you have one. A better layout when you do not — maps, party data, battle intelligence and touch controls for Gen1Recomp.",
+  "version": "2.2.0",
+  "categories": ["UI", "QOL"],
+  "tags": [
+    "dual screen",
+    "single screen",
+    "touchscreen",
+    "maps",
+    "battle ui",
+    "handheld",
+    "gen 1",
+    "gen 2"
+  ],
+  "repo": "https://github.com/AverageConsumer/kanto-gear",
+  "github": "AverageConsumer/kanto-gear",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": "0.0.0-dev || 0.1.94-kanto.22 || >=0.1.99 <2.0.0",
+  "games": ["gen1", "gen2"],
+  "profile": "content",
+  "affects_link": false,
+  "experimental": false,
+  "permissions": ["engine_internals"],
+  "dependencies": [],
+  "conflicts": [],
+  "license": "MIT"
+}

@@ -2,20 +2,22 @@
   "id": "groovy_palette",
   "title": "Groovy Palette & Frames",
   "author": "MadeinTaly",
-  "version": "0.5.0",
+  "version": "0.7.0",
   "categories": [
     "ART",
     "UI"
   ],
   "repo": "https://github.com/MadeinTaly/gen1recomp-groovy-palette-frames",
   "github": "MadeinTaly/gen1recomp-groovy-palette-frames",
-  "summary": "Thirty more COLORS palettes and eight text-box borders, previewed on the running game from the COLORS row itself.",
+  "summary": "Thirty extra colour palettes and nine text-box frames, with a live preview. Both halves work on Gold.",
   "tags": [
     "palette",
     "colours",
     "borders",
     "cosmetic",
-    "retro"
+    "retro",
+    "gold",
+    "gen-2"
   ],
   "permissions": [
     "engine_internals"

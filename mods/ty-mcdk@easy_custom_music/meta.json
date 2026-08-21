@@ -1,0 +1,18 @@
+{
+  "id": "easy_custom_music",
+  "title": "Easy Custom Music",
+  "author": "ty-mcdk",
+  "version": "1.0.0",
+  "categories": [
+    "AUDIO"
+  ],
+  "repo": "https://github.com/ty-mcdk/easy-custom-music",
+  "summary": "Allows User to drag & drop their own music to replace in-game music",
+  "tags": [
+    "audio"
+  ],
+  "github": "ty-mcdk/easy-custom-music",
+  "game_version": ">=0.1.88",
+  "api": 2,
+  "profile": "content"
+}

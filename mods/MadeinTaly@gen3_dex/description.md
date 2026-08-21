@@ -30,3 +30,5 @@ surface buys room and colour, never detail. It reads the save's dex and
 writes nothing.
 
 Lua source only: no ROM, no ROM-derived data and no game assets.
+
+**On Gold.** The dex covers Johto rather than stopping at Mew, the caught half is read where Gold actually keeps it, and DATA and AREA open Gold's own dex entry. GRID BIG works there too, through the widescreen contract Gold's own screens use -- only the per-species palette zones stay Gen 1, because Gold colours itself.

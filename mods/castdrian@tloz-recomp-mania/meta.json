@@ -1,0 +1,20 @@
+{
+  "id": "tloz-recomp-mania",
+  "title": "TLoZ: Recomp Mania",
+  "author": "castdrian",
+  "version": "0.1.0",
+  "categories": ["GAMEPLAY", "ART", "AUDIO"],
+  "repo": "https://github.com/castdrian/tloz-recomp-mania",
+  "summary": "The Legend of Zelda, sort of?",
+  "tags": ["zelda", "link", "sword", "shield", "audio"],
+  "github": "castdrian/tloz-recomp-mania",
+  "automatic_version_check": true,
+  "api": 2,
+  "profile": "overhaul",
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "games": ["gen1", "gen2"],
+  "affects_link": true,
+  "permissions": ["engine_internals"],
+  "dependencies": [],
+  "conflicts": []
+}

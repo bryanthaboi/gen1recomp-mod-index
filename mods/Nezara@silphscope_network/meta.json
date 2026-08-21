@@ -1,0 +1,26 @@
+{
+  "id": "silphscope_network",
+  "title": "Silph Scope Network",
+  "author": "Nezara",
+  "version": "0.12.1",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT",
+    "OTHER"
+  ],
+  "repo": "https://github.com/Nezara/silph-scope-network",
+  "summary": "online invasion mechanic with players across the world.",
+  "tags": [
+    "multiplayer",
+    "pvp",
+    "online",
+    "versus",
+    "dark souls",
+    "friends",
+    "streaming"
+  ],
+  "github": "Nezara/silph-scope-network",
+  "downloadURL": "https://github.com/Nezara/silph-scope-network/releases/download/v0.12.1/silphscope_network-0.12.1.zip",
+  "api": 2,
+  "profile": "content"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "rby_run_forrest",
+  "title": "Run Forrest",
+  "author": "alamops",
+  "summary": "Hold B to run at bike speed, and to jump back UP the ledges these games only ever let you drop off. On foot or on the bike, Red through Gold.",
+  "version": "1.0.0",
+  "categories": [
+    "GAMEPLAY",
+    "QOL"
+  ],
+  "tags": [
+    "running",
+    "running shoes",
+    "ledges",
+    "movement",
+    "overworld",
+    "quality of life"
+  ],
+  "repo": "https://github.com/alamops/RBYRunForrest",
+  "github": "alamops/RBYRunForrest",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.1.86 <2.0.0",
+  "games": [
+    "gen1",
+    "gen2"
+  ],
+  "profile": "content",
+  "affects_link": false,
+  "experimental": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "dependencies": [],
+  "conflicts": []
+}

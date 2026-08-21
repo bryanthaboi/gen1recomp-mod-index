@@ -1,0 +1,16 @@
+{
+  "id": "Music1_HGSS",
+  "title": "Music1-HGSS",
+  "author": "DarioMelo",
+  "summary": "Music from HeartGold / SoulSilver",
+  "version": "26.08.14",
+  "categories": ["AUDIO"],
+  "tags": ["audio","music"],
+  "repo": "https://github.com/DarioMelo/Gen1Recomp-Music1-HGSS",
+  "github": "DarioMelo/Gen1Recomp-Music1-HGSS",
+  "automatic_version_check": true,
+  "game_version": ">=0.1.83",
+  "games": ["gen1"],
+  "api": 2,
+  "profile": "content"
+}

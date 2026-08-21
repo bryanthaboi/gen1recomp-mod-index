@@ -35,3 +35,5 @@ passes 6, and if you are carrying a Pokemon while both are full the screen
 refuses to close rather than dropping it out of the save.
 
 Lua source only: no ROM, no ROM-derived data, no game assets.
+
+**On Gold.** Runs on Pokemon Gold as well as Red, Blue and Yellow: fourteen boxes of twenty instead of twelve, Gold's own summary screen, its split Special in a withdrawn Pokemon's stat block, and its MAIL rules honoured (a Pokemon holding mail cannot be boxed, exactly as the vanilla PC refuses it). GRID BIG is Gen 1 only -- Gold's boot scales a single Game Boy canvas and never asks a screen how big it would like to be.

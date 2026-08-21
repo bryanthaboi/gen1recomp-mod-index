@@ -1,0 +1,31 @@
+{
+  "id": "what-the-heck",
+  "title": "what-the-heck",
+  "author": "adrian",
+  "summary": "what the heck is this?",
+  "version": "0.1.0",
+  "categories": [
+    "TRANSLATION"
+  ],
+  "tags": [
+    "translation",
+    "back-translation",
+    "nonsense",
+    "pokemon"
+  ],
+  "repo": "https://github.com/castdrian/what-the-heck",
+  "github": "castdrian/what-the-heck",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-dev <2.0.0",
+  "games": [
+    "red",
+    "blue",
+    "yellow",
+    "gold"
+  ],
+  "profile": "content",
+  "permissions": [],
+  "dependencies": [],
+  "conflicts": []
+}

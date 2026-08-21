@@ -2,12 +2,21 @@
   "id": "running_shoes",
   "title": "Running Shoes",
   "author": "MadeinTaly",
-  "version": "1.1.0",
-  "categories": ["QOL", "GAMEPLAY"],
+  "version": "1.6.0",
+  "categories": [
+    "QOL",
+    "GAMEPLAY"
+  ],
   "repo": "https://github.com/MadeinTaly/gen1recomp-running-shoes",
   "github": "MadeinTaly/gen1recomp-running-shoes",
-  "summary": "Hold B to walk faster, at a speed you pick. Gen 3 gave you these in five minutes; Gen 1 made you earn a bicycle.",
-  "tags": ["quality-of-life", "movement", "running", "beginner"],
+  "summary": "Hold B to walk faster, at a speed you pick, with an optional trail and grass that really gets cut. Everything works on Gold.",
+  "tags": [
+    "running",
+    "speed",
+    "qol",
+    "gold",
+    "gen-2"
+  ],
   "permissions": [],
   "api": 2,
   "profile": "content",

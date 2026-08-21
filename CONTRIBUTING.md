@@ -53,6 +53,57 @@ Open a PR to change the listing itself: description, categories, tags,
 thumbnail, a moved repository, or a mod that is no longer maintained (say so in
 the description — a listing that quietly rots helps nobody).
 
+## What the sandbox scan looks for
+
+CI reads the Lua inside your release zip and checks it against the engine's own
+sandbox policy (`src/mods/Sandbox.lua`). These fail the run outright, because
+the sandbox refuses them at runtime and a mod built on them cannot work:
+
+- `require` of `io`, `os`, `debug`, `package` or `ffi`
+- `require` of a `love.*`, `ffi.*` or `jit.*` submodule
+- `require` of `socket`, `enet`, `http`, `https`, `ssl`, `mime` or `ltn12`
+  without `"network"` in your permissions
+
+These do not fail anything, but they are printed for a human to read: a
+computed `require`, `load`, `loadstring`, `dofile`, `string.dump`, `getfenv`,
+`setfenv`, and indexing `_G` with a computed key. All have honest uses; a scan
+just cannot see through them.
+
+Files under `tests/`, `spec/` or `workers/`, and anything ending `_test.lua`,
+`_spec.lua` or `_worker.lua`, are reported rather than blocking — a love.thread
+worker runs in its own Lua state and a test runs on your machine, so neither
+passes through the sandbox. The contents of `[[ long strings ]]` are skipped
+for the same reason: that is how worker source travels.
+
+The scan runs on your pull request **and again every time the index picks up a
+new release of your mod**. A version that does not pass is held: the index goes
+on serving the last release that did, and an issue is opened here. Merging is
+not a permanent pass.
+
+## When a listing goes dead
+
+A job runs every six hours and probes every entry: the `github` repo has to
+resolve, and a `downloadURL` has to answer with something that is not a 404
+and not an HTML page.
+
+An entry that fails takes a strike. Four consecutive strikes — a full day of
+staying broken — and the folder is deleted and the removal is recorded in an
+issue. One passing probe clears the count, so a repo that blips is never at
+risk.
+
+Ceilings sit above that. If entries break in a batch, if too many probes come
+back inconclusive, or if more than five entries are due for removal at once,
+the whole run is skipped: nothing recorded, nothing removed, nothing committed.
+A wave of failures is a GitHub outage far more often than it is a wave of
+authors deleting repos on the same afternoon.
+
+If your entry was removed, fix the repo or the link and open a fresh
+submission. Nothing is held against you, and the git history still has it.
+
+`blocklist.json` is the exception: a name listed there fails CI on sight.
+It is a maintainer decision, not an automatic one, and each entry records
+why and when.
+
 ## What review looks at
 
 CI checks shape, naming, and that the download resolves. A maintainer then

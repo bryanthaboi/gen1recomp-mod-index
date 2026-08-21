@@ -1,0 +1,25 @@
+{
+  "id": "character_select",
+  "title": "Character Sprite Selection",
+  "author": "xkrisl",
+  "version": "1.0.0",
+  "categories": [
+    "ART"
+  ],
+  "repo": "https://github.com/xkrisl/Character-Sprite-Selection",
+  "summary": "Choose character sprite from the Start menu. Affects overworld, battle, Trainer Card, Hall of Fame, etc.",
+  "tags": [
+    "art",
+    "sprite",
+    "character"
+  ],
+  "github": "xkrisl/Character-Sprite-Selection",
+  "downloadURL": "https://github.com/xkrisl/Character-Sprite-Selection/releases/download/Release/Character.Sprite.Selection.v1.Release.zip",
+  "game_version": "0.1.77",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content",
+  "experimental": true
+}

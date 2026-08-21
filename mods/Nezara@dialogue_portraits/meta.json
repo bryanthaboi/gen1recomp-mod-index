@@ -1,0 +1,16 @@
+{
+  "id": "dialogue_portraits",
+  "title": "Dialogue Portraits",
+  "author": "Nezara",
+  "summary": "Shows a portrait of whoever's talking beside the dialogue box: all 45 trainer classes, 28 talking Pokémon, and custom art for anyone else.",
+  "version": "1.0.2",
+  "categories": ["UI", "ART"],
+  "tags": ["portraits", "dialogue", "faces", "visual novel", "customization"],
+  "repo": "https://github.com/Nezara/gen1recomp-dialogue-portraits",
+  "github": "Nezara/gen1recomp-dialogue-portraits",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "profile": "content",
+  "permissions": ["engine_internals"]
+}

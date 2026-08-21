@@ -1,0 +1,34 @@
+{
+  "id": "blackjack_corner",
+  "title": "Blackjack Corner",
+  "author": "martin2844",
+  "summary": "A Kanto-wide casino campaign with eight games, random starters, themed Gym and mixed ACE cases, local prize counters, two-way coin exchange, High Roller progression, and a Rocket battle arena.",
+  "version": "0.7.4",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT"
+  ],
+  "tags": [
+    "casino",
+    "gambling",
+    "blackjack",
+    "shiny pokemon",
+    "gym cases",
+    "coin exchange",
+    "battle arena",
+    "gamble mode"
+  ],
+  "repo": "https://github.com/martin2844/gen1recomp-blackjack-corner",
+  "github": "martin2844/gen1recomp-blackjack-corner",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "profile": "content",
+  "permissions": [
+    "engine_internals",
+    "filesystem"
+  ],
+  "dependencies": [],
+  "conflicts": [],
+  "license": "MIT"
+}

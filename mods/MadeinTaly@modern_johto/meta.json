@@ -1,0 +1,28 @@
+{
+  "id": "modern_johto",
+  "title": "Modern Johto",
+  "author": "MadeinTaly",
+  "version": "0.2.0",
+  "categories": [
+    "GAMEPLAY",
+    "BALANCE"
+  ],
+  "repo": "https://github.com/MadeinTaly/gen1recomp-modern-johto",
+  "github": "MadeinTaly/gen1recomp-modern-johto",
+  "summary": "The Gen 4 physical/special split for Pokemon Gold, decided per move instead of per type, plus an AI that reads type effectiveness where Gold left trainers type-blind.",
+  "tags": [
+    "split",
+    "physical-special",
+    "battle",
+    "gold",
+    "gen-2"
+  ],
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content",
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "license": "MIT",
+  "automatic_version_check": true
+}

@@ -1,0 +1,18 @@
+{
+  "id": "gym_leader_shuffle",
+  "title": "Gym Leader Shuffle",
+  "author": "inmento",
+  "summary": "Standalone Kanto and Johto Gym Leader Shuffle with optional Crystal 251 detection; no randomizer or starter mod is required, and each physical gym keeps its badge, rewards, and intended level curve.",
+  "version": "1.0.8",
+  "categories": ["GAMEPLAY"],
+  "tags": ["gym leaders", "shuffle", "kanto", "johto"],
+  "repo": "https://github.com/inmento/Gym-Leader-Shuffle",
+  "github": "inmento/Gym-Leader-Shuffle",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.1.99",
+  "games": ["gen1", "gen2"],
+  "profile": "content",
+  "affects_link": false,
+  "permissions": ["engine_internals"]
+}

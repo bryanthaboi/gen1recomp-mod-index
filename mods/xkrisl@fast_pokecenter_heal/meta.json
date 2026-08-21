@@ -1,0 +1,21 @@
+{
+  "id": "fast_pokecenter_heal",
+  "title": "Fast Pokemon Center Heal",
+  "author": "xkrisl",
+  "version": "1.0.0",
+  "categories": [
+    "QOL"
+  ],
+  "repo": "https://github.com/xkrisl/Fast-Pokemon-Center-Heal/tree/main",
+  "summary": "Skips the pokemon center nurse intro, animation, etc.",
+  "tags": [
+    "qol",
+    "heal",
+    "center"
+  ],
+  "github": "xkrisl/Fast-Pokemon-Center-Heal",
+  "downloadURL": "https://github.com/xkrisl/Fast-Pokemon-Center-Heal/releases/download/Release/Fast.Pokemon.Center.Heal.v1.Release.zip",
+  "game_version": "0.1.77",
+  "api": 2,
+  "profile": "content"
+}

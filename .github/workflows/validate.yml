@@ -64,6 +64,9 @@ jobs:
       - name: No duplicate entries
         run: node scripts/check-duplicates.mjs
 
+      - name: Not blocklisted
+        run: node scripts/check-blocklist.mjs
+
       - name: Validate
         run: |
           set -o pipefail
@@ -92,6 +95,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/check-links.mjs ${{ steps.changed.outputs.folders }}
+
+      - name: Lua sandbox scan
+        if: github.event_name == 'pull_request' && steps.check.outcome == 'success'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/scan-lua.mjs ${{ steps.changed.outputs.folders }}
 
       - name: Index builds
         run: node scripts/build-index.mjs
