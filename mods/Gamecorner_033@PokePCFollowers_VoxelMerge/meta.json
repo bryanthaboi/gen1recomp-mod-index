@@ -1,16 +1,28 @@
 {
   "id": "PokePCFollowers_VoxelMerge",
-  "title": "PokéPC Followers (W/Voxel Support)",
+  "title": "PokéPC Followers (Gold + Voxel Support)",
   "author": "Gamecorner_033",
-  "version": "0.5.1",
+  "summary": "Any healthy party Pokémon can follow you in Red, Blue, Yellow, or Gold, with all 251 species, proportional sizing, full-color art, and voxel support.",
+  "version": "0.8.0",
   "categories": [
     "GAMEPLAY",
     "CONTENT",
     "ART",
-    "LIBRARY"
+    "QOL"
   ],
-  "repo": "https://github.com/gamecorner-033/PokePCFollowers",
-  "github": "gamecorner-033/PokePCFollowers",
+  "tags": [
+    "followers",
+    "gold",
+    "gen 2",
+    "all species",
+    "voxel"
+  ],
+  "repo": "https://github.com/mfrtechconsult/PokePCFollowers",
+  "github": "mfrtechconsult/PokePCFollowers",
+  "automatic_version_check": true,
   "api": 2,
-  "profile": "content"
+  "profile": "content",
+  "permissions": [
+    "engine_internals"
+  ]
 }
