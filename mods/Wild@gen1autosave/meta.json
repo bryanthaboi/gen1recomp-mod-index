@@ -1,0 +1,14 @@
+{
+  "id": "gen1autosave",
+  "title": "Gen1AutoSave",
+  "author": "Wild",
+  "version": "1.2.0",
+  "categories": [
+    "GAMEPLAY",
+    "QOL"
+  ],
+  "repo": "https://github.com/wild1walker/Gen1AutoSave",
+  "github": "wild1walker/Gen1AutoSave",
+  "api": 2,
+  "profile": "content"
+}
