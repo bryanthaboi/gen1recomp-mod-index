@@ -1,0 +1,16 @@
+{
+  "id": "gender_display",
+  "title": "Gender Display",
+  "author": "ElFuego",
+  "version": "0.6.0",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "repo": "https://github.com/elfuegotx/Gender_Display",
+  "summary": "Adds a male/female symbol to the level display, like Gold/Silver/Crystal.",
+  "github": "elfuegotx/Gender_Display",
+  "license": "MIT",
+  "api": 2,
+  "profile": "content"
+}
