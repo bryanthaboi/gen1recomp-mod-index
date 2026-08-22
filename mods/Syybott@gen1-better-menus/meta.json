@@ -1,0 +1,29 @@
+{
+  "id": "gen1-better-menus",
+  "title": "Gen1BetterMenus",
+  "author": "Syybott",
+  "version": "1.0.16",
+  "categories": [
+    "UI",
+    "QOL",
+    "TOTAL_CONVERSION",
+    "TOOL"
+  ],
+  "repo": "https://github.com/syybott/Gen1BetterMenus",
+  "summary": "Widescreen-friendly Gen 1 menus with cleaner spacing and faithful Game Boy styling",
+  "tags": [
+    "ui",
+    "quality-of-life",
+    "widescreen",
+    "menus",
+    "interface",
+    "layout"
+  ],
+  "github": "syybott/Gen1BetterMenus",
+  "permissions": [
+    "network",
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "overhaul"
+}
