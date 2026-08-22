@@ -1,0 +1,36 @@
+{
+  "id": "battle_info_hud",
+  "title": "Battle Info HUD",
+  "author": "ishhodaszi",
+  "version": "0.8.5",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "repo": "https://github.com/piftee/gen1recomp-battle-info-hud",
+  "summary": "Adds colour HP, EXP progress, caught markers, and clearer status and level labels to the existing native battle HUD.",
+  "tags": [
+    "ui",
+    "battle",
+    "quality-of-life",
+    "hud",
+    "exp",
+    "caught marker"
+  ],
+  "github": "piftee/gen1recomp-battle-info-hud",
+  "api": 2,
+  "game_version": ">=0.0.0-dev <1.0.0",
+  "games": [
+    "red",
+    "blue",
+    "yellow"
+  ],
+  "profile": "content",
+  "experimental": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "dependencies": [],
+  "conflicts": [],
+  "license": "MIT"
+}

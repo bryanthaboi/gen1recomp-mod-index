@@ -1,0 +1,37 @@
+{
+  "id": "modern_bag_ui",
+  "title": "Modern Bag UI",
+  "author": "ishhodaszi",
+  "version": "0.4.1",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "repo": "https://github.com/piftee/gen1recomp-modern-bag-ui",
+  "summary": "Rebuilds the Bag and PC item lists as responsive pocket-based interfaces with expanded storage and two selectable skins.",
+  "tags": [
+    "ui",
+    "inventory",
+    "quality-of-life",
+    "responsive",
+    "mobile",
+    "bag",
+    "pc"
+  ],
+  "github": "piftee/gen1recomp-modern-bag-ui",
+  "api": 2,
+  "game_version": ">=0.0.0-dev <1.0.0",
+  "games": [
+    "red",
+    "blue",
+    "yellow"
+  ],
+  "profile": "content",
+  "experimental": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "dependencies": [],
+  "conflicts": [],
+  "license": "MIT"
+}

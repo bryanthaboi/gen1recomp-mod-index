@@ -1,0 +1,37 @@
+{
+  "id": "typed_move_colors",
+  "title": "Typed Move Colors",
+  "author": "ishhodaszi",
+  "version": "0.4.0",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "repo": "https://github.com/piftee/gen1recomp-typed-move-colors",
+  "summary": "Adds responsive type-coloured move cards or native-layout move-name colours across battles, summaries, and move pickers.",
+  "tags": [
+    "ui",
+    "moves",
+    "battle",
+    "types",
+    "quality-of-life",
+    "responsive",
+    "accessibility"
+  ],
+  "github": "piftee/gen1recomp-typed-move-colors",
+  "api": 2,
+  "game_version": ">=0.0.0-dev <1.0.0",
+  "games": [
+    "red",
+    "blue",
+    "yellow"
+  ],
+  "profile": "content",
+  "experimental": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "dependencies": [],
+  "conflicts": [],
+  "license": "MIT"
+}

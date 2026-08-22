@@ -1,0 +1,37 @@
+{
+  "id": "modern_party_ui",
+  "title": "Modern Party UI",
+  "author": "ishhodaszi",
+  "version": "0.3.15",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "repo": "https://github.com/piftee/gen1recomp-modern-party-ui",
+  "summary": "Adds responsive type-coloured party and Pokémon summary cards built from Gen 1's own font, sprites, and UI assets.",
+  "tags": [
+    "ui",
+    "party",
+    "summary",
+    "quality-of-life",
+    "responsive",
+    "mobile",
+    "widescreen"
+  ],
+  "github": "piftee/gen1recomp-modern-party-ui",
+  "api": 2,
+  "game_version": ">=0.0.0-dev <1.0.0",
+  "games": [
+    "red",
+    "blue",
+    "yellow"
+  ],
+  "profile": "content",
+  "experimental": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "dependencies": [],
+  "conflicts": [],
+  "license": "MIT"
+}
