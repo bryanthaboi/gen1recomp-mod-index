@@ -1,0 +1,36 @@
+{
+  "id": "deutsch-gold",
+  "title": "Deutsch für Pokémon Gold",
+  "author": "Roxas2712",
+  "summary": "Deutsche Beta-Übersetzung für Pokémon Gold: Dialoge, Namen, Menüs, Kämpfe, Schrift und editionsspezifische Grafiken für die importierte US-ROM.",
+  "version": "0.2.1",
+  "categories": [
+    "TRANSLATION"
+  ],
+  "tags": [
+    "deutsch",
+    "german",
+    "ubersetzung",
+    "translation",
+    "gold",
+    "johto",
+    "gen 2",
+    "beta"
+  ],
+  "repo": "https://github.com/Roxas2712/pokemon-gold-deutsch-mod",
+  "github": "Roxas2712/pokemon-gold-deutsch-mod",
+  "downloadURL": "https://github.com/Roxas2712/pokemon-gold-deutsch-mod/releases/download/v0.2.1/deutsch-gold-0.2.1.zip",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.1.90 <1.0.0",
+  "games": [
+    "gold"
+  ],
+  "profile": "content",
+  "experimental": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "dependencies": [],
+  "conflicts": []
+}

@@ -1,0 +1,35 @@
+{
+  "id": "jj_quick_select",
+  "title": "Quick Select",
+  "author": "Roxas2712",
+  "summary": "Use Gen II-style SELECT shortcuts for the Bicycle and four registered Bag items, with Field Kit and German-UI compatibility.",
+  "version": "1.0.1",
+  "categories": [
+    "QOL",
+    "UI"
+  ],
+  "tags": [
+    "shortcuts",
+    "select",
+    "items",
+    "bicycle",
+    "field moves",
+    "gen 2",
+    "german"
+  ],
+  "repo": "https://github.com/Roxas2712/pokemon-quick-select",
+  "github": "Roxas2712/pokemon-quick-select",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-dev <1.0.0",
+  "games": [
+    "gen1"
+  ],
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "dependencies": [],
+  "conflicts": []
+}

@@ -1,0 +1,34 @@
+{
+  "id": "anytime_rename",
+  "title": "Anytime Rename",
+  "author": "Roxas2712",
+  "summary": "Rename the trainer, rival and party Pokémon from the START menu, with generation-aware save handling and automatic German localization.",
+  "version": "1.2.1",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "tags": [
+    "rename",
+    "nicknames",
+    "trainer",
+    "rival",
+    "gen 1",
+    "gen 2",
+    "german"
+  ],
+  "repo": "https://github.com/Roxas2712/pokemon-gen1-recomp-mod-anytime-rename",
+  "github": "Roxas2712/pokemon-gen1-recomp-mod-anytime-rename",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "games": [
+    "gen1",
+    "gen2"
+  ],
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [],
+  "dependencies": [],
+  "conflicts": []
+}

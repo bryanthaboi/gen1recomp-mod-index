@@ -1,0 +1,42 @@
+{
+  "id": "VOXEL_ASCENDANT",
+  "title": "Voxel Ascendant",
+  "author": "Roxas2712",
+  "summary": "A sandbox-native voxel overworld and 3D battle renderer for Gen1Recomp 0.1.90+, with depth-tested dioramas, camera modes, lighting and safe 2D fallbacks.",
+  "version": "0.1.7",
+  "categories": [
+    "ART",
+    "UI"
+  ],
+  "tags": [
+    "voxel",
+    "3d battles",
+    "renderer",
+    "overworld",
+    "tilt shift",
+    "day night",
+    "gen 1"
+  ],
+  "repo": "https://github.com/Roxas2712/voxel-ascendant",
+  "github": "Roxas2712/voxel-ascendant",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.1.90",
+  "games": [
+    "gen1"
+  ],
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "dependencies": [],
+  "conflicts": [
+    "DRAMATIC_SHAPE",
+    "DRAMALESS_SHAPE",
+    "BATTLE_ART_VOXEL_FORK",
+    "potato_voxel",
+    "TERRARIUM"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "kanto_ascendant",
+  "title": "Kanto Ascendant",
+  "author": "Roxas2712",
+  "summary": "A living 251-Pokémon Kanto expansion with evolving rematches, Johto progression, legendary events, breeding, shinies, Mega Evolution and a substantial postgame.",
+  "version": "6.5.7",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT",
+    "QOL"
+  ],
+  "tags": [
+    "postgame",
+    "johto",
+    "rematches",
+    "legendaries",
+    "breeding",
+    "shinies",
+    "mega evolution",
+    "bilingual"
+  ],
+  "repo": "https://github.com/Roxas2712/kanto-ascendant",
+  "github": "Roxas2712/kanto-ascendant",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.1.90",
+  "games": [
+    "red",
+    "blue",
+    "yellow"
+  ],
+  "profile": "content",
+  "permissions": [
+    "engine_internals"
+  ],
+  "dependencies": [],
+  "conflicts": [
+    "overworld_wild_spawns",
+    "trainer_rematch",
+    "all_pokemon_catchable_151_mod",
+    "modern_party_ui",
+    "FOLLOWERS_EX",
+    "PokePCFollowers_VoxelMerge",
+    "pokepc_followers_rb",
+    "pokepcfollowers",
+    "quality_of_life",
+    "quality_of_life_pr9_test",
+    "crystal_animated_sprites_with_shiny_visuals",
+    "shiny_indicators",
+    "unique_menu_icons",
+    "Dynamic_Cries",
+    "gender_mod",
+    "pokemon_gender",
+    "pokemon_genders",
+    "pokemon_gender_system",
+    "gen2_pokemon_gender",
+    "pokemon_breeding",
+    "gen2_breeding",
+    "useful_bag",
+    "jj_quick_select",
+    "nuzlocke",
+    "Kanto-Reforged",
+    "VOXEL_ASCENDANT@<0.1.0-rc.1 || >=3.0.0-0",
+    "BATTLE_ART_VOXEL_FORK@<1.9.0 || >=3.0.0-0",
+    "DRAMATIC_SHAPE",
+    "potato_voxel@<1.7.2 || >=3.0.0-0",
+    "TERRARIUM",
+    "ds_fp_ceiling",
+    "DRAMALESS_SHAPE@<1.6.2-ST.190.1 || >=3.0.0-0"
+  ]
+}
