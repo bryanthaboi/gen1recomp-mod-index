@@ -1,0 +1,33 @@
+{
+  "id": "versaodourada",
+  "title": "Gen2 Tradução PT-BR  Gold & Silver 0.53.0",
+  "author": "LordSangreal",
+  "summary": "Pokémon Gold e Silver em português brasileiro, num download só: a POKéDEX troca sozinha conforme o jogo. Tradução própria, escrita do inglês original de cada versão.",
+  "version": "0.53.0",
+  "categories": [
+    "TRANSLATION"
+  ],
+  "tags": [
+    "portugues",
+    "brasileiro",
+    "portuguese",
+    "brazilian",
+    "traducao",
+    "gold",
+    "silver",
+    "gen2"
+  ],
+  "repo": "https://github.com/LordSangreal/versaodourada",
+  "github": "LordSangreal/versaodourada",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "games": [
+    "gold",
+    "gen2"
+  ],
+  "profile": "content",
+  "permissions": [],
+  "dependencies": [],
+  "conflicts": []
+}
