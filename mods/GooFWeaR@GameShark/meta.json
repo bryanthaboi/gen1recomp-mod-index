@@ -1,0 +1,24 @@
+{
+  "id": "GameShark",
+  "title": "Gameshark",
+  "author": "GooFWeaR",
+  "version": "0.7.6",
+  "categories": [
+    "GAMEPLAY",
+    "QOL",
+    "TOOL",
+    "OTHER"
+  ],
+  "repo": "https://github.com/goofwear/gameshark/",
+  "summary": "Gameshark Cheat Device",
+  "tags": [
+    "gameshark",
+    "cheat",
+    "enhance",
+    "infinite",
+    "unlimited"
+  ],
+  "github": "goofwear/gameshark",
+  "api": 2,
+  "profile": "content"
+}
