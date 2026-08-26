@@ -1,0 +1,18 @@
+{
+  "id": "speed_flash",
+  "title": "Speed Indicator",
+  "author": "Tonedawg1",
+  "version": "1.1.0",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "repo": "https://github.com/Tonedawg1/gen1recomp-simple-speed-indicator-",
+  "summary": "Flashes the current game speed (2X, 10X, etc.) in the bottom-left when you change it.",
+  "tags": [
+    "qol"
+  ],
+  "github": "Tonedawg1/gen1recomp-simple-speed-indicator-",
+  "api": 2,
+  "profile": "content"
+}
