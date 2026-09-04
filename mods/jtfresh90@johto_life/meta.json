@@ -1,0 +1,42 @@
+{
+  "id": "johto_life",
+  "title": "Johto Life",
+  "author": "jtfresh90",
+  "version": "0.1.37",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT"
+  ],
+  "repo": "https://github.com/jtfresh90/Johto-Life-Mod",
+  "github": "jtfresh90/Johto-Life-Mod",
+  "summary": "Ambient Johto crowds, Pokemon NPCs (area or full-dex random), sleep options, Common Courtesy knocking, progressive dialogue events \u2014 Gen 2 (Gold/Silver/Crystal) only.",
+  "tags": [
+    "npc",
+    "town",
+    "sleep",
+    "knock",
+    "atmosphere",
+    "johto",
+    "gold",
+    "silver",
+    "crystal",
+    "pokemon-npcs"
+  ],
+  "api": 2,
+  "game_version": ">=0.0.0 <10.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "experimental": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "dependencies": [],
+  "conflicts": [
+    "kanto_life"
+  ],
+  "automatic_version_check": true,
+  "games": [
+    "gen2"
+  ],
+  "gen2compat": true
+}
