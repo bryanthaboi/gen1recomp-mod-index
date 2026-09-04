@@ -1,0 +1,20 @@
+{
+  "id": "tm_hm_names",
+  "title": "TM/HM Move Names",
+  "author": "Tonedawg1",
+  "version": "1.1.0",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "repo": "https://github.com/Tonedawg1/gen1recomp-tm-hm-names",
+  "summary": "Shows move names next to TM/HM numbers; long names can scroll the text while the item is highlighted.",
+  "tags": [
+    "qol",
+    "tm",
+    "hm"
+  ],
+  "github": "Tonedawg1/gen1recomp-tm-hm-names",
+  "api": 2,
+  "profile": "content"
+}
