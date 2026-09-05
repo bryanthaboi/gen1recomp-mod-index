@@ -3,7 +3,7 @@
   "title": "Gen2 Tradução pt-br  crystal",
   "author": "LordSangreal",
   "summary": "Pokémon Crystal em português brasileiro. Tradução própria, escrita do inglês original de cada fala, com registro duplo de ponteiros e compatibilidade total com o gen1recomp.",
-  "version": "0.47.1",
+  "version": "0.57.9",
   "categories": [
     "TRANSLATION"
   ],
@@ -16,8 +16,8 @@
     "crystal",
     "gen2"
   ],
-  "repo": "https://github.com/LordSangreal/versaocristal-ptbr",
-  "github": "LordSangreal/versaocristal-ptbr",
+  "repo": "https://github.com/LordSangreal/versaocristal",
+  "github": "LordSangreal/versaocristal",
   "automatic_version_check": true,
   "api": 2,
   "game_version": ">=0.0.0-0 <2.0.0",

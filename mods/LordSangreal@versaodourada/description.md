@@ -100,7 +100,7 @@ texto, como qualquer outra.
 ## Joga Crystal?
 
 E outro mod:
-[versaocristal-ptbr](https://github.com/LordSangreal/versaocristal-ptbr). Ali
+[versaocristal](https://github.com/LordSangreal/versaocristal). Ali
 as falas de NPC realmente divergem das do Gold -- centenas de rotulos existem
 nos dois jogos com texto diferente --, e um catalogo unico mostrava a fala do
 jogo errado. Entre Gold e Silver isso nao acontece, e por isso os dois cabem
