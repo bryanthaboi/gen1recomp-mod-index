@@ -1,0 +1,29 @@
+{
+  "id": "safari_derby",
+  "title": "Safari Derby",
+  "author": "Gawd Mode",
+  "version": "1.0.1",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT"
+  ],
+  "repo": "https://github.com/GawdMode/Safari-Derby",
+  "summary": "Race and train your Pokémon at Fuchsia's Safari Derby, compete in cups, wager on races, earn ribbons, and unlock unique prizes.",
+  "tags": [
+    "racing",
+    "safari derby",
+    "minigame",
+    "wagering",
+    "training",
+    "ribbons",
+    "fuchsia",
+    "pokemon crystal"
+  ],
+  "github": "GawdMode/Safari-Derby",
+  "game_version": ">=0.2.53 <2.0.0",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
