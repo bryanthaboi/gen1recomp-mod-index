@@ -1,0 +1,23 @@
+{
+  "id": "aquarium_prototype",
+  "title": "Angler's Cove Aquarium",
+  "author": "Gawd Mode",
+  "version": "1.3.0",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT"
+  ],
+  "repo": "https://github.com/GawdMode/anglers-cove-aquarium",
+  "summary": "Fishing and aquarium sim side activity for Pokémon Crystal, with tank care, unique catches, collectibles, and optional PokeSurvive integration.",
+  "tags": [
+    "fishing",
+    "aquarium",
+    "minigame",
+    "cerulean",
+    "pokemon crystal",
+    "pokesurvive"
+  ],
+  "github": "GawdMode/anglers-cove-aquarium",
+  "api": 2,
+  "profile": "content"
+}
