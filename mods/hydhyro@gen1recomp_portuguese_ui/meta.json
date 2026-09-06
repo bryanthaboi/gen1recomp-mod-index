@@ -1,0 +1,14 @@
+{
+  "id": "gen1recomp_portuguese_ui",
+  "title": "Interface em PT-BR (Launcher)",
+  "author": "hydhyro",
+  "version": "0.1.2",
+  "categories": [
+    "UI",
+    "TRANSLATION"
+  ],
+  "repo": "https://github.com/hydhyro/gen1recomp_portuguese_ui",
+  "github": "hydhyro/gen1recomp_portuguese_ui",
+  "api": 2,
+  "profile": "content"
+}
