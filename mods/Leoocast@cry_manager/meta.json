@@ -1,0 +1,18 @@
+{
+  "id": "cry_manager",
+  "title": "Cry Manager",
+  "author": "Leoocast",
+  "version": "0.2.1",
+  "summary": "Customize Pokemon cries from Options: mix packs by species, apply an entire pack, or restore original cries. Preferences persist between sessions. Audio packs are installed separately.",
+  "categories": ["AUDIO", "UI"],
+  "tags": ["cries", "sound packs", "pokemon", "gen1"],
+  "repo": "https://github.com/Leoocast/cry-manager-gen1recomp-mod",
+  "github": "Leoocast/cry-manager-gen1recomp-mod",
+  "downloadURL": "https://github.com/Leoocast/cry-manager-gen1recomp-mod/releases/download/0.2.1/cry_manager-0.2.1.zip",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.2.56 <0.3.0",
+  "profile": "content",
+  "games": ["gen1"],
+  "permissions": []
+}
