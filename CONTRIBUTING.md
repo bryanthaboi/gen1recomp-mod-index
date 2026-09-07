@@ -61,8 +61,9 @@ bundle's `cart.json` already uses, so paste that file in and add `title`,
 `author`, `repo` and the rest around it. Beyond the mod rules, a cart entry has
 to hold:
 
-- `base` is one of red, blue, yellow, gold, silver; `seal` is `sealed` (the
-  engine loads this list and nothing else) or `open` (the player may add more).
+- `base` is one of red, blue, yellow, gold, silver, crystal; `seal` is
+  `sealed` (the engine loads this list and nothing else) or `open` (the player
+  may add more).
 - Every row of `mods` names one exact build, flat: `"source": "github"` needs
   `repo`, `version` and the zip's `sha256`; `"source": "gamebanana"` needs
   `mod`, `file` and the `md5` GameBanana reports. There is no third kind, and a
