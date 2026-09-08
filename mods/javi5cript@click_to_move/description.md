@@ -8,14 +8,17 @@ and navigate supported dialogue, menus and battles. This is not
 click-to-destination or pathfinding. Native battle rules, progression,
 collision and saving are preserved.
 
+Designed for a clean Gen1Recomp installation with Mouse Adventure enabled.
+No other mods are required.
+
 ## What it changes
 
-- **Held steering in flat, TILT and voxel orbit views.** Release to stop after
+- **Held steering in flat and engine TILT views.** Release to stop after
   the current tile step. Click directly on a following Pokemon to talk;
   holding past it steers instead.
 - **Clickable screens.** Native dialogue, battle choices, party
   SWITCH / STATS / CANCEL menus, summary pages, Pokedex DATA / CRY / AREA
-  menus, area maps and trainer cards, plus recognized replacement layouts.
+  menus, area maps and trainer cards.
 - **Wheel navigation.** Scroll supported lists, Pokedex notes and moves, or
   change supported entry tabs without confirming. Enabled by default;
   overworld wheel zoom is unchanged.
@@ -39,29 +42,22 @@ Use the release asset, not GitHub's automatic source-code archives. The seven
 mod files are at the ZIP root, without a wrapper folder. Automatic GitHub
 release tracking remains enabled for this listing.
 
-## Compatibility
+## Requirements and scope
 
 - Requires mod API 2, **Gen1Recomp >=0.2.56 and <2.0.0**, and your own
   legally obtained Red, Blue or Yellow game data. Intended for single-player.
-- Supports the flat view, engine **TILT**, and voxel orbit/diorama levels
-  **1-5**. Voxel free-look levels **6/7 are unsupported**.
-- Projected player anchoring is experimental. Camera edges and visual-effect
-  mods may affect accuracy; follower targeting uses sprite-sized bounds,
-  not alpha-mask or occlusion detection.
-- Recognized Modern Party, Modern Pokedex and Gen1Dex layouts have adapters.
-  Arbitrary replacement UIs are not guaranteed clickable; use the dock's
-  arrows and A/B controls where needed. Badge icons remain display-only.
-- **Gen1Arena's 2D backdrops can overlap voxel battles.** Turn off its
-  **BACKDROPS** option. If it persists, disable Gen1Arena and restart after
-  saving. Mouse Adventure does not fix third-party battle-renderer conflicts.
+- The native game UI is the baseline. Use the dock's arrows and A/B controls
+  when direct clicking is unavailable. Badge icons remain display-only.
+- Projected player anchoring is optional and experimental.
+- Optional integrations are available, but compatibility with other mods
+  is not guaranteed. They are not required for the core controls.
 - Keyboard/controller input takes priority. Animations, cries and scripted
   waits still apply; clicks do not bypass native gameplay restrictions.
 
 ## Status
 
-**v1.4.0 public beta.** Clean-game coverage across Red, Blue and Yellow is not
-yet complete. Experimental controls and replacement-mod combinations need
-further live play coverage.
+**v1.4.0 public beta.** Full playthrough coverage across Red, Blue and Yellow
+is not yet complete.
 
 See the [README](https://github.com/javi5cript/gen1recomp-mouse-adventure#readme)
 for controls and options. Report problems on the
