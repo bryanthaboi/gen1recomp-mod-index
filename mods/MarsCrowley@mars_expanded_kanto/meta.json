@@ -1,0 +1,19 @@
+{
+  "id": "mars_expanded_kanto",
+  "title": "Mars's Expanded Kanto",
+  "author": "MarsCrowley",
+  "version": "1.0.0",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT"
+  ],
+  "repo": "https://github.com/MarsCrowley/Mars-s-Expanded-Kanto",
+  "summary": "A large-scale content overhaul for Pokemon Red/Blue in Gen1Recomp",
+  "tags": [
+    "sprites",
+    "content"
+  ],
+  "github": "MarsCrowley/Mars-s-Expanded-Kanto",
+  "api": 2,
+  "profile": "content"
+}
