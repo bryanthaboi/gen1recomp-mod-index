@@ -1,0 +1,28 @@
+{
+  "id": "battle_factory_recomp",
+  "title": "Battle Factory Remix",
+  "author": "Gawd Mode",
+  "version": "1.0.0",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT"
+  ],
+  "repo": "https://github.com/GawdMode/Battle-Factory-Remix",
+  "summary": "Battle through rental Pokémon challenges, swap your team between rounds, defeat Factory Heads, and earn unique BP rewards.",
+  "tags": [
+    "battle factory",
+    "rentals",
+    "battles",
+    "minigame",
+    "rewards",
+    "red",
+    "crystal"
+  ],
+  "github": "GawdMode/Battle-Factory-Remix",
+  "game_version": ">=0.2.24 <1.0.0",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "overhaul"
+}
