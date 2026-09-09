@@ -48,7 +48,8 @@
         "blue",
         "yellow",
         "gold",
-        "silver"
+        "silver",
+        "crystal"
       ],
       "description": "The game the cart plays as. Same name and vocabulary as the bundle's cart.json."
     },

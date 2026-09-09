@@ -1,0 +1,45 @@
+{
+  "id": "wild_crystal",
+  "title": "Wild Crystal",
+  "author": "Wild",
+  "summary": "Johto with everything the Gen1Wild suite learned on Kanto: both halves pinned whole, all 251 in one save without trading, and Time Capsule trading with Wild Green.",
+  "version": "1.0.0",
+  "base": "crystal",
+  "seal": "sealed",
+  "shell": "#ae66fb",
+  "finish": "sparkle+holo",
+  "tags": [
+    "cart",
+    "bundle",
+    "crystal",
+    "johto",
+    "all 251",
+    "celebi",
+    "ui",
+    "quality of life"
+  ],
+  "repo": "https://github.com/wild1walker/Gen1WildCrystal",
+  "github": "wild1walker/Gen1WildCrystal",
+  "automatic_version_check": true,
+  "mods": [
+    {
+      "id": "gen1_wild_qol",
+      "source": "github",
+      "repo": "wild1walker/Gen1WildQOL",
+      "version": "1.30.0",
+      "sha256": "b9fa762c0896661b9c68d69b809d83a47508a9db1f6b1f2280d75bcabd8d6f8c"
+    },
+    {
+      "id": "gen1_wild_ui",
+      "source": "github",
+      "repo": "wild1walker/Gen1WildUI",
+      "version": "1.27.0",
+      "sha256": "cc92e0b2c268720bccc03c6431e1dc43f9bd395868cc690861e5a779de26d513"
+    }
+  ],
+  "load_order": [
+    "gen1_wild_qol",
+    "gen1_wild_ui"
+  ],
+  "license": "MIT"
+}
