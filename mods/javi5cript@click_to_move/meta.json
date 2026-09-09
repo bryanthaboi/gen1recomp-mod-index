@@ -1,0 +1,18 @@
+{
+  "id": "click_to_move",
+  "title": "Mouse Adventure",
+  "author": "javi5cript",
+  "summary": "Hold to move, point to steer in eight directions, and click NPCs, items, dialogue and menus. Right-click to go back or use the on-screen action dock. Native battles, collision and saves stay intact.",
+  "version": "1.4.0",
+  "categories": ["QOL", "UI", "GAMEPLAY"],
+  "tags": ["mouse", "point-to-steer", "controls", "accessibility", "one-handed", "overworld", "dialogue", "mouse-only"],
+  "repo": "https://github.com/javi5cript/gen1recomp-mouse-adventure",
+  "github": "javi5cript/gen1recomp-mouse-adventure",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.2.56 <2.0.0",
+  "games": ["gen1"],
+  "profile": "content",
+  "permissions": ["engine_internals"],
+  "license": "MIT"
+}
