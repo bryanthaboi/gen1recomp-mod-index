@@ -1,0 +1,23 @@
+{
+  "id": "cinnabar_experimental_lab",
+  "title": "Mutant Monster Lab",
+  "author": "Gawd Mode",
+  "version": "1.0.0",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT"
+  ],
+  "repo": "https://github.com/GawdMode/Mutant-Monster-Lab",
+  "summary": "Splice Pokémon mutations and unleash global phenomena with the Holon Collider.",
+  "tags": [
+    "pokemon",
+    "mutations",
+    "randomizer",
+    "sidequest",
+    "cinnabar"
+  ],
+  "github": "GawdMode/Mutant-Monster-Lab",
+  "game_version": ">=0.9",
+  "api": 2,
+  "profile": "content"
+}
