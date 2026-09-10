@@ -1,8 +1,8 @@
 {
   "id": "kanto_contests",
-  "title": "Kanto Contests (Alpha)",
+  "title": "Contests",
   "author": "Mister Miracle",
-  "summary": "ALPHA - Ruby/Sapphire-style Pokemon Contests in Kanto and Johto. Raise condition with PokeSnacks, earn scarves, then appeal in COOL, BEAUTY, CUTE, SMART or TOUGH. Wins record per category.",
+  "summary": "Pokemon Contests for Crystal, Gold and Silver: five categories, a four-hall rank circuit across Johto, rival coordinators, snacks, scarves and a Ruby/Sapphire judging round.",
   "version": "0.15.0",
   "categories": [
     "CONTENT",
@@ -10,8 +10,9 @@
   ],
   "tags": [
     "contests",
-    "celadon",
-    "alpha",
+    "johto",
+    "coordinators",
+    "ribbons",
     "gen1",
     "gen2"
   ],
