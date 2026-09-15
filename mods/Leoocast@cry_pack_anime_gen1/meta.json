@@ -1,0 +1,17 @@
+{
+  "id": "cry_pack_anime_gen1",
+  "title": "Anime Cries - Gen 1",
+  "author": "Leoocast",
+  "version": "1.0.0",
+  "summary": "Give Gen 1 Pokemon their anime voices with 151 numbered cries, from Bulbasaur to Mew. Requires Cry Manager. Pikachu keeps its original game voice in Yellow.",
+  "categories": ["AUDIO"],
+  "tags": ["anime", "cries", "sound packs", "pokemon", "gen1"],
+  "repo": "https://github.com/Leoocast/cry-manager-gen1recomp-mod",
+  "downloadURL": "https://github.com/Leoocast/cry-manager-gen1recomp-mod/releases/download/0.2.1/cry_pack_anime_gen1-1.0.0.zip",
+  "automatic_version_check": false,
+  "api": 2,
+  "profile": "content",
+  "games": ["gen1"],
+  "permissions": [],
+  "dependencies": ["cry_manager@>=0.2.1 <0.3.0"]
+}
