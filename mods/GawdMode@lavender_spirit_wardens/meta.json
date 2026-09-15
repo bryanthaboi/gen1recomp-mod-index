@@ -1,0 +1,26 @@
+{
+  "id": "lavender_spirit_wardens",
+  "title": "PhasmoPokéa",
+  "author": "Gawd Mode",
+  "version": "1.1.0",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT"
+  ],
+  "repo": "https://github.com/GawdMode/PhasmoPokea",
+  "summary": "A paranormal investigation side activity for Pokémon Crystal featuring ghost hunting, evidence gathering, spirit cleansing, and Warden progression.",
+  "tags": [
+    "ghost hunting",
+    "investigation",
+    "horror",
+    "quest",
+    "lavender",
+    "pokemon crystal",
+    "minigame",
+    "progression"
+  ],
+  "github": "GawdMode/PhasmoPokea",
+  "game_version": ">=0.2.59 <2.0.0",
+  "api": 2,
+  "profile": "content"
+}
