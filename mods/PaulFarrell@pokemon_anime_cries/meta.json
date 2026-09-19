@@ -1,0 +1,24 @@
+{
+  "id": "pokemon_anime_cries",
+  "title": "Pokemon Anime Cries",
+  "author": "Paul Farrell",
+  "version": "1.0.0",
+  "categories": [
+    "AUDIO"
+  ],
+  "repo": "https://github.com/Faz540/pokemon-anime-cries-recomp-mod/",
+  "summary": "Replaced the ingame Pokemon noises/cries with the sounds from the Anime series.",
+  "tags": [
+    "audio",
+    "cry",
+    "cries",
+    "noises",
+    "sounds",
+    "sfx",
+    "sound effects",
+    "anime"
+  ],
+  "github": "faz540/pokemon-anime-cries-recomp-mo",
+  "api": 2,
+  "profile": "content"
+}
