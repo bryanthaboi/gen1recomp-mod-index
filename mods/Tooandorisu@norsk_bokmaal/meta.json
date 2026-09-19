@@ -1,0 +1,20 @@
+{
+  "id": "norsk_bokmaal",
+  "title": "Norwegian Bokmål Translation",
+  "author": "Tooandorisu",
+  "version": "1.0.0",
+  "categories": [
+    "TRANSLATION"
+  ],
+  "repo": "https://github.com/Tooandorisu/Gen1-Recomp-Norwegian-Translate",
+  "summary": "Complete Norwegian Bokmål translation for Gen1Recomp.",
+  "tags": [
+    "norwegian",
+    "bokmal",
+    "language"
+  ],
+  "github": "Tooandorisu/Gen1-Recomp-Norwegian-Translate",
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "api": 2,
+  "profile": "content"
+}
