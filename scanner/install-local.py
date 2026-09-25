@@ -47,6 +47,9 @@ plist.parent.mkdir(parents=True, exist_ok=True)
 plist.write_bytes(plistlib.dumps({'Label': label, 'ProgramArguments': [sys.executable, str(BASE / 'runner-manager.py')],
     'RunAtLoad': True, 'KeepAlive': True, 'ThrottleInterval': 15,
     'StandardOutPath': str(BASE / 'logs/supervisor.log'), 'StandardErrorPath': str(BASE / 'logs/supervisor-error.log')}))
-subprocess.run(['launchctl', 'bootout', f'gui/{os.getuid()}/{label}'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-run(['launchctl', 'bootstrap', f'gui/{os.getuid()}', str(plist)])
+# Existing supervisors pick up the rebuilt image for their next disposable runner.
+# Restarting launchd here can kill an active job and leave its GitHub run stuck.
+loaded = subprocess.run(['launchctl', 'print', f'gui/{os.getuid()}/{label}'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+if loaded.returncode:
+    run(['launchctl', 'bootstrap', f'gui/{os.getuid()}', str(plist)])
 print('Installed review service at http://localhost:8849 and disposable GitHub runner supervisor')
