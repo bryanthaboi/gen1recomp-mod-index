@@ -59,6 +59,22 @@ class ScannerTests(unittest.TestCase):
         self.assertIn('mods/large', store.quarantine_manifest()['entries'])
         with self.assertRaises(ValueError): store.decide(scan_id, 'approve', 'cannot inspect')
 
+    def test_readonly_runner_cache_does_not_discard_successful_scan(self):
+        from jobs import scan_process
+        from types import SimpleNamespace
+        import errno
+        cache = self.root / 'cache'
+        original_write = Path.write_text
+        def write(path, text, *args, **kwargs):
+            if path.parent == cache: raise OSError(errno.EROFS, 'Read-only file system')
+            return original_write(path, text, *args, **kwargs)
+        def worker(args, **kwargs):
+            Path(args[-1]).write_text(json.dumps({'complete': True, 'status': 'clean'}))
+            return SimpleNamespace(returncode=0)
+        with patch('jobs.subprocess.run', side_effect=worker), patch.object(Path, 'write_text', write):
+            result = scan_process(b'archive', self.engine, cache)
+        self.assertEqual(result['status'], 'clean')
+
     def test_distinct_exact_assets_cross_quarantine_threshold(self):
         other = self.image.copy(); other.putpixel((0, 0), (255, 0, 0, 255))
         other.save(self.root / 'other.png')
