@@ -52,8 +52,8 @@ jobs:
           except Exception:
               if os.environ['RUN_CONCLUSION'] == 'success':
                   raise SystemExit('Could not read scan evidence for notification')
-          flagged = [r for r in records if isinstance(r, dict) and r.get('status') in ('review', 'quarantined', 'incomplete')]
-          if not flagged and os.environ['RUN_CONCLUSION'] == 'success':
+          flagged = [r for r in records if isinstance(r, dict) and r.get('complete') and r.get('status') in ('review', 'quarantined', 'updated_recheck')]
+          if not flagged:
               raise SystemExit(0)
           urgent = any(r.get('priority') or r.get('status') == 'quarantined' for r in flagged)
           url = os.environ.get('PUSHCUT_WEBHOOK_URL')
@@ -61,7 +61,7 @@ jobs:
               raise SystemExit('Pushcut secret is not configured')
           payload = {'id': 'mod-scan-' + os.environ['RUN_ID'], 'threadId': 'mod-scan-pr',
                      'title': 'Mod submission needs review',
-                     'text': str(len(flagged)) + ' releases need review or a successful rescan and the workflow finished with ' + os.environ['RUN_CONCLUSION'],
+                     'text': str(len(flagged)) + ' releases need human review and the workflow finished with ' + os.environ['RUN_CONCLUSION'],
                      'sound': 'problem' if urgent else 'question', 'isTimeSensitive': urgent,
                      'defaultAction': {'url': os.environ['RUN_URL']},
                      'actions': [{'name': 'Review scan', 'url': os.environ['RUN_URL']}]}

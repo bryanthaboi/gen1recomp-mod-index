@@ -11,6 +11,10 @@ def secret(name):
     return Path(path).read_text().strip() if path else os.environ.get(name, '')
 
 
+def needs_notification(record):
+    return bool(record.get('complete')) and record['status'] in ('review', 'quarantined', 'updated_recheck')
+
+
 def payload(record, review_url):
     key = hashlib.sha256(f"{record['key']}:{record.get('sha256')}:{record['status']}:{record.get('scanner')}".encode()).hexdigest()[:32]
     body = {'id': key, 'threadId': record['key'], 'title': f"{record['status'].title()}: {record['title']}",
@@ -27,8 +31,13 @@ def deliver(store):
     url = secret('PUSHCUT_WEBHOOK_URL')
     if not url: return
     for item in store.pending():
+        body = json.loads(item['body'])
+        # Drop incomplete-only notifications queued by older installations.
+        if body.get('title', '').startswith('Incomplete:') or 'successful rescan' in body.get('text', ''):
+            store.delivery(item['id'], True)
+            continue
         try:
-            response = requests.post(url, json=json.loads(item['body']), timeout=20, allow_redirects=False)
+            response = requests.post(url, json=body, timeout=20, allow_redirects=False)
             success = 200 <= response.status_code < 300
             store.delivery(item['id'], success)
             if not success:

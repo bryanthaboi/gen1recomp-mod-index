@@ -42,15 +42,15 @@ def main():
         approved = moderation.get('approvals', {}).get(entry['key'], {}).get('sha256')
         if approved and approved == record.get('sha256') and record.get('complete'):
             record['status'] = 'approved'
-        held = moderation.get('entries', {}).get(entry['key'])
-        if held and held.get('sha256') == record.get('sha256'):
-            record['status'] = 'quarantined'
+        held = moderation.get('entries', {}).get(entry['key']) or moderation.get('watchlist', {}).get(entry['key'])
+        if held and record['status'] != 'approved':
+            record['status'] = 'quarantined' if held.get('sha256') == record.get('sha256') else 'updated_recheck'
         records.append(record)
         Path(args.output).write_text(json.dumps({'version': 1, 'entries': records}))
         print(redact(f"{entry['key']}: {record['status']} exact={record.get('exact_unique', 0)} similar={record.get('similar_unique', 0)}"))
     Path(args.output).write_text(json.dumps({'version': 1, 'entries': records}))
     if args.gate_index:
-        denied = {r['key'] for r in records if r['status'] in ('quarantined', 'incomplete') or any(f['severity'] == 'error' for f in r.get('api', []))}
+        denied = {r['key'] for r in records if r['status'] in ('quarantined', 'updated_recheck', 'incomplete') or any(f['severity'] == 'error' for f in r.get('api', []))}
         for kind in ('mods', 'carts'):
             feed[kind] = [m for m in feed.get(kind, []) if f"{kind}/{m['folder']}" not in denied]
         feed['count'], feed['cart_count'] = len(feed['mods']), len(feed['carts'])
@@ -64,7 +64,7 @@ def main():
         summary.append(f"- {r['key'].replace('`', '')}: **{r['status']}**, {r.get('exact_unique', 0)} distinct exact matches, {r.get('similar_unique', 0)} similarity matches, {len(r.get('api', []))} API findings")
     if os.environ.get('GITHUB_STEP_SUMMARY'):
         with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f: f.write(redact('\n'.join(summary)))
-    return 0 if args.gate_index else int(any(r['status'] in ('quarantined', 'incomplete') or any(f['severity'] == 'error' for f in r.get('api', [])) for r in records))
+    return 0 if args.gate_index else int(any(r['status'] in ('quarantined', 'updated_recheck', 'incomplete') or any(f['severity'] == 'error' for f in r.get('api', [])) for r in records))
 
 
 if __name__ == '__main__':

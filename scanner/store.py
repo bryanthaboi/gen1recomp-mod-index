@@ -19,7 +19,14 @@ class Store:
                 CREATE TABLE IF NOT EXISTS settings(key TEXT PRIMARY KEY, value TEXT);
                 CREATE TABLE IF NOT EXISTS decision_events(id INTEGER PRIMARY KEY, entry TEXT, sha TEXT, action TEXT, note TEXT, changed INTEGER);
                 CREATE INDEX IF NOT EXISTS scans_entry ON scans(entry, id DESC);
+                CREATE TABLE IF NOT EXISTS quarantine_history(entry TEXT PRIMARY KEY, sha TEXT);
             ''')
+            # Preserve historical quarantines when upgrading an existing database.
+            for row in db.execute("SELECT entry,sha,report FROM scans WHERE origin='nightly'").fetchall():
+                if json.loads(row['report']).get('status') == 'quarantined':
+                    db.execute('INSERT OR IGNORE INTO quarantine_history VALUES (?,?)', (row['entry'], row['sha']))
+            db.execute("INSERT OR IGNORE INTO quarantine_history SELECT entry,sha FROM decisions WHERE action='quarantine'")
+            db.execute("INSERT OR IGNORE INTO quarantine_history SELECT entry,sha FROM decision_events WHERE action='quarantine'")
 
     @contextmanager
     def connect(self):
@@ -48,6 +55,8 @@ class Store:
 
     def record(self, record, origin='nightly'):
         with self.connect() as db:
+            if origin == 'nightly' and record['status'] == 'quarantined':
+                db.execute('INSERT OR IGNORE INTO quarantine_history VALUES (?,?)', (record['key'], record.get('sha256', '')))
             cursor = db.execute('INSERT INTO scans(entry,sha,checked,report,origin) VALUES(?,?,?,?,?)',
                                 (record['key'], record.get('sha256', ''), record['checked_at'], json.dumps(record), origin))
             return cursor.lastrowid
@@ -55,6 +64,10 @@ class Store:
     def effective(self, record):
         with self.connect() as db:
             row = db.execute('SELECT * FROM decisions WHERE entry=? AND sha=?', (record['key'], record.get('sha256', ''))).fetchone()
+            held = db.execute('SELECT sha FROM quarantine_history WHERE entry=?', (record['key'],)).fetchone()
+        if held:
+            record = {**record, 'scan_status': record['status'], 'priority': True,
+                      'status': 'quarantined' if held['sha'] == record.get('sha256') else 'updated_recheck'}
         if row:
             record = {**record, 'decision': dict(row)}
             if row['action'] == 'approve' and record.get('complete'):
@@ -80,9 +93,9 @@ class Store:
 
     def decide(self, scan_id, action, note):
         record = self.get(scan_id)
-        if not record or not record.get('sha256') or action not in ('approve', 'quarantine', 'reset'):
+        if not record or action not in ('approve', 'quarantine', 'reset'):
             raise ValueError('Decision requires a scanned artifact')
-        if action == 'approve' and not record.get('complete'):
+        if action == 'approve' and (not record.get('complete') or not record.get('sha256')):
             raise ValueError('Incomplete scans cannot be approved; rescan first')
         with self.connect() as db:
             db.execute('INSERT INTO decision_events(entry,sha,action,note,changed) VALUES(?,?,?,?,?)',
@@ -92,6 +105,8 @@ class Store:
             else:
                 db.execute('INSERT OR REPLACE INTO decisions VALUES(?,?,?,?,?)',
                            (record['key'], record['sha256'], action, note[:2000], int(time.time())))
+                if action == 'quarantine':
+                    db.execute('INSERT OR IGNORE INTO quarantine_history VALUES (?,?)', (record['key'], record['sha256']))
 
     def quarantine_manifest(self):
         entries = {}
@@ -99,9 +114,9 @@ class Store:
         for r in self.latest():
             if r['status'] == 'approved':
                 approvals[r['key']] = {'sha256': r['sha256']}
-            if r['status'] == 'quarantined':
+            if r['status'] in ('quarantined', 'updated_recheck'):
                 entries[r['key']] = {'sha256': r['sha256'], 'version': (r.get('release') or {}).get('version'),
-                                     'reason': f"Asset policy quarantine: {r.get('exact_unique', 0)} distinct exact matches; review required",
+                                     'reason': 'Previously quarantined entry requires explicit approval of this artifact',
                                      'checked_at': r['checked_at']}
             elif r['status'] == 'incomplete':
                 # An outage must never erase a previous quarantine.
@@ -115,7 +130,9 @@ class Store:
                     elif prior['status'] == 'approved':
                         approvals[r['key']] = {'sha256': prior['sha256']}
                     break
-        return {'version': 1, 'entries': entries, 'approvals': approvals}
+        with self.connect() as db:
+            watchlist = {r['entry']: {'sha256': r['sha']} for r in db.execute('SELECT * FROM quarantine_history')}
+        return {'version': 1, 'entries': entries, 'approvals': approvals, 'watchlist': watchlist}
 
     def enqueue(self, key, payload):
         with self.connect() as db:

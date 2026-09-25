@@ -40,6 +40,25 @@ class ScannerTests(unittest.TestCase):
         self.assertEqual(result['status'], 'review')
         self.assertTrue(result['previews'])
 
+    def test_oversized_manifest_keeps_inventory_and_exact_size(self):
+        engine = Engine(self.root / 'references.json', self.root, {**POLICY, 'max_member_bytes': 64})
+        data = archive({'manifest.json': b'x' * 100, 'readme.txt': b'hello'})
+        result = engine.scan(data)
+        self.assertFalse(result['complete'])
+        self.assertEqual(result['archive_bytes'], len(data))
+        self.assertEqual(result['unpacked_bytes'], 105)
+        self.assertEqual(result['total_files'], 2)
+        self.assertEqual(result['file_stats'][0]['bytes'], 100)
+        self.assertTrue(result['file_stats'][0]['over_member_limit'])
+        self.assertIn('100 bytes', ' '.join(result['errors']))
+
+    def test_incomplete_download_can_be_manually_quarantined_but_not_approved(self):
+        store = Store(self.root / 'large.sqlite')
+        scan_id = store.record({'key': 'mods/large', 'sha256': '', 'checked_at': 1, 'status': 'incomplete', 'complete': False})
+        store.decide(scan_id, 'quarantine', 'oversized download')
+        self.assertIn('mods/large', store.quarantine_manifest()['entries'])
+        with self.assertRaises(ValueError): store.decide(scan_id, 'approve', 'cannot inspect')
+
     def test_distinct_exact_assets_cross_quarantine_threshold(self):
         other = self.image.copy(); other.putpixel((0, 0), (255, 0, 0, 255))
         other.save(self.root / 'other.png')
@@ -100,7 +119,7 @@ class ScannerTests(unittest.TestCase):
         self.assertIn('mods/a', store.quarantine_manifest()['entries'])
         store.decide(scan_id, 'approve', 'reviewed')
         self.assertEqual(store.effective(record)['status'], 'approved')
-        self.assertEqual(store.effective({**record, 'sha256': 'two'})['status'], 'quarantined')
+        self.assertEqual(store.effective({**record, 'sha256': 'two'})['status'], 'updated_recheck')
 
     def test_notifications_are_deduplicated(self):
         store = Store(self.root / 'db.sqlite')
@@ -109,6 +128,36 @@ class ScannerTests(unittest.TestCase):
         store.delivery('a', True)
         store.enqueue('a', {'title': 'one'})
         self.assertEqual(store.pending(), [])
+
+    def test_quarantined_update_requires_explicit_approval_and_future_updates_recheck(self):
+        store = Store(self.root / 'sticky.sqlite')
+        original = {'key': 'mods/a', 'sha256': 'one', 'checked_at': 1, 'status': 'quarantined', 'complete': True}
+        store.record(original)
+        updated = {**original, 'sha256': 'two', 'status': 'clean'}
+        scan_id = store.record(updated)
+        self.assertEqual(store.latest()[0]['status'], 'updated_recheck')
+        self.assertIn('mods/a', store.quarantine_manifest()['entries'])
+        store = Store(self.root / 'sticky.sqlite')
+        self.assertEqual(store.latest()[0]['status'], 'updated_recheck')
+        store.decide(scan_id, 'approve', 'new version reviewed')
+        self.assertEqual(store.latest()[0]['status'], 'approved')
+        self.assertNotIn('mods/a', store.quarantine_manifest()['entries'])
+        self.assertIn('mods/a', store.quarantine_manifest()['watchlist'])
+        store.record({**updated, 'sha256': 'three'})
+        self.assertEqual(store.latest()[0]['status'], 'updated_recheck')
+        store.decide(scan_id, 'reset', 'reset old approval')
+        self.assertIn('mods/a', store.quarantine_manifest()['entries'])
+
+    def test_untrusted_ci_cannot_create_quarantine_history(self):
+        store = Store(self.root / 'ci.sqlite')
+        store.record({'key': 'mods/a', 'sha256': 'one', 'checked_at': 1, 'status': 'quarantined'}, origin='ci')
+        self.assertEqual(Store(self.root / 'ci.sqlite').quarantine_manifest()['watchlist'], {})
+
+    def test_incomplete_scans_never_notify(self):
+        from notify import needs_notification
+        for status in ('incomplete', 'quarantined', 'updated_recheck', 'review'):
+            self.assertFalse(needs_notification({'status': status, 'complete': False, 'priority': True}))
+        self.assertTrue(needs_notification({'status': 'updated_recheck', 'complete': True}))
 
     def test_database_backup_retains_history(self):
         store = Store(self.root / 'db.sqlite')
