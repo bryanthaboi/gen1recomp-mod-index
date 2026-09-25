@@ -24,6 +24,8 @@ jobs:
 
       - name: Which entries changed
         id: changed
+        env:
+          PUSH_BASE: ${{ github.event.before }}
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             base="origin/${{ github.base_ref }}"
@@ -32,6 +34,8 @@ jobs:
             # base" (checkout already ran with fetch-depth: 0)
             git fetch --no-tags origin "${{ github.base_ref }}"
             files=$(git diff --name-only "$base"...HEAD)
+          elif [ "${{ github.event_name }}" = "push" ] && git cat-file -e "$PUSH_BASE^{commit}" 2>/dev/null; then
+            files=$(git diff --name-only "$PUSH_BASE" HEAD)
           else
             files=$(git ls-files 'mods/*' 'carts/*')
           fi
@@ -91,7 +95,7 @@ jobs:
           [ "${{ steps.check.outcome }}" = "success" ]
 
       - name: Check download links resolve
-        if: steps.check.outcome == 'success' && (github.event_name != 'pull_request' || steps.changed.outputs.folders != '')
+        if: steps.check.outcome == 'success' && steps.changed.outputs.folders != ''
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/check-links.mjs ${{ steps.changed.outputs.folders }}
