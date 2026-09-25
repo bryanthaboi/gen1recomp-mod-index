@@ -1,6 +1,12 @@
 {
   "version": 1,
   "entries": {
+    "mods/Dgray66@crystal": {
+      "sha256": "ede5eb492d509d8ee8b339779cb35314d205a96ba4b4a21d06d12cb22387a189",
+      "version": "2.0.0",
+      "reason": "Asset policy quarantine: 0 distinct exact matches; review required",
+      "checked_at": 1790347899
+    },
     "mods/Nezara@dialogue_portraits": {
       "sha256": "425863b8b894fac4eb901f15cd538ff1a8e880133d63237b47ebd9d1845d3764",
       "version": "1.0.2",
