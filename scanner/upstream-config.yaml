@@ -1,0 +1,309 @@
+# ====================================================================
+# Mod Scanner Configuration
+# ====================================================================
+
+# Optional GitHub Token to bypass unauthenticated 60 req/hr rate limit
+# (Can also be provided via GITHUB_TOKEN environment variable)
+github_token: ""
+
+# Concurrency & Worker limits (prevents OOM under concurrent mod uploads)
+concurrency:
+  max_workers: 2               # Recommended: 2-4 worker processes
+
+# Upstream decomp repositories to pull canonical reference assets from on first run
+pret_sources:
+  - name: "pokered"
+    repo: "pret/pokered"
+    branch: "master"
+    image_patterns:
+      - "gfx/sprites/**/*.png"
+      - "gfx/pokemon/**/*.png"
+      - "gfx/trainers/**/*.png"
+  - name: "pokeyellow"
+    repo: "pret/pokeyellow"
+    branch: "master"
+    image_patterns:
+      - "gfx/sprites/**/*.png"
+      - "gfx/pokemon/**/*.png"
+      - "gfx/trainers/**/*.png"
+  - name: "pokegold"
+    repo: "pret/pokegold"
+    branch: "master"
+    image_patterns:
+      - "gfx/sprites/**/*.png"
+      - "gfx/pokemon/**/*.png"
+      - "gfx/trainers/**/*.png"
+  - name: "pokecrystal"
+    repo: "pret/pokecrystal"
+    branch: "master"
+    image_patterns:
+      - "gfx/sprites/**/*.png"
+      - "gfx/pokemon/**/front.png"
+      - "gfx/pokemon/**/back.png"
+      - "gfx/trainers/**/*.png"
+  - name: "pokefirered"
+    repo: "pret/pokefirered"
+    branch: "master"
+    image_patterns:
+      - "graphics/pokemon/**/front.png"
+      - "graphics/pokemon/**/back.png"
+      - "graphics/trainers/**/*.png"
+  - name: "pokeemerald"
+    repo: "pret/pokeemerald"
+    branch: "master"
+    image_patterns:
+      - "graphics/pokemon/**/front.png"
+      - "graphics/pokemon/**/back.png"
+      - "graphics/pokemon/**/icon.png"
+      - "graphics/trainers/**/*.png"
+
+# Archive safety limits
+archive:
+  max_unpacked_size_mb: 500    # Maximum allowable total uncompressed size (MB)
+  max_file_count: 130000        # Maximum number of files in an archive
+  max_compression_ratio: 100.0 # Rejects archive if file > 5MB and ratio > 100:1
+
+# Static binary checks (Console ROM headers & Blacklists)
+binary_rules:
+  blacklisted_extensions:
+    # Retro Nintendo ROM formats (NES, SNES, GB, GBC, GBA, N64)
+    - ".nes"
+    - ".fds"
+    - ".sfc"
+    - ".smc"
+    - ".swc"
+    - ".fig"
+    - ".gb"
+    - ".gbc"
+    - ".sgb"
+    - ".gba"
+    - ".z64"
+    - ".n64"
+    - ".v64"
+    # GameCube, Wii & Wii U Disc / Image formats
+    - ".iso"
+    - ".gcm"
+    - ".tgp"
+    - ".gcz"
+    - ".rvz"
+    - ".wia"
+    - ".wbfs"
+    - ".ciso"
+    - ".wud"
+    - ".wux"
+    - ".wua"
+    - ".wad"
+    - ".dol"
+    - ".rel"
+    - ".rpx"
+    - ".rpl"
+    - ".nus"
+    # Nintendo DS & 3DS formats
+    - ".nds"
+    - ".dsi"
+    - ".srl"
+    - ".3ds"
+    - ".3dsx"
+    - ".cia"
+    - ".cxi"
+    - ".app"
+    - ".smdh"
+    # Nintendo Switch formats
+    - ".nsp"
+    - ".xci"
+    - ".nsz"
+    - ".xcz"
+    - ".nca"
+    - ".nro"
+    - ".nso"
+    - ".kip"
+    # Proprietary container & asset formats
+    - ".fsys"
+    - ".rarc"
+    - ".tpl"
+    - ".bti"
+    - ".brres"
+    - ".garc"
+    - ".darc"
+    - ".dsp"
+    - ".brstm"
+    - ".bcstm"
+    - ".bfstm"
+    - ".hps"
+    - ".musyx"
+    - ".sdat"
+  magic_bytes:
+    # NES & Famicom Disk System
+    - name: "NES ROM Header (iNES)"
+      offset: 0x0000
+      hex: "4e45531a" # "NES\x1A"
+    - name: "Famicom Disk System Header"
+      offset: 0x0000
+      hex: "4644531a" # "FDS\x1A"
+
+    # Game Boy / GBA / N64 Console ROMs
+    - name: "Game Boy / GBC Nintendo Logo"
+      offset: 0x0104
+      hex: "ceed6666cc0d000b03730083000c000d0008111f8889000eaccf"
+    - name: "GBA Nintendo Logo Header"
+      offset: 0x0004
+      hex: "24ffae51699aa2213d84820a84e409ad"
+    - name: "N64 ROM (Big Endian)"
+      offset: 0x0000
+      hex: "80371240"
+    - name: "N64 ROM (Byte-swapped)"
+      offset: 0x0000
+      hex: "37804012"
+    - name: "N64 ROM (Little Endian)"
+      offset: 0x0000
+      hex: "40123780"
+
+    # GameCube, Wii & Wii U Disc & Container Formats
+    - name: "GameCube Disc Magic"
+      offset: 0x001C
+      hex: "c2339f3d"
+    - name: "Wii Disc Magic"
+      offset: 0x0018
+      hex: "5d1c9ea3"
+    - name: "Dolphin RVZ Compressed Disc Container"
+      offset: 0x0000
+      hex: "52565a01" # "RVZ\x01"
+    - name: "Wii WIA Compressed Disc Container"
+      offset: 0x0000
+      hex: "57494101" # "WIA\x01"
+    - name: "GameCube GCZ Compressed Container"
+      offset: 0x0000
+      hex: "47435a" # "GCZ"
+    - name: "Wii WBFS Disc Container"
+      offset: 0x0000
+      hex: "57424653" # "WBFS"
+    - name: "GameCube Genius Sonority FSYS Container"
+      offset: 0x0000
+      hex: "46535953" # "FSYS"
+    - name: "GameCube / Wii RARC Archive"
+      offset: 0x0000
+      hex: "52415243" # "RARC"
+    - name: "Nintendo U8 Archive"
+      offset: 0x0000
+      hex: "55aa382d"
+    - name: "GameCube Texture Palette Library (TPL)"
+      offset: 0x0000
+      hex: "0020af30"
+    - name: "GameCube HPS Audio Stream"
+      offset: 0x0000
+      hex: "48505331" # "HPS1"
+
+    # Nintendo DS & 3DS Headers
+    - name: "Nintendo DS Logo Header"
+      offset: 0x00C0
+      hex: "24ffae51699aa2213d84820a84e409ad"
+    - name: "Nintendo DS Logo CRC"
+      offset: 0x015C
+      hex: "cf56"
+    - name: "Nintendo DS Sound Data (SDAT)"
+      offset: 0x0000
+      hex: "53444154" # "SDAT"
+    - name: "3DS NCCH Partition"
+      offset: 0x0100
+      hex: "4e434348" # "NCCH"
+    - name: "3DS NCSD Header"
+      offset: 0x0100
+      hex: "4e435344" # "NCSD"
+    - name: "3DS Executable (3DSX)"
+      offset: 0x0000
+      hex: "33445358" # "3DSX"
+    - name: "3DS System Menu Data Header (SMDH)"
+      offset: 0x0000
+      hex: "534d4448" # "SMDH"
+    - name: "3DS General Archive (GARC)"
+      offset: 0x0000
+      hex: "47415243" # "GARC"
+
+    # Nintendo Switch Formats
+    - name: "Nintendo Switch NSP / PFS0 Container"
+      offset: 0x0000
+      hex: "50465330" # "PFS0"
+    - name: "Nintendo Switch XCI / HFS0 Container"
+      offset: 0x0000
+      hex: "48465330" # "HFS0"
+    - name: "Nintendo Switch Content Archive (NCA)"
+      offset: 0x0200
+      hex: "4e4341" # "NCA"
+
+  # Deep signatures searched anywhere within binary packages (.pack, .dat, .bin, .pak, .bundle, etc.)
+  contained_signatures:
+    - name: "NKit GameCube/Wii Recovery Data"
+      pattern: "NKIT"
+    - name: "Dolphin RVZ Disc Container"
+      pattern: "RVZ\x01"
+    - name: "Wii WBFS Disc Container"
+      pattern: "WBFS"
+    - name: "GameCube Genius Sonority FSYS Container"
+      pattern: "FSYS"
+    - name: "GameCube / Wii RARC Archive"
+      pattern: "RARC"
+    - name: "GameCube / Wii Binary Resource (BRRES)"
+      pattern: "bres"
+    - name: "MusyX Audio Engine / Soundbank"
+      pattern: "MusyX"
+    - name: "Nintendo 3DS Binary Resource (.bcres)"
+      pattern: ".bcres"
+    - name: "Nintendo 3DS Binary Model (.bcmdl)"
+      pattern: ".bcmdl"
+    - name: "Nintendo 3DS Binary Texture (.bctex)"
+      pattern: ".bctex"
+    - name: "Nintendo 3DS CGFX Model Header"
+      pattern: "CGFX"
+    - name: "Nintendo 3DS BCH Model Header"
+      hex: "42434800" # "BCH\0"
+    - name: "NintendoWare for CTR (3DS)"
+      pattern: "NW4C"
+    - name: "Nintendo Switch Binary Texture (BNTX)"
+      pattern: "BNTX"
+    - name: "Nintendo Switch / Wii U Binary Resource (.bfres)"
+      pattern: ".bfres"
+    - name: "Nintendo SARC Archive"
+      pattern: "SARC"
+    - name: "Nintendo Yaz0 Compressed Stream"
+      pattern: "Yaz0"
+    - name: "Nintendo DS NARC Archive"
+      pattern: "NARC"
+    - name: "Nintendo DS Character Graphics (NCGR)"
+      pattern: "NCGR"
+    - name: "Nintendo DS Color Palette (NCLR)"
+      pattern: "NCLR"
+    - name: "Nintendo DS Screen Resource (NSCR)"
+      pattern: "NSCR"
+    - name: "Nintendo 3DS RomFS IVFC"
+      pattern: "IVFC"
+
+# Perceptual Image Matching (256-bit dHash)
+image_rules:
+  hash_type: "dhash"
+  hash_size: 16               # 16x16 = 256 bits for high-detail pixel art
+  thresholds:
+    auto_reject: 14           # Hamming distance 0-14: Auto-reject (Direct rip / simple recolor)
+    flag_for_review: 30       # Hamming distance 15-30: Flag for review (Demake / high similarity)
+    # Hamming distance > 30: Distinct custom artwork (Pass)
+  generate_diff_preview: true # Generate [Mod] [Ref] [Pixel Diff] image for flagged items
+  preview_panel_size: 64      # Pixel dimensions for each preview panel
+
+# Discord Bot integration settings
+discord:
+  token: ""                   # Or set DISCORD_BOT_TOKEN environment variable
+  guild_id: 0
+  # List of Forum Channel or Text Channel IDs to monitor (empty list = monitor all accessible channels)
+  monitored_channel_ids: []
+  # Target channel where review embeds and diff bundles are sent for moderators
+  mod_review_channel_id: 0
+  # Maximum number of top match previews to display in the main embed
+  max_embed_items: 4
+  # Attach an in-memory .zip bundle containing all 3-panel diff PNGs and a text summary report
+  attach_diff_bundle_zip: true
+  # If true, automatically removes violating posts from the public mod channel/thread
+  auto_delete_violations: false
+
+# Local storage paths
+paths:
+  cache_dir: "./.cache"
+  whitelist_file: "./whitelist.json"

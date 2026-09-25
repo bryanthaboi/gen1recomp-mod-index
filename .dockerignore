@@ -1,0 +1,8 @@
+*
+!scanner
+!scanner/**
+!scripts
+!scripts/lib
+!scripts/lib/lua-scan.mjs
+scanner/**/__pycache__
+scanner/tests

@@ -200,7 +200,7 @@ test('a cart needs a base game, a seal and a mod list', () => {
 });
 
 test('the base game and the seal come from fixed vocabularies', () => {
-  assert.match(validate({ ...GOOD_CART, base: 'crystal' }, cartSchema).join(), /is not one of/);
+  assert.match(validate({ ...GOOD_CART, base: 'unsupported_game' }, cartSchema).join(), /is not one of/);
   assert.match(validate({ ...GOOD_CART, seal: 'locked' }, cartSchema).join(), /is not one of/);
 });
 

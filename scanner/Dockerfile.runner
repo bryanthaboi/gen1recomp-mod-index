@@ -1,0 +1,9 @@
+FROM gen1mod-review:local
+USER root
+ARG RUNNER_VERSION=2.337.0
+ARG RUNNER_SHA256=9b1dc70626422526e3c94767cf024896beb15da5342a3f4819bf2feac13e0393
+RUN mkdir /runner /workspace && curl --fail --location --silent --show-error https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/actions-runner-linux-arm64-${RUNNER_VERSION}.tar.gz -o /tmp/runner.tgz && echo "$RUNNER_SHA256  /tmp/runner.tgz" | sha256sum -c - && tar xzf /tmp/runner.tgz -C /runner && rm /tmp/runner.tgz && chown -R scanner /runner /workspace
+COPY scanner/runner-entrypoint.sh /runner-entrypoint.sh
+USER scanner
+WORKDIR /runner
+ENTRYPOINT ["bash", "/runner-entrypoint.sh"]
