@@ -1,4 +1,5 @@
 import hashlib
+import errno
 import json
 import os
 from pathlib import Path
@@ -33,8 +34,9 @@ def scan_process(data, engine, cache=None):
             try:
                 cached.parent.mkdir(parents=True, exist_ok=True)
                 cached.write_text(json.dumps(result))
-            except PermissionError:
-                pass  # CI receives the trusted controller cache read-only.
+            except OSError as exc:
+                # Read-only Docker mounts raise EROFS, not PermissionError.
+                if exc.errno not in (errno.EROFS, errno.EACCES, errno.EPERM): raise
         return result
 
 
