@@ -29,6 +29,8 @@ def summary(record):
     body += f"<p class='filename'>{esc(artifact.get('name') or 'Release artifact')} <span class='badge'>{esc(release.get('version') or 'Unknown version')}</span></p><div class='stats'>"
     detail = f"{main_size:,} bytes · {source}" if isinstance(main_size, int) else source
     body += card('Download size', size(main_size), detail)
+    manifests = [f for f in record.get('file_stats', []) if f['path'] == 'manifest.json']
+    if manifests: body += card('Main manifest', size(manifests[0]['bytes']), f"{manifests[0]['bytes']:,} bytes")
     body += card('Unpacked size', size(record.get('unpacked_bytes')), 'ZIP directory metadata')
     total = record.get('total_files')
     body += card('Files', f'{total:,}' if total is not None else 'Not inventoried', f"{record.get('files', 0):,} visited · {record.get('images', 0):,} images inspected")
@@ -38,7 +40,10 @@ def summary(record):
     if download.get('download_limit_bytes'):
         body += f"<p class='muted'>Download limit {size(download['download_limit_bytes'])} · Unpacked limit 512 MiB · Per file limit 32 MiB · Per source limit 16 MiB</p>"
     if record.get('errors'):
-        body += "<div class='issues'><strong>Scan limitations</strong><ul>" + ''.join(f'<li>{esc(e)}</li>' for e in record['errors']) + '</ul></div>'
+        body += "<div class='issues'><strong>Scan limitations</strong><ul>" + ''.join(f'<li>{esc(e)}</li>' for e in record['errors'][:3]) + '</ul>'
+        if len(record['errors']) > 3:
+            body += f"<details><summary>{len(record['errors']) - 3} more recorded limitations</summary><ul>" + ''.join(f'<li>{esc(e)}</li>' for e in record['errors'][3:]) + '</ul></details>'
+        body += '</div>'
     files = record.get('file_stats', [])
     if files:
         body += '<h2>Largest files and manifests</h2><div class="table-scroll"><table><tr><th>File</th><th>Unpacked</th><th>Compressed</th><th>Scan limit</th></tr>'
