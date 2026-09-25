@@ -21,6 +21,7 @@
 import { copyFileSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { loadModeration, isQuarantined } from './lib/moderation.mjs';
 import {
   checkCartFolder,
   checkModFolder,
@@ -44,6 +45,7 @@ const cartsDir = join(repoRoot, 'carts');
 const outDir = join(repoRoot, 'site', 'data');
 const withReleases = process.argv.includes('--releases');
 const token = process.env.GITHUB_TOKEN || '';
+const moderation = loadModeration(join(repoRoot, '.health', 'moderation.json'));
 
 const schema = loadSchema(repoRoot);
 const cartSchema = loadCartSchema(repoRoot);
@@ -115,6 +117,10 @@ function collect(dir, root, entrySchema, check) {
 
   const rows = [];
   for (const folder of listEntryFolders(dir)) {
+    if (isQuarantined(moderation, root, folder)) {
+      console.log(`quarantined ${root}/${folder}: excluded from published index`);
+      continue;
+    }
     const from = join(dir, folder);
     const { meta, errors } = check(from, folder, entrySchema);
     if (!meta || errors.length) {

@@ -1,0 +1,51 @@
+name: Mod asset and compatibility scan
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: mod-scan-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: pip install -r scanner/requirements.txt
+      - run: PYTHONPATH=scanner python -m unittest discover -s scanner/tests
+      - run: node --test scripts/test.mjs scripts/moderation.test.mjs
+  scan:
+    runs-on: [self-hosted, Linux, ARM64, mod-scan]
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Scan release assets and API usage
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          REFERENCE_IMAGES: /references
+        run: |
+          args=()
+          if [ -n "$BASE_SHA" ]; then args+=(--base "$BASE_SHA"); fi
+          python /opt/scanner/cli.py --root "$GITHUB_WORKSPACE" --cache /scan-cache --output "$RUNNER_TEMP/scan-report.json" "${args[@]}"
+      - name: Save review evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mod-scan-report
+          path: ${{ runner.temp }}/scan-report.json
+          retention-days: 14
+          if-no-files-found: warn

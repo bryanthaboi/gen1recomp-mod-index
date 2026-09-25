@@ -1,4 +1,6 @@
 node_modules/
+__pycache__/
+*.pyc
 .DS_Store
 
 # Built by scripts/build-index.mjs. Committed copies keep the submission page

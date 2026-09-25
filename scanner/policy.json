@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "auto_quarantine_exact": 25,
+  "priority_similarity": 100,
+  "similarity_distance": 30,
+  "max_download_bytes": 268435456,
+  "max_unpacked_bytes": 536870912,
+  "max_member_bytes": 33554432,
+  "max_files": 50000,
+  "max_image_pixels": 16777216,
+  "max_previews": 12,
+  "max_seconds": 600
+}

@@ -1,0 +1,36 @@
+name: Notify mod scan results
+on:
+  workflow_run:
+    workflows: [Mod asset and compatibility scan]
+    types: [completed]
+permissions:
+  contents: read
+jobs:
+  notify:
+    if: github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send private review notification
+        env:
+          PUSHCUT_WEBHOOK_URL: ${{ secrets.PUSHCUT_WEBHOOK_URL }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          url = os.environ.get('PUSHCUT_WEBHOOK_URL')
+          if not url:
+              raise SystemExit('Pushcut secret is not configured')
+          payload = {'id': 'mod-scan-' + os.environ['RUN_ID'], 'threadId': 'mod-scan-pr',
+                     'title': 'Mod submission needs review',
+                     'text': 'Asset checks, API checks, or scan completion failed. Open the job for evidence.',
+                     'sound': 'question', 'isTimeSensitive': False,
+                     'defaultAction': {'url': os.environ['RUN_URL']},
+                     'actions': [{'name': 'Review scan', 'url': os.environ['RUN_URL']}]}
+          request = urllib.request.Request(url, data=json.dumps(payload).encode(), headers={'Content-Type': 'application/json'})
+          try:
+              with urllib.request.urlopen(request, timeout=20) as response:
+                  if response.status != 200: raise RuntimeError()
+          except Exception:
+              raise SystemExit('Pushcut notification delivery failed')
+          PY
