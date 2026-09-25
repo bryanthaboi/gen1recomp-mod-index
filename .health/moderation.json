@@ -13,6 +13,12 @@
       "reason": "Asset policy quarantine: 0 distinct exact matches; review required",
       "checked_at": 1790347887
     },
+    "mods/DarioMelo@Music1_LGPE": {
+      "sha256": "165dfc3c45c04ec6f3f9dbd29fa82b6236a6768a5752d17dbc780b0c5e5d7d1d",
+      "version": "26.09.05",
+      "reason": "Asset policy quarantine: 0 distinct exact matches; review required",
+      "checked_at": 1790347891
+    },
     "mods/Dgray66@crystal": {
       "sha256": "ede5eb492d509d8ee8b339779cb35314d205a96ba4b4a21d06d12cb22387a189",
       "version": "2.0.0",
