@@ -1,42 +1,62 @@
 {
   "version": 1,
   "entries": {
-    "mods/DarioMelo@Music1_FRLG": {
-      "sha256": "c841418c6b72e4726fde0a4a08d83bd9ac006a572f685c46ff9c076f1236a749",
-      "version": "26.09.05",
-      "reason": "Asset policy quarantine: 0 distinct exact matches; review required",
-      "checked_at": 1790348746
-    },
     "mods/DarioMelo@Music1_HGSS": {
       "sha256": "abf49096a609cb671da4191c4c5d22fc99352104da1a09565cb918afcf19d3e3",
       "version": "26.09.05",
-      "reason": "Asset policy quarantine: 0 distinct exact matches; review required",
+      "reason": "Previously quarantined entry requires explicit approval of this artifact",
       "checked_at": 1790348751
     },
     "mods/DarioMelo@Music1_LGPE": {
       "sha256": "165dfc3c45c04ec6f3f9dbd29fa82b6236a6768a5752d17dbc780b0c5e5d7d1d",
       "version": "26.09.05",
-      "reason": "Asset policy quarantine: 0 distinct exact matches; review required",
+      "reason": "Previously quarantined entry requires explicit approval of this artifact",
       "checked_at": 1790348757
     },
     "mods/Dgray66@crystal": {
       "sha256": "ede5eb492d509d8ee8b339779cb35314d205a96ba4b4a21d06d12cb22387a189",
       "version": "2.0.0",
-      "reason": "Asset policy quarantine: 0 distinct exact matches; review required",
+      "reason": "Previously quarantined entry requires explicit approval of this artifact",
       "checked_at": 1790348767
     },
     "mods/Nezara@dialogue_portraits": {
       "sha256": "425863b8b894fac4eb901f15cd538ff1a8e880133d63237b47ebd9d1845d3764",
       "version": "1.0.2",
-      "reason": "Asset policy quarantine: 0 distinct exact matches; review required",
+      "reason": "Previously quarantined entry requires explicit approval of this artifact",
       "checked_at": 1790348829
     },
     "mods/eduardocalafell@gen2_dex": {
       "sha256": "7c74c3beba12154af51ea1d9ee9a3e2cb6f6038cd04e3fd4fa47d469e8050aa8",
       "version": "1.2.2",
-      "reason": "Asset policy quarantine: 0 distinct exact matches; review required",
+      "reason": "Previously quarantined entry requires explicit approval of this artifact",
       "checked_at": 1790348970
+    },
+    "mods/DarioMelo@Music1_FRLG": {
+      "sha256": "c841418c6b72e4726fde0a4a08d83bd9ac006a572f685c46ff9c076f1236a749",
+      "version": "26.09.05",
+      "reason": "Previously quarantined entry requires explicit approval of this artifact",
+      "checked_at": 1790349316
     }
   },
-  "approvals": {}
+  "approvals": {},
+  "watchlist": {
+    "mods/eduardocalafell@gen2_dex": {
+      "sha256": "7c74c3beba12154af51ea1d9ee9a3e2cb6f6038cd04e3fd4fa47d469e8050aa8"
+    },
+    "mods/Nezara@dialogue_portraits": {
+      "sha256": "425863b8b894fac4eb901f15cd538ff1a8e880133d63237b47ebd9d1845d3764"
+    },
+    "mods/Dgray66@crystal": {
+      "sha256": "ede5eb492d509d8ee8b339779cb35314d205a96ba4b4a21d06d12cb22387a189"
+    },
+    "mods/DarioMelo@Music1_FRLG": {
+      "sha256": "c841418c6b72e4726fde0a4a08d83bd9ac006a572f685c46ff9c076f1236a749"
+    },
+    "mods/DarioMelo@Music1_HGSS": {
+      "sha256": "abf49096a609cb671da4191c4c5d22fc99352104da1a09565cb918afcf19d3e3"
+    },
+    "mods/DarioMelo@Music1_LGPE": {
+      "sha256": "165dfc3c45c04ec6f3f9dbd29fa82b6236a6768a5752d17dbc780b0c5e5d7d1d"
+    }
+  }
 }
