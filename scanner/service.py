@@ -8,7 +8,7 @@ from pathlib import Path
 import secrets
 import threading
 import time
-from urllib.parse import urlsplit, parse_qs
+from urllib.parse import urlsplit, parse_qs, urlencode
 from zoneinfo import ZoneInfo
 
 from catalog import REPO, remote_entries
@@ -17,7 +17,7 @@ from jobs import scan_entry
 from notify import deliver, payload, secret, needs_notification
 from store import Store
 from import_reports import import_reports
-from presentation import summary, progress_panel
+from presentation import summary, progress_panel, size, SORT_COLUMNS, sort_records, sort_value
 
 STATE = Path(os.environ.get('REVIEW_STATE', '/state'))
 STATE.mkdir(parents=True, exist_ok=True)
@@ -137,7 +137,7 @@ def scheduler():
         time.sleep(60)
 
 
-STYLE = '''body{font:16px system-ui;margin:32px auto;max-width:1200px;padding:0 24px;background:#101820;color:#e9eff4}a{color:#80caff}table{width:100%;border-collapse:collapse}td,th{overflow-wrap:anywhere;max-width:470px;text-align:left;padding:12px;border-bottom:1px solid #405060}button,input{font:inherit;padding:10px;margin:5px}button{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#172632;padding:18px}img{max-width:100%;image-rendering:pixelated}.quarantined,.updated_recheck{color:#ff8888}.review,.incomplete{color:#ffcf77}.clean,.approved{color:#84e8af}small{color:#b7c5d0}form{display:inline}.summary,.progress-panel{background:#172632;border:1px solid #354858;border-radius:16px;padding:24px;margin:24px 0}.eyebrow{font-size:12px;letter-spacing:.12em;color:#9fbbce}.filename{font-size:20px;overflow-wrap:anywhere}.badge{font-size:13px;background:#2b4153;padding:5px 10px;border-radius:20px}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.stat{padding:18px;background:#101e29;border-radius:10px;display:flex;flex-direction:column;gap:8px}.stat strong{font-size:26px}.stat span,.muted,.byte-count{font-size:13px;color:#a8bdcd}.byte-count{display:block;margin-top:5px}.issues{background:#392b21;border-left:3px solid #ffcf77;padding:16px;margin:16px 0;overflow-wrap:anywhere}.issues li{margin:8px 0}.table-scroll{overflow:auto}.file-path{max-width:470px;overflow-wrap:anywhere}.progress-heading{display:flex;justify-content:space-between;gap:16px}progress{width:100%;height:14px;margin-top:18px;accent-color:#80caff}h2{font-size:20px}select{font:inherit;padding:10px;background:#172632;color:#e9eff4}button{border:1px solid #5b819d;border-radius:8px;background:#233e53;color:#e9eff4}input{border:1px solid #405060;border-radius:8px;background:#101e29;color:#e9eff4}details{margin-top:20px}'''
+STYLE = '''body{font:16px system-ui;margin:32px auto;max-width:1200px;padding:0 24px;background:#101820;color:#e9eff4}a{color:#80caff}table{width:100%;border-collapse:collapse}td,th{overflow-wrap:anywhere;max-width:470px;text-align:left;padding:12px;border-bottom:1px solid #405060}button,input{font:inherit;padding:10px;margin:5px}button{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#172632;padding:18px}img{max-width:100%;image-rendering:pixelated}.quarantined,.updated_recheck{color:#ff8888}.review,.incomplete{color:#ffcf77}.clean,.approved{color:#84e8af}small{color:#b7c5d0}form{display:inline}.summary,.progress-panel{background:#172632;border:1px solid #354858;border-radius:16px;padding:24px;margin:24px 0}.eyebrow{font-size:12px;letter-spacing:.12em;color:#9fbbce}.filename{font-size:20px;overflow-wrap:anywhere}.badge{font-size:13px;background:#2b4153;padding:5px 10px;border-radius:20px}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.stat{padding:18px;background:#101e29;border-radius:10px;display:flex;flex-direction:column;gap:8px}.stat strong{font-size:26px}.stat span,.muted,.byte-count{font-size:13px;color:#a8bdcd}.byte-count{display:block;margin-top:5px}.issues{background:#392b21;border-left:3px solid #ffcf77;padding:16px;margin:16px 0;overflow-wrap:anywhere}.issues li{margin:8px 0}.table-scroll{overflow:auto}.file-path{max-width:470px;overflow-wrap:anywhere}.progress-heading{display:flex;justify-content:space-between;gap:16px}progress{width:100%;height:14px;margin-top:18px;accent-color:#80caff}h2{font-size:20px}.catalog{min-width:1050px}.catalog td:first-child{min-width:240px}.catalog th a{white-space:nowrap;text-decoration:none}.numeric{white-space:nowrap;font-variant-numeric:tabular-nums}select{font:inherit;padding:10px;background:#172632;color:#e9eff4}button{border:1px solid #5b819d;border-radius:8px;background:#233e53;color:#e9eff4}input{border:1px solid #405060;border-radius:8px;background:#101e29;color:#e9eff4}details{margin-top:20px}'''
 
 
 def status_label(status):
@@ -204,24 +204,35 @@ class Handler(BaseHTTPRequestHandler):
         query = parse_qs(urlsplit(self.path).query)
         search = query.get('q', [''])[0].lower()
         selected = query.get('status', [''])[0]
+        sort = query.get('sort', [''])[0]
+        if sort not in dict(SORT_COLUMNS): sort = ''
+        direction = 'desc' if query.get('direction', ['asc'])[0] == 'desc' else 'asc'
         total = len(records)
         records = [r for r in records if (not selected or r['status'] == selected) and (search in (r['title'] + r['key']).lower())]
         records.sort(key=lambda r: ({'quarantined': 0, 'updated_recheck': 0, 'review': 1, 'incomplete': 2}.get(r['status'], 3), -r.get('exact_unique', 0), -r.get('similar_unique', 0)))
+        if sort: records = sort_records(records, sort, direction == 'desc')
         body = self.form('scan', 'Scan all mods now') + self.form('publish', 'Sync quarantine to GitHub')
         body += f"<p>Midnight scans · America/New_York · Morning digest after 08:00 · {total} entries checked</p>"
         body += f'<form method="get"><input name="q" aria-label="Search mods" placeholder="Search mods" value="{esc(search)}"><select name="status" aria-label="Status filter">'
         for status in ['', 'quarantined', 'updated_recheck', 'review', 'incomplete', 'approved', 'clean']:
             body += f'<option value="{status}" {"selected" if status == selected else ""}>{status_label(status) if status else "All statuses"}</option>'
-        body += '</select><button>Filter</button></form>'
+        body += f'</select><input type="hidden" name="sort" value="{sort}"><input type="hidden" name="direction" value="{direction}"><button>Filter</button></form>'
         body += '<p>Refresh this page to see progress. Quarantined listings are excluded from the published index after the next Pages deployment.</p>'
         body += progress_panel(STORE.setting('progress'), STORE.setting('running', False))
         for key in ['last_error', 'publish_error', 'notification_error', 'import_error']:
             value = STORE.setting(key)
             if value: body += f"<p class='issues'>{esc(key.replace('_', ' ').capitalize())}: {esc(value)}</p>"
-        body += '<table><tr><th>Mod</th><th>Status</th><th>Exact assets</th><th>Similar assets</th><th>API findings</th></tr>'
+        body += '<div class="table-scroll"><table class="catalog"><tr>'
+        for column, label in SORT_COLUMNS:
+            next_direction = ('asc' if direction == 'desc' else 'desc') if sort == column else ('asc' if column in ('title', 'status') else 'desc')
+            url = '/?' + urlencode({'q': search, 'status': selected, 'sort': column, 'direction': next_direction})
+            arrow = (' ↓' if direction == 'desc' else ' ↑') if sort == column else ' ↕'
+            aria_sort = ('descending' if direction == 'desc' else 'ascending') if sort == column else 'none'
+            body += f'<th aria-sort="{aria_sort}"><a href="{esc(url)}">{label}{arrow}</a></th>'
+        body += '</tr>'
         for r in records:
-            body += f"<tr><td><a href='/review/{r['scan_id']}'>{esc(r['title'])}</a><br><small>{esc(r['key'])}</small></td><td class='{esc(r['status'])}'>{esc(status_label(r['status']))}</td><td>{r.get('exact_unique', 0)}</td><td>{r.get('similar_unique', 0)}</td><td>{len(r.get('api', []))}</td></tr>"
-        body += '</table><details><summary>Recent scan history</summary><ul>'
+            body += f"<tr><td><a href='/review/{r['scan_id']}'>{esc(r['title'])}</a><br><small>{esc(r['key'])}</small></td><td class='{esc(r['status'])}'>{esc(status_label(r['status']))}</td><td class='numeric'>{size(sort_value(r, 'zip'))}</td><td class='numeric'>{size(r.get('unpacked_bytes'))}</td><td class='numeric'>{format(r['total_files'], ',') if r.get('total_files') is not None else '—'}</td><td>{r.get('exact_unique', 0)}</td><td>{r.get('similar_unique', 0)}</td><td>{len(r.get('api', []))}</td></tr>"
+        body += '</table></div><details><summary>Recent scan history</summary><ul>'
         for r in STORE.recent(): body += f"<li><a href='/review/{r['scan_id']}'>{esc(r['key'])}</a> {esc(r['status'])} {esc(r['origin'])}</li>"
         self.page('Mod review queue', body + '</ul></details>')
 

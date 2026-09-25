@@ -68,3 +68,20 @@ def progress_panel(progress, running):
     title = 'Audit in progress' if running else 'Latest audit'
     entry = progress.get('entry', '')
     return f"<section class='progress-panel'><div class='progress-heading'><strong>{title}</strong><span>{done:,} / {total:,} entries · {percent}%</span></div><progress max='{max(total, 1)}' value='{done}' aria-label='Audit progress'></progress><p class='muted'>{esc(entry)}</p></section>"
+
+
+SORT_COLUMNS = [('title', 'Mod'), ('status', 'Status'), ('zip', 'ZIP size'), ('unpacked', 'Unpacked size'), ('files', 'Files'), ('exact', 'Exact assets'), ('similar', 'Similar assets'), ('api', 'API findings')]
+
+
+def sort_value(record, column):
+    return {'title': record['title'].casefold(), 'status': record['status'],
+            'zip': record.get('download', {}).get('download_bytes', record.get('archive_bytes')),
+            'unpacked': record.get('unpacked_bytes'), 'files': record.get('total_files'),
+            'exact': record.get('exact_unique', 0), 'similar': record.get('similar_unique', 0),
+            'api': len(record.get('api', []))}.get(column)
+
+
+def sort_records(records, column, descending=False):
+    known = [r for r in records if sort_value(r, column) is not None]
+    unknown = [r for r in records if sort_value(r, column) is None]
+    return sorted(known, key=lambda r: (sort_value(r, column), r['key']), reverse=descending) + sorted(unknown, key=lambda r: r['key'])
