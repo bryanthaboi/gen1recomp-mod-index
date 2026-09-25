@@ -72,3 +72,5 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          token: ${{ secrets.MOD_INDEX_API_TOKEN || github.token }}
