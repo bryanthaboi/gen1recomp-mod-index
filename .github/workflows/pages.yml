@@ -30,12 +30,12 @@ jobs:
 
       - name: Build index
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.MOD_INDEX_API_TOKEN || github.token }}
         run: node scripts/build-index.mjs --releases
 
       - name: Gate resolved releases before publication
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.MOD_INDEX_API_TOKEN || github.token }}
           REFERENCE_IMAGES: /references
         run: python /opt/scanner/cli.py --root "$GITHUB_WORKSPACE" --gate-index site/data/index.json --cache /scan-cache --output "$RUNNER_TEMP/scan-report.json"
 

@@ -50,7 +50,7 @@ def public_url(url):
     return url
 
 
-def fetch(url, limit=POLICY['max_download_bytes'], token='', timeout=90):
+def fetch(url, limit=POLICY['max_download_bytes'], token='', timeout=90, stats=None):
     """Cap streamed bytes, wall time, redirects; never forward auth to downloads."""
     start = time.monotonic()
     for _ in range(6):
@@ -63,14 +63,22 @@ def fetch(url, limit=POLICY['max_download_bytes'], token='', timeout=90):
                 url = urljoin(url, response.headers['Location'])
                 continue
             response.raise_for_status()
-            if int(response.headers.get('Content-Length', 0)) > limit:
-                raise ValueError('Download exceeds byte limit')
+            declared = int(response.headers.get('Content-Length', 0))
+            if stats is not None:
+                stats.update({'download_limit_bytes': limit, 'download_bytes': declared or None, 'size_source': 'server header' if declared else 'unknown'})
+            if declared > limit:
+                raise ValueError(f'Download is {declared:,} bytes; limit is {limit:,} bytes')
             chunks, size = [], 0
             for chunk in response.iter_content(65536):
                 size += len(chunk)
+                if stats is not None:
+                    stats['received_bytes'] = size
+                    if not declared:
+                        stats.update({'download_bytes': size, 'size_source': 'at least'})
                 if size > limit or time.monotonic() - start > timeout:
-                    raise ValueError('Download exceeds byte or time limit')
+                    raise ValueError(f'Download stopped after {size:,} bytes; byte limit {limit:,}, time limit {timeout}s')
                 chunks.append(chunk)
+            if stats is not None: stats.update({'download_bytes': size, 'size_source': 'measured'})
             return b''.join(chunks)
     raise ValueError('Too many redirects')
 
@@ -118,7 +126,8 @@ class Engine:
     def scan(self, data):
         result = {'sha256': digest(data), 'scanner': self.revision, 'status': 'clean', 'complete': True,
                   'files': 0, 'images': 0, 'exact_unique': 0, 'similar_unique': 0,
-                  'assets': [], 'api': [], 'errors': [], 'previews': []}
+                  'assets': [], 'api': [], 'errors': [], 'previews': [],
+                  'archive_bytes': len(data), 'file_stats': [], 'file_types': {}}
         analyzer = ApiAnalyzer()
         exact, similar = set(), set()
         started = time.monotonic()
@@ -175,6 +184,20 @@ class Engine:
                 raise ValueError('Archive download limit exceeded')
             with zipfile.ZipFile(io.BytesIO(data)) as archive:
                 infos = archive.infolist()
+                files = [i for i in infos if not i.is_dir()]
+                result['total_files'] = len(files)
+                result['unpacked_bytes'] = sum(i.file_size for i in files)
+                result['compressed_member_bytes'] = sum(i.compress_size for i in files)
+                selected = sorted(files, key=lambda i: i.file_size, reverse=True)[:20]
+                selected += [i for i in files if PurePosixPath(i.filename).name.lower() == 'manifest.json' and i not in selected][:100]
+                result['file_stats'] = [{'path': i.filename, 'bytes': i.file_size, 'compressed_bytes': i.compress_size,
+                    'over_member_limit': i.file_size > self.policy['max_member_bytes'],
+                    'over_source_limit': (PurePosixPath(i.filename).suffix.lower() == '.lua' or PurePosixPath(i.filename).name.lower() == 'manifest.json') and i.file_size > 16 * 1024 * 1024}
+                    for i in selected]
+                for i in files:
+                    ext = PurePosixPath(i.filename).suffix.lower() or '(no extension)'
+                    kind = result['file_types'].setdefault(ext, {'count': 0, 'bytes': 0})
+                    kind['count'] += 1; kind['bytes'] += i.file_size
                 if len(infos) > self.policy['max_files'] or sum(i.file_size for i in infos) > self.policy['max_unpacked_bytes']:
                     raise ValueError('Archive file count or unpacked size limit exceeded')
                 names = set()
@@ -191,7 +214,7 @@ class Engine:
                     result['files'] += 1
                     analyzer.add_file(name)
                     if info.file_size > self.policy['max_member_bytes']:
-                        incomplete(f'File exceeds scan limit: {name}')
+                        incomplete(f'File exceeds scan limit: {name} ({info.file_size:,} bytes; limit {self.policy["max_member_bytes"]:,} bytes)')
                         continue
                     raw = archive.read(info)
                     if len(raw) > self.policy['max_member_bytes']:
@@ -203,7 +226,7 @@ class Engine:
                             analyzer.add_file(name, raw)
                             if ext == '.lua': lua_files.append({'name': name, 'text': raw.decode('utf-8', 'replace')})
                         else:
-                            incomplete(f'Source budget exceeded: {name}')
+                            incomplete(f'Source budget exceeded: {name} ({len(raw):,} bytes; per source limit 16,777,216 bytes; total source bytes {source_bytes:,})')
                     binary = check_file_stream_for_magic(io.BytesIO(raw), name, self.config.binary_rules)
                     if binary:
                         # An extension or four-byte marker alone is not proof of a ROM.

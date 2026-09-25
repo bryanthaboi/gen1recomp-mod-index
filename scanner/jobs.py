@@ -41,11 +41,12 @@ def scan_process(data, engine, cache=None):
 def scan_entry(entry, engine, token='', cache=None):
     record = {'key': entry['key'], 'title': entry['meta'].get('title', entry['key']), 'checked_at': int(time.time()), 'release': None}
     try:
-        release = entry.get('resolved_release') or release_for(entry['meta'], token, '.g1rcart' if entry['kind'] == 'carts' else '.zip')
+        release = entry['resolved_release'] if 'resolved_release' in entry else release_for(entry['meta'], token, '.g1rcart' if entry['kind'] == 'carts' else '.zip')
         record['release'] = release
         if not release:
             raise ValueError('No installable release')
-        data = fetch(release['zip']['url'])
+        record['download'] = {}
+        data = fetch(release['zip']['url'], stats=record['download'])
         if entry['kind'] == 'carts':
             import base64, io, zipfile
             from cart import parse_bundle
@@ -90,5 +91,5 @@ def scan_entry(entry, engine, token='', cache=None):
         if record.get('status') != 'quarantined': record['status'] = 'incomplete'
         record.setdefault('sha256', '')
         record.setdefault('scanner', engine.revision)
-        if 'byte limit' in str(exc): record['priority'] = True
+        if 'limit' in str(exc) and 'byte' in str(exc): record['priority'] = True
     return json.loads(redact(json.dumps(record)))

@@ -14,9 +14,10 @@ from zoneinfo import ZoneInfo
 from catalog import REPO, remote_entries
 from engine import Engine, redact
 from jobs import scan_entry
-from notify import deliver, payload, secret
+from notify import deliver, payload, secret, needs_notification
 from store import Store
 from import_reports import import_reports
+from presentation import summary, progress_panel
 
 STATE = Path(os.environ.get('REVIEW_STATE', '/state'))
 STATE.mkdir(parents=True, exist_ok=True)
@@ -46,6 +47,7 @@ def publish():
             known = {r['key'] for r in STORE.latest()}
             doc['entries'].update({k: v for k, v in current.get('entries', {}).items() if k not in known})
             doc['approvals'].update({k: v for k, v in current.get('approvals', {}).items() if k not in known})
+            doc['watchlist'].update(current.get('watchlist', {}))
             if current == doc:
                 STORE.set('publish_error', None); return
         content = base64.b64encode((json.dumps(doc, indent=2) + '\n').encode()).decode()
@@ -68,6 +70,7 @@ def full_scan():
     if not LOCK.acquire(False): return
     try:
         STORE.set('running', True); STORE.set('last_error', None)
+        STORE.set('progress', {'done': 0, 'total': 0, 'entry': 'Loading catalog'})
         ENGINE = ENGINE or Engine()
         entries = remote_entries(secret('GH_TOKEN'))
         STORE.set('progress', {'done': 0, 'total': len(entries)})
@@ -75,7 +78,7 @@ def full_scan():
             record = scan_entry(entry, ENGINE, secret('GH_TOKEN'), STATE / 'cache')
             scan_id = STORE.record(record)
             effective = STORE.effective(record)
-            if effective.get('priority') and effective['status'] != 'approved':
+            if effective.get('priority') and needs_notification(effective):
                 # A localhost link is intentionally not sent to the phone.
                 review_url = os.environ.get('REVIEW_PUBLIC_URL') or f'https://github.com/{REPO}/actions'
                 if os.environ.get('REVIEW_PUBLIC_URL'): review_url += f'/review/{scan_id}'
@@ -85,7 +88,7 @@ def full_scan():
                 deliver(STORE)
             STORE.set('progress', {'done': number, 'total': len(entries), 'entry': entry['key']})
             # Quarantine takes effect before waiting for the entire index scan.
-            if effective['status'] == 'quarantined': safe_publish()
+            if effective['status'] in ('quarantined', 'updated_recheck'): safe_publish()
         safe_publish()
         STORE.set('last_scan', int(time.time()))
         STORE.set('scanner_revision', ENGINE.revision)
@@ -113,11 +116,11 @@ def scheduler():
             STORE.set('attempt_revision', revision)
             threading.Thread(target=full_scan, daemon=True).start()
         if now.hour >= 8 and STORE.setting('digest_day') != day:
-            records = [r for r in STORE.latest() if r['status'] in ('review', 'incomplete') and not r.get('priority')]
+            records = [r for r in STORE.latest() if r['status'] == 'review' and needs_notification(r) and not r.get('priority')]
             fingerprint = sorted((r['key'], r.get('sha256'), r['status'], r.get('scanner')) for r in records)
             if records and STORE.setting('digest_fingerprint') != [list(x) for x in fingerprint]:
                 STORE.enqueue('digest-' + day, {'id': 'mod-review-digest', 'threadId': 'mod-review', 'title': 'Mod review queue',
-                    'text': f'{len(records)} mods need review or a successful rescan. Open the review dashboard on this machine at localhost:8849.',
+                    'text': f'{len(records)} mods need human review. Open the review dashboard on this machine at localhost:8849.',
                     'sound': 'subtle', 'isTimeSensitive': False,
                     'defaultAction': {'url': os.environ.get('REVIEW_PUBLIC_URL') or f'https://github.com/{REPO}/actions'}})
                 STORE.set('digest_fingerprint', fingerprint)
@@ -134,7 +137,11 @@ def scheduler():
         time.sleep(60)
 
 
-STYLE = '''body{font:16px system-ui;margin:32px auto;max-width:1200px;padding:0 24px;background:#101820;color:#e9eff4}a{color:#80caff}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:12px;border-bottom:1px solid #405060}button,input{font:inherit;padding:10px;margin:5px}button{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#172632;padding:18px}img{max-width:100%;image-rendering:pixelated}.quarantined{color:#ff8888}.review,.incomplete{color:#ffcf77}.clean,.approved{color:#84e8af}small{color:#b7c5d0}form{display:inline}'''
+STYLE = '''body{font:16px system-ui;margin:32px auto;max-width:1200px;padding:0 24px;background:#101820;color:#e9eff4}a{color:#80caff}table{width:100%;border-collapse:collapse}td,th{overflow-wrap:anywhere;max-width:470px;text-align:left;padding:12px;border-bottom:1px solid #405060}button,input{font:inherit;padding:10px;margin:5px}button{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#172632;padding:18px}img{max-width:100%;image-rendering:pixelated}.quarantined,.updated_recheck{color:#ff8888}.review,.incomplete{color:#ffcf77}.clean,.approved{color:#84e8af}small{color:#b7c5d0}form{display:inline}.summary,.progress-panel{background:#172632;border:1px solid #354858;border-radius:16px;padding:24px;margin:24px 0}.eyebrow{font-size:12px;letter-spacing:.12em;color:#9fbbce}.filename{font-size:20px;overflow-wrap:anywhere}.badge{font-size:13px;background:#2b4153;padding:5px 10px;border-radius:20px}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.stat{padding:18px;background:#101e29;border-radius:10px;display:flex;flex-direction:column;gap:8px}.stat strong{font-size:26px}.stat span,.muted,.byte-count{font-size:13px;color:#a8bdcd}.byte-count{display:block;margin-top:5px}.issues{background:#392b21;border-left:3px solid #ffcf77;padding:16px;margin:16px 0;overflow-wrap:anywhere}.issues li{margin:8px 0}.table-scroll{overflow:auto}.file-path{max-width:470px;overflow-wrap:anywhere}.progress-heading{display:flex;justify-content:space-between;gap:16px}progress{width:100%;height:14px;margin-top:18px;accent-color:#80caff}h2{font-size:20px}select{font:inherit;padding:10px;background:#172632;color:#e9eff4}button{border:1px solid #5b819d;border-radius:8px;background:#233e53;color:#e9eff4}input{border:1px solid #405060;border-radius:8px;background:#101e29;color:#e9eff4}details{margin-top:20px}'''
+
+
+def status_label(status):
+    return 'updated — recheck required' if status == 'updated_recheck' else status
 
 
 def esc(value): return html.escape(str(value), quote=True)
@@ -172,8 +179,9 @@ class Handler(BaseHTTPRequestHandler):
             try: record = STORE.get(int(path.split('/')[-1]))
             except ValueError: record = None
             if not record: return self.send(404, 'Scan not found')
-            body = f"<p class='{esc(record['status'])}'>{esc(record['status'])}</p><p>{esc(record['key'])}</p>"
-            body += '<p>Decisions apply only to this ZIP checksum. Incomplete scans cannot be approved.</p>'
+            body = f"<p class='{esc(record['status'])}'>{esc(status_label(record['status']))}</p><p>{esc(record['key'])}</p>"
+            body += summary(record)
+            body += '<p>Approval applies only to this artifact checksum. Previously quarantined mods stay blocked after updates until you approve the new artifact. Resetting a decision does not clear quarantine history. Incomplete scans cannot be approved.</p>'
             for action, label in [('approve', 'Approve this artifact'), ('quarantine', 'Quarantine this artifact'), ('reset', 'Reset decision')]:
                 body += self.form(action, label, record['scan_id'])
             for preview in record.get('previews', []):
@@ -198,20 +206,21 @@ class Handler(BaseHTTPRequestHandler):
         selected = query.get('status', [''])[0]
         total = len(records)
         records = [r for r in records if (not selected or r['status'] == selected) and (search in (r['title'] + r['key']).lower())]
-        records.sort(key=lambda r: ({'quarantined': 0, 'review': 1, 'incomplete': 2}.get(r['status'], 3), -r.get('exact_unique', 0), -r.get('similar_unique', 0)))
+        records.sort(key=lambda r: ({'quarantined': 0, 'updated_recheck': 0, 'review': 1, 'incomplete': 2}.get(r['status'], 3), -r.get('exact_unique', 0), -r.get('similar_unique', 0)))
         body = self.form('scan', 'Scan all mods now') + self.form('publish', 'Sync quarantine to GitHub')
         body += f"<p>Midnight scans · America/New_York · Morning digest after 08:00 · {total} entries checked</p>"
         body += f'<form method="get"><input name="q" aria-label="Search mods" placeholder="Search mods" value="{esc(search)}"><select name="status" aria-label="Status filter">'
-        for status in ['', 'quarantined', 'review', 'incomplete', 'approved', 'clean']:
-            body += f'<option value="{status}" {"selected" if status == selected else ""}>{status or "All statuses"}</option>'
+        for status in ['', 'quarantined', 'updated_recheck', 'review', 'incomplete', 'approved', 'clean']:
+            body += f'<option value="{status}" {"selected" if status == selected else ""}>{status_label(status) if status else "All statuses"}</option>'
         body += '</select><button>Filter</button></form>'
         body += '<p>Refresh this page to see progress. Quarantined listings are excluded from the published index after the next Pages deployment.</p>'
-        for key in ['progress', 'last_error', 'publish_error', 'notification_error', 'import_error']:
+        body += progress_panel(STORE.setting('progress'), STORE.setting('running', False))
+        for key in ['last_error', 'publish_error', 'notification_error', 'import_error']:
             value = STORE.setting(key)
-            if value: body += f'<p>{esc(key)}: {esc(value)}</p>'
+            if value: body += f"<p class='issues'>{esc(key.replace('_', ' ').capitalize())}: {esc(value)}</p>"
         body += '<table><tr><th>Mod</th><th>Status</th><th>Exact assets</th><th>Similar assets</th><th>API findings</th></tr>'
         for r in records:
-            body += f"<tr><td><a href='/review/{r['scan_id']}'>{esc(r['title'])}</a><br><small>{esc(r['key'])}</small></td><td class='{esc(r['status'])}'>{esc(r['status'])}</td><td>{r.get('exact_unique', 0)}</td><td>{r.get('similar_unique', 0)}</td><td>{len(r.get('api', []))}</td></tr>"
+            body += f"<tr><td><a href='/review/{r['scan_id']}'>{esc(r['title'])}</a><br><small>{esc(r['key'])}</small></td><td class='{esc(r['status'])}'>{esc(status_label(r['status']))}</td><td>{r.get('exact_unique', 0)}</td><td>{r.get('similar_unique', 0)}</td><td>{len(r.get('api', []))}</td></tr>"
         body += '</table><details><summary>Recent scan history</summary><ul>'
         for r in STORE.recent(): body += f"<li><a href='/review/{r['scan_id']}'>{esc(r['key'])}</a> {esc(r['status'])} {esc(r['origin'])}</li>"
         self.page('Mod review queue', body + '</ul></details>')
