@@ -88,6 +88,7 @@ def full_scan():
             if effective['status'] == 'quarantined': safe_publish()
         safe_publish()
         STORE.set('last_scan', int(time.time()))
+        STORE.set('scanner_revision', ENGINE.revision)
         STORE.set('scheduled_day', datetime.now(TZ).date().isoformat())
     except Exception as exc:
         STORE.set('last_error', redact(f'{type(exc).__name__}: {exc}'))
@@ -99,13 +100,17 @@ def full_scan():
 def scheduler():
     STORE.set('running', False)
     last_import = 0
+    revision = Engine().revision
     while True:
         now = datetime.now(TZ)
         day = now.date().isoformat()
         last = STORE.setting('scheduled_day')
-        if last != day and not LOCK.locked() and time.time() - STORE.setting('last_attempt', 0) >= 3600:
+        needs_scan = last != day or STORE.setting('scanner_revision') != revision
+        retry_ready = STORE.setting('attempt_revision') != revision or time.time() - STORE.setting('last_attempt', 0) >= 3600
+        if needs_scan and not LOCK.locked() and retry_ready:
             # Startup catches missed midnight runs; at most one daily attempt.
             STORE.set('last_attempt', int(time.time()))
+            STORE.set('attempt_revision', revision)
             threading.Thread(target=full_scan, daemon=True).start()
         if now.hour >= 8 and STORE.setting('digest_day') != day:
             records = [r for r in STORE.latest() if r['status'] in ('review', 'incomplete') and not r.get('priority')]
