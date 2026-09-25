@@ -5,9 +5,10 @@ on:
     types: [completed]
 permissions:
   contents: read
+  actions: read
 jobs:
   notify:
-    if: github.event.workflow_run.conclusion == 'failure'
+    if: github.event.workflow_run.conclusion != 'cancelled'
     runs-on: ubuntu-latest
     steps:
       - name: Send private review notification
@@ -15,16 +16,53 @@ jobs:
           PUSHCUT_WEBHOOK_URL: ${{ secrets.PUSHCUT_WEBHOOK_URL }}
           RUN_URL: ${{ github.event.workflow_run.html_url }}
           RUN_ID: ${{ github.event.workflow_run.id }}
+          RUN_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
         run: |
           python3 - <<'PY'
-          import json, os, urllib.request
+          import io, json, os, urllib.request, urllib.error, zipfile
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self, req, fp, code, msg, headers, newurl):
+                  return None
+          headers = {'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'}
+          api = 'https://api.github.com/repos/' + os.environ['REPOSITORY'] + '/actions/runs/' + os.environ['RUN_ID'] + '/artifacts'
+          records = []
+          try:
+              with urllib.request.urlopen(urllib.request.Request(api, headers=headers), timeout=20) as response:
+                  artifacts = json.load(response)['artifacts']
+              for artifact in artifacts:
+                  if artifact['name'] != 'mod-scan-report' or artifact.get('expired') or artifact['size_in_bytes'] > 33554432:
+                      continue
+                  request = urllib.request.Request(artifact['archive_download_url'], headers=headers)
+                  try:
+                      urllib.request.build_opener(NoRedirect).open(request, timeout=20)
+                  except urllib.error.HTTPError as redirect:
+                      if redirect.code != 302: raise
+                      location = redirect.headers['Location']
+                  if not location.startswith('https://'): raise ValueError()
+                  # The signed storage redirect receives no GitHub credential.
+                  with urllib.request.urlopen(location, timeout=30) as response:
+                      raw = response.read(33554433)
+                  if len(raw) > 33554432: raise ValueError()
+                  with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+                      info = archive.getinfo('scan-report.json')
+                      if info.file_size > 67108864: raise ValueError()
+                      records.extend(json.loads(archive.read(info)).get('entries', []))
+          except Exception:
+              if os.environ['RUN_CONCLUSION'] == 'success':
+                  raise SystemExit('Could not read scan evidence for notification')
+          flagged = [r for r in records if isinstance(r, dict) and r.get('status') in ('review', 'quarantined', 'incomplete')]
+          if not flagged and os.environ['RUN_CONCLUSION'] == 'success':
+              raise SystemExit(0)
+          urgent = any(r.get('priority') or r.get('status') == 'quarantined' for r in flagged)
           url = os.environ.get('PUSHCUT_WEBHOOK_URL')
           if not url:
               raise SystemExit('Pushcut secret is not configured')
           payload = {'id': 'mod-scan-' + os.environ['RUN_ID'], 'threadId': 'mod-scan-pr',
                      'title': 'Mod submission needs review',
-                     'text': 'Asset checks, API checks, or scan completion failed. Open the job for evidence.',
-                     'sound': 'question', 'isTimeSensitive': False,
+                     'text': str(len(flagged)) + ' releases need review or a successful rescan and the workflow finished with ' + os.environ['RUN_CONCLUSION'],
+                     'sound': 'problem' if urgent else 'question', 'isTimeSensitive': urgent,
                      'defaultAction': {'url': os.environ['RUN_URL']},
                      'actions': [{'name': 'Review scan', 'url': os.environ['RUN_URL']}]}
           request = urllib.request.Request(url, data=json.dumps(payload).encode(), headers={'Content-Type': 'application/json'})
