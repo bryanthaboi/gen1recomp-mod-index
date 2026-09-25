@@ -132,6 +132,9 @@ class Store:
                     break
         with self.connect() as db:
             watchlist = {r['entry']: {'sha256': r['sha']} for r in db.execute('SELECT * FROM quarantine_history')}
+        # Scan timestamps belong in local history, not policy: unchanged decisions
+        # must not create a commit and deployment for every nightly rescan.
+        for entry in entries.values(): entry.pop('checked_at', None)
         return {'version': 1, 'entries': entries, 'approvals': approvals, 'watchlist': watchlist}
 
     def enqueue(self, key, payload):
