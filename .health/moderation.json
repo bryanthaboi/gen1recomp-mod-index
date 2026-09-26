@@ -1,6 +1,11 @@
 {
   "version": 1,
   "entries": {
+    "mods/eduardocalafell@gen2_dex": {
+      "sha256": "7c74c3beba12154af51ea1d9ee9a3e2cb6f6038cd04e3fd4fa47d469e8050aa8",
+      "version": "1.2.2",
+      "reason": "Previously quarantined entry requires explicit approval of this artifact"
+    },
     "mods/DarioMelo@Music1_FRLG": {
       "sha256": "c841418c6b72e4726fde0a4a08d83bd9ac006a572f685c46ff9c076f1236a749",
       "version": "26.09.05",
@@ -27,13 +32,8 @@
       "reason": "Previously quarantined entry requires explicit approval of this artifact"
     },
     "mods/Roxas2712@kanto_ascendant": {
-      "sha256": "1ce236fd2d8f302eeb707b5070b90a68bea22f070ebce50b78e8f0af54c4a3dd",
-      "version": "6.7.25",
-      "reason": "Previously quarantined entry requires explicit approval of this artifact"
-    },
-    "mods/eduardocalafell@gen2_dex": {
-      "sha256": "7c74c3beba12154af51ea1d9ee9a3e2cb6f6038cd04e3fd4fa47d469e8050aa8",
-      "version": "1.2.2",
+      "sha256": "bbfc0aff291a8eb9ef63c61628a9c3abf2934656560f51ca7330a552bff78e3e",
+      "version": "6.7.27",
       "reason": "Previously quarantined entry requires explicit approval of this artifact"
     }
   },
