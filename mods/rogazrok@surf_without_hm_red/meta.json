@@ -2,14 +2,14 @@
   "id": "surf_without_hm_red",
   "title": "Modern Field Moves",
   "author": "rogazrok",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "categories": [
     "GAMEPLAY",
     "UI",
     "QOL"
   ],
   "repo": "https://github.com/rogazrok/modern-field-moves.git",
-  "summary": "Modern HM and field-move QoL for Pokémon Red, Blue, Yellow, Gold, Silver and Crystal.",
+  "summary": "Modern HM and field-move QoL for Pokémon Red, Blue, Yellow, Gold, Silver, Crystal, FireRed and LeafGreen.",
   "tags": [
     "hm",
     "field moves",
@@ -27,5 +27,15 @@
   ],
   "api": 2,
   "profile": "content",
-  "experimental": true
+  "games": [
+    "red",
+    "blue",
+    "yellow",
+    "gold",
+    "silver",
+    "crystal",
+    "firered",
+    "leafgreen"
+  ],
+  "experimental": false
 }
