@@ -2,12 +2,12 @@
   "version": 1,
   "failing": {
     "mods/MFRTechConsult@DRAMATIC_SKY_RIDE": {
-      "strikes": 2,
+      "strikes": 3,
       "since": "2026-10-06T13:01:40.527Z",
       "reason": "github \"mfrtechconsult/dramatic-sky-ride\" returned 404 — deleted, renamed away, or made private"
     },
     "mods/MraYT@kanto_dive": {
-      "strikes": 2,
+      "strikes": 3,
       "since": "2026-10-06T13:01:40.527Z",
       "reason": "github \"mfrtechconsult/Kanto-gen1-dive\" returned 404 — deleted, renamed away, or made private"
     }
