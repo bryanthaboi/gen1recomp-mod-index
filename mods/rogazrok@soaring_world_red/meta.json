@@ -1,0 +1,28 @@
+{
+  "id": "soaring_world_red",
+  "title": "Soaring World",
+  "author": "rogazrok",
+  "version": "1.0.1",
+  "games": ["red", "blue", "yellow"],
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT",
+    "ART"
+  ],
+  "repo": "https://github.com/rogazrok/soaring-world",
+  "summary": "Explore 3D Kanto on Dragonite, discover hidden areas and rare Pokémon.",
+  "tags": [
+    "soaring",
+    "kanto",
+    "exploration",
+    "dragonite",
+    "hidden areas"
+  ],
+  "github": "rogazrok/soaring-world",
+  "game_version": ">=0.3.63 <0.4.0",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "overhaul"
+}
