@@ -1,0 +1,18 @@
+{
+  "id": "LIVING_WORLD",
+  "title": "Living World",
+  "author": "FadeyMods",
+  "summary": "A natural, living world around every outdoor map in all 11 games: mountains, forests, rivers, coasts, villages and people, laid out after the real Japanese regions.",
+  "version": "1.0.0",
+  "categories": ["ART", "CONTENT"],
+  "tags": ["world", "void", "border", "scenery", "gen1", "gen2", "gen3", "npcs"],
+  "repo": "https://github.com/FadeyMods/living-world",
+  "github": "FadeyMods/living-world",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "games": ["all"],
+  "profile": "content",
+  "permissions": ["engine_internals"],
+  "conflicts": ["KANTO_WORLD", "JOHTO_KANTO_LINK", "POKE_WORLD"]
+}
