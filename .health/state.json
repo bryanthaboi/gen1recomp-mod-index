@@ -2,42 +2,42 @@
   "version": 1,
   "failing": {
     "mods/Roxas2712@VOXEL_ASCENDANT": {
-      "strikes": 1,
+      "strikes": 2,
       "since": "2026-10-09T05:19:36.979Z",
       "reason": "github \"Roxas2712/voxel-ascendant\" returned 404 — deleted, renamed away, or made private"
     },
     "mods/Roxas2712@anytime_rename": {
-      "strikes": 1,
+      "strikes": 2,
       "since": "2026-10-09T05:19:36.979Z",
       "reason": "github \"Roxas2712/pokemon-gen1-recomp-mod-anytime-rename\" returned 404 — deleted, renamed away, or made private"
     },
     "mods/Roxas2712@deutsch": {
-      "strikes": 1,
+      "strikes": 2,
       "since": "2026-10-09T05:19:36.979Z",
       "reason": "github \"Roxas2712/pokemon-rot-deutsch-mod\" returned 404 — deleted, renamed away, or made private"
     },
     "mods/Roxas2712@deutsch-blau": {
-      "strikes": 1,
+      "strikes": 2,
       "since": "2026-10-09T05:19:36.979Z",
       "reason": "github \"Roxas2712/pokemon-blau-deutsch-mod\" returned 404 — deleted, renamed away, or made private"
     },
     "mods/Roxas2712@deutsch-gelb": {
-      "strikes": 1,
+      "strikes": 2,
       "since": "2026-10-09T05:19:36.979Z",
       "reason": "github \"Roxas2712/pokemon-gelb-deutsch-mod\" returned 404 — deleted, renamed away, or made private"
     },
     "mods/Roxas2712@deutsch-gold": {
-      "strikes": 1,
+      "strikes": 2,
       "since": "2026-10-09T05:19:36.979Z",
       "reason": "github \"Roxas2712/pokemon-gold-deutsch-mod\" returned 404 — deleted, renamed away, or made private"
     },
     "mods/Roxas2712@jj_quick_select": {
-      "strikes": 1,
+      "strikes": 2,
       "since": "2026-10-09T05:19:36.979Z",
       "reason": "github \"Roxas2712/pokemon-quick-select\" returned 404 — deleted, renamed away, or made private"
     },
     "mods/Roxas2712@kanto_ascendant": {
-      "strikes": 1,
+      "strikes": 2,
       "since": "2026-10-09T05:19:36.980Z",
       "reason": "github \"Roxas2712/kanto-ascendant\" returned 404 — deleted, renamed away, or made private"
     }
