@@ -1,39 +1,54 @@
 # Modern Field Moves
 
-Modern Field Moves brings modern HM and field-move quality-of-life features to Pokémon Red, Blue, Yellow, Gold, Silver, Crystal, FireRed and LeafGreen on gen1recomp, while keeping the classic look and feel of the original games.
+**Modern HM mechanics with the classic Pokémon feel.**
 
-Pokémon no longer need to sacrifice moveslots just to use HMs in the overworld. Field moves become natural world interactions while the original progression requirements remain intact by default.
+Modern Field Moves brings modern field-move quality-of-life improvements to Pokémon Red, Blue, Yellow, Gold, Silver, Crystal, FireRed, LeafGreen, Ruby, Sapphire and Emerald on gen1recomp.
+
+Pokémon no longer need to reserve battle moveslots for HMs. Field moves become natural world interactions while preserving the original animations, terrain restrictions and story progression.
 
 ## Features
 
-- Contextual field moves across Gen 1, Gen 2 and FireRed/LeafGreen
-- CUT, SURF, STRENGTH, FLASH, FLY and generation-specific field moves such as WHIRLPOOL, WATERFALL and ROCK SMASH
-- TOWN MAP / MAP integration for Fly
-- Native-style Town Map and Fly integration in FireRed/LeafGreen
-- Sevii Islands Fly handling that preserves normal story progression
-- Optional CROSS-REGION FLY for FireRed/LeafGreen
-- Contextual LIGHT system for dark areas
-- Manual and automatic lighting modes
-- Configurable HM requirements
-- GENERIC and KNOWN MOVE field-move user modes
+- Contextual field moves across all three generations
+- Cut, Fly, Surf, Strength and Flash/LIGHT
+- Whirlpool and Waterfall in Gold, Silver and Crystal
+- Rock Smash and Waterfall in FireRed and LeafGreen
+- Rock Smash, Waterfall, Dive and surfacing in Ruby, Sapphire and Emerald
+- Integrated Town Map and Fly in Gen 1 and FireRed/LeafGreen
+- Fly directly from the Pokégear Map Card in Gold, Silver and Crystal
+- Fly directly from the PokéNav map in Ruby, Sapphire and Emerald
+- Optional CROSS-REGION FLY in FireRed/LeafGreen, preserving Sevii story restrictions
+- Contextual LIGHT system with MANUAL and AUTO modes
+- Puzzle-safe Flash behavior
+- Configurable HM and badge requirements
+- GENERIC and KNOWN MOVE field-move presentation
 - Optional confirmation prompts
-- Debug-friendly UNRESTRICTED mode
-- Support for Red, Blue, Yellow, Gold, Silver, Crystal, FireRed and LeafGreen
+- FREE and CLASSIC map cursor modes in Gen 1/2
 
 ## Field Move User
 
 Modern Field Moves provides two presentation modes:
 
-- **GENERIC** — field moves are used without assigning them to a specific Pokémon
-- **KNOWN MOVE** — uses a party Pokémon that actually knows the move when available, otherwise falls back to GENERIC
+- **GENERIC** — field moves are used without assigning them to a specific Pokémon.
+- **KNOWN MOVE** — uses a party Pokémon that actually knows the move when available, otherwise falls back to GENERIC.
+
+## Maps and Travel
+
+Fly is integrated into the original regional maps while preserving their browsing functions.
+
+- **Red/Blue/Yellow:** Town Map becomes accessible from START after obtaining it.
+- **Gold/Silver/Crystal:** Fly is integrated into the Pokégear Map Card, without a duplicate MAP entry in START.
+- **FireRed/LeafGreen:** Town Map supports Fly while preserving Kanto and Sevii map navigation.
+- **Ruby/Sapphire/Emerald:** SELECT offers Fly on the PokéNav map, while A retains the original zoom function.
+
+Fly requires a valid, visited and available destination. Travel and story progression restrictions are preserved.
 
 ## Compatibility
 
-Modern Field Moves modifies field-move logic, menus, maps and some world interactions.
+Modern Field Moves modifies field-move logic, maps, menus and some world interactions.
 
-Core functionality has been tested across all supported games, but compatibility with every possible save state or mod combination cannot be guaranteed.
+Core functionality has been tested across the supported games, but compatibility with every possible save state or third-party mod combination cannot be guaranteed.
 
-Mods that modify field moves, the START menu, Town Map / Pokégear map, FireRed/LeafGreen region map, Flash/lighting or related world logic may conflict.
+Mods affecting field moves, the START menu, Town Map, Pokégear, PokéNav, Fly, Flash/lighting or related world logic may conflict.
 
 Keeping a backup of your save file is recommended.
 
