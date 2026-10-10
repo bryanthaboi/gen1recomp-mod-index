@@ -1,0 +1,1 @@
+Kanto in Motion is a visual overhaul for Gen1Recomp that adds HD animated Pokémon sprites, modern battle and menu interfaces, redesigned Pokédex and party screens, HD backgrounds, and extensive UI customization across supported Gen 1–3 games.

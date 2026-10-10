@@ -1,0 +1,20 @@
+{
+  "id": "animated_menu_pokemon",
+  "title": "Kanto in Motion",
+  "author": "HaseoSora",
+  "version": "1.6.6",
+  "categories": [
+    "UI",
+    "OTHER"
+  ],
+  "repo": "https://github.com/HaseoSora/Kanto-in-Motion",
+  "tags": [
+    "ui",
+    "sprites"
+  ],
+  "github": "HaseoSora/Kanto-in-Motion",
+  "downloadURL": "https://github.com/HaseoSora/Kanto-in-Motion/releases/download/v1.6.6/Kanto-in-Motion-v1.6.6.zip",
+  "fixed_release_tag": "v1.6.6",
+  "api": 2,
+  "profile": "content"
+}
