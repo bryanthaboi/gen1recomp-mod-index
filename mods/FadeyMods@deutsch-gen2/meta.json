@@ -3,7 +3,7 @@
   "title": "📀🇩🇪 Definitiv German 💬✅ Gen 2",
   "author": "FadeyMods",
   "summary": "Gold, Silber und Kristall komplett auf Deutsch: Texte, Namen, Schrift, Grafiken und Anordnung - gelesen aus deinen eigenen deutschen ROMs. Keine ROM-Inhalte im Mod.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "categories": [
     "TRANSLATION"
   ],
@@ -16,7 +16,7 @@
   "github": "FadeyMods/Definitiv-German-Gen-2",
   "automatic_version_check": true,
   "api": 2,
-  "game_version": ">=0.3.72",
+  "game_version": ">=0.3.73",
   "profile": "content",
   "permissions": [],
   "games": [
