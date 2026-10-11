@@ -2,32 +2,20 @@
   "id": "pikachu_true_potential",
   "title": "Pikachu True Potential",
   "author": "twgrodd",
-  "summary": "Let Pok\u00e9mon Yellow's partner Pikachu grow to Raichu-level base stats without evolving.",
   "version": "1.0.0",
   "categories": [
-    "GAMEPLAY",
-    "BALANCE"
-  ],
-  "tags": [
-    "pokemon-yellow",
-    "starter",
-    "pikachu",
-    "balance"
+    "GAMEPLAY"
   ],
   "repo": "https://github.com/twgrodd/G1R-Deluxe_Yellow_mod_Pikachu-True-Potential",
-  "github": "twgrodd/G1R-Deluxe_Yellow_mod_Pikachu-True-Potential",
-  "automatic_version_check": true,
-  "api": 2,
-  "game_version": ">=0.0.0-0 <2.0.0",
-  "games": [
+  "summary": "Starter Pikachu grows as strong as a Raichu",
+  "tags": [
     "yellow"
   ],
-  "profile": "content",
-  "affects_link": true,
-  "experimental": false,
+  "github": "twgrodd/G1R-Deluxe_Yellow_mod_Pikachu-True-Potential",
+  "downloadURL": "https://github.com/twgrodd/G1R-Deluxe_Yellow_mod_Pikachu-True-Potential/releases/download/v1.0.0/pikachu_true_potential-1.0.0.zip",
   "permissions": [
     "engine_internals"
   ],
-  "dependencies": [],
-  "conflicts": []
+  "api": 2,
+  "profile": "content"
 }
