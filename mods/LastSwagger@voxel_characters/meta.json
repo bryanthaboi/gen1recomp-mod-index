@@ -1,0 +1,20 @@
+{
+  "id": "voxel_characters",
+  "title": "Voxel Characters",
+  "author": "LastSwagger",
+  "summary": "Turns Gen 1 overworld characters into animated voxel models through a compatible voxel host.",
+  "version": "1.8.2",
+  "categories": ["ART"],
+  "tags": ["voxel", "3d", "overworld", "characters", "graphics"],
+  "repo": "https://github.com/last-swagger/gen1recomp-voxel-characters",
+  "github": "last-swagger/gen1recomp-voxel-characters",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": "0.0.0-dev || >=0.1.51 <2.0.0",
+  "games": ["gen1"],
+  "profile": "content",
+  "affects_link": false,
+  "permissions": ["engine_internals"],
+  "dependencies": [],
+  "conflicts": []
+}
