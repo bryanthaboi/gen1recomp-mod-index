@@ -1,0 +1,19 @@
+{
+  "id": "second_screen_companion",
+  "title": "Second Screen Companion",
+  "author": "AlfonsPistoletti",
+  "summary": "Your phone as a second screen for Pokémon! Maps, manage party, give items, quick fly and bike buttons, shiny hunting helpers, etc.",
+  "version": "1.1.0",
+  "categories": ["TOOL", "QOL"],
+  "tags": ["companion", "dexnav", "second-screen", "shiny-hunting", "tv-dashboard"],
+  "repo": "https://github.com/AlfonsPistoletti/gen1recomp-mod-second-screen-companion",
+  "github": "AlfonsPistoletti/gen1recomp-mod-second-screen-companion",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-dev <1.0.0",
+  "games": ["gen1", "gen2", "gen3"],
+  "profile": "content",
+  "experimental": false,
+  "permissions": ["network", "engine_internals"],
+  "license": "MIT"
+}
