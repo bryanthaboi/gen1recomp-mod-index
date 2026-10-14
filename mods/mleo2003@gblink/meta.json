@@ -2,11 +2,11 @@
   "id": "gblink",
   "title": "GB-Link Online Trades",
   "author": "mleo2003",
-  "version": "0.1.2",
+  "version": "0.3.0",
   "categories": [
     "TOOL"
   ],
-  "summary": "Cable Club trades with real Game Boys and emulators online, in the same rooms as pokemon.gblink.io.",
+  "summary": "Online trades with real Game Boys and emulators in pokemon.gblink.io's rooms: the Cable Club in Red/Blue/Yellow, the Trade Center in Gold/Silver/Crystal.",
   "tags": [
     "multiplayer",
     "online",
@@ -22,7 +22,10 @@
   "games": [
     "red",
     "blue",
-    "yellow"
+    "yellow",
+    "gold",
+    "silver",
+    "crystal"
   ],
   "profile": "content",
   "affects_link": false,
