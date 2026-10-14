@@ -1,0 +1,25 @@
+{
+  "id": "voxel_world_gen3",
+  "title": "Voxel Diorama",
+  "author": "Tooandorisu",
+  "version": "1.10.18",
+  "categories": [
+    "ART"
+  ],
+  "repo": "https://github.com/Tooandorisu/Voxel-Diorama",
+  "summary": "Transforms the Gen 3 overworld into a voxel-inspired diorama.",
+  "tags": [
+    "voxel",
+    "diorama",
+    "gen3",
+    "overworld",
+    "graphics",
+    "visual"
+  ],
+  "github": "Tooandorisu/Voxel-Diorama",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
