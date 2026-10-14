@@ -1,0 +1,35 @@
+{
+  "id": "gblink_celio",
+  "title": "GB-Link Celio Trades",
+  "author": "mleo2003",
+  "version": "0.1.0",
+  "categories": [
+    "TOOL"
+  ],
+  "summary": "Online trades from FireRed/LeafGreen with real GBAs and mGBA in celio.gblink.io's rooms, on the game's own Trade Center.",
+  "tags": [
+    "multiplayer",
+    "online",
+    "trade",
+    "link-cable",
+    "gblink"
+  ],
+  "repo": "https://github.com/mleo2003/gen1recomp-celio",
+  "github": "mleo2003/gen1recomp-celio",
+  "license": "MIT",
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "games": [
+    "firered",
+    "leafgreen"
+  ],
+  "profile": "content",
+  "affects_link": false,
+  "experimental": true,
+  "permissions": [
+    "network",
+    "engine_internals"
+  ],
+  "dependencies": [],
+  "conflicts": []
+}
