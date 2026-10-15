@@ -3,12 +3,10 @@
 Crystal's animated sprites in Pokemon Red, Blue and Yellow, decoded from your
 own Pokemon Crystal ROM.
 
-![Charizard and Mewtwo each playing Crystal's animation as they attack in a Pokemon Red battle](https://raw.githubusercontent.com/Code-Grub/crystal-animated-sprites/master/images/animated-battle.gif)
-
 **No artwork is included.** The mod reads the sprites, animation frames and
 timing straight out of a Crystal ROM that you supply, builds them once, and
 keeps the result in the mod's own cache. Nothing from the ROM is part of the
-download. The animation above is a capture of the running game.
+download.
 
 ## What you get
 
