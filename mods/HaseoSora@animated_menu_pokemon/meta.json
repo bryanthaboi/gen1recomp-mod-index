@@ -1,0 +1,28 @@
+{
+  "id": "animated_menu_pokemon",
+  "title": "Kanto in Motion",
+  "author": "HaseoSora",
+  "version": "1.7.5",
+  "categories": [
+    "UI",
+    "OTHER"
+  ],
+  "repo": "https://github.com/HaseoSora/Kanto-in-Motion",
+  "tags": [
+    "ui",
+    "sprites"
+  ],
+  "github": "HaseoSora/Kanto-in-Motion",
+  "api": 2,
+  "profile": "overhaul",
+  "permissions": [
+    "engine_internals",
+    "network"
+  ],
+  "conflicts": [
+    "gen1_modern_ui",
+    "gen1_clean_ui",
+    "pokeball-colorfix"
+  ],
+  "affects_link": false
+}
