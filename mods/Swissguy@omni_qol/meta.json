@@ -1,0 +1,28 @@
+{
+  "id": "omni_qol",
+  "title": "OmniQoL",
+  "author": "Swissguy",
+  "version": "0.1.0-alpha",
+  "categories": [
+    "QOL",
+    "GAMEPLAY"
+  ],
+  "repo": "https://github.com/swissguy/OmniQoL",
+  "github": "swissguy/OmniQoL",
+  "summary": "Modular Quality of Life suite with in-game Start Menu toggle and Running Shoes for Pokémon Red & Blue.",
+  "tags": [
+    "qol",
+    "running",
+    "speed",
+    "shoes",
+    "menu",
+    "red",
+    "blue"
+  ],
+  "api": 2,
+  "games": [
+    "red",
+    "blue"
+  ],
+  "license": "MIT"
+}
