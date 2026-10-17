@@ -1,0 +1,32 @@
+{
+  "id": "omni_qol",
+  "title": "OmniQoL",
+  "author": "Swissguy",
+  "version": "0.1.1-alpha",
+  "categories": [
+    "QOL",
+    "GAMEPLAY"
+  ],
+  "repo": "https://github.com/swissguy/OmniQoL",
+  "github": "swissguy/OmniQoL",
+  "summary": "Modular Quality of Life suite with native Options menu integration, Running Shoes, and Pikachu follower sync for Pokémon Red, Blue & Yellow.",
+  "tags": [
+    "qol",
+    "running",
+    "speed",
+    "shoes",
+    "options",
+    "menu",
+    "red",
+    "blue",
+    "yellow",
+    "pikachu"
+  ],
+  "api": 2,
+  "games": [
+    "red",
+    "blue",
+    "yellow"
+  ],
+  "license": "MIT"
+}
