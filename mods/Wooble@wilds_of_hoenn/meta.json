@@ -1,0 +1,32 @@
+{
+  "id": "wilds_of_hoenn",
+  "title": "Wilds of Hoenn",
+  "author": "Wooble",
+  "version": "1.10.1",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT",
+    "ART",
+    "OTHER"
+  ],
+  "repo": "https://github.com/poooooby/wilds-of-hoenn",
+  "summary": "Wild Pokémon in the overworld for all Gen3 games.",
+  "tags": [
+    "gen3",
+    "wild",
+    "overworld"
+  ],
+  "github": "poooooby/wilds-of-hoenn",
+  "license": "MIT",
+  "conflicts": [
+    "wildfollowers",
+    "wilds_of_firered",
+    "untamed_advanced",
+    "wilds_of_kanto_gen3"
+  ],
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
