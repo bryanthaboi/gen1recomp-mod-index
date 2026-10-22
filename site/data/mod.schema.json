@@ -81,7 +81,7 @@
     "api": {
       "type": "integer",
       "minimum": 1,
-      "maximum": 2,
+      "maximum": 3,
       "description": "Mod API the mod is written against (manifest api)."
     },
     "game_version": {

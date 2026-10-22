@@ -29,6 +29,9 @@ Compatible apps from other installed Recomp mods can appear in the Store too.
   checklists and drawings.
 - **Day-Care and Calendar:** boarded partners, breeding information where
   supported, weekly events in Gen 2 and game-specific activities in Gen 3.
+- **Pokégear and PokéNav:** install the game's original device as a Store app
+  in its supported games. Walk with the game's controls above while using the
+  device through touch below, or add widgets that open individual sections.
 - **Field Kit, Trainer Card and Step Counter:** currently usable field tools,
   trainer records, badges and movement tracking.
 - **Battle controls:** Companion, Info, Gear and Full Gear layouts, including
@@ -48,10 +51,10 @@ Install from the Mod Index or import the ZIP from the
 enable Kanto Gear and open its Options. The same ZIP works on all three host
 platforms. It includes no ROM or save; bring your own supported game ROM.
 
-Use the latest official Gen1Recomp. Minimum versions are **0.3.20** for Gen 1,
-Gen 2 and FireRed/LeafGreen, **0.3.33** for Emerald (US 1.0), and **0.3.74** for
-Ruby/Sapphire (US/Europe). Gen 3 welcomes broader playthrough testing; some
-specialized native screens remain on the game screen.
+Kanto Gear 4.4.0 requires **Gen1Recomp 0.3.93 or newer (mod API 3)**.
+Update Recomp before installing this version. Hosts on 0.3.92 or earlier should
+keep Kanto Gear 4.3.1 until updated. Gen 3 welcomes broader playthrough testing;
+some specialized native screens remain on the game screen.
 
 Permissions match the mod manifest:
 
