@@ -11278,6 +11278,102 @@
         "window_days": 30,
         "as_of": "2026-10-22T03:56:03.199Z"
       }
+    },
+    {
+      "id": "gmarcs_gen2_voxel_mod",
+      "folder": "gmarcs@gmarcs_gen2_voxel_mod",
+      "title": "gmarcs Gen 2 Voxel Mod",
+      "author": "gmarcs",
+      "summary": "3D voxel overworld for Gen 2 (Gold/Silver/Crystal).",
+      "version": "1.0.0",
+      "categories": [
+        "ART"
+      ],
+      "tags": [
+        "voxel",
+        "3d",
+        "graphics",
+        "overhaul"
+      ],
+      "games": [
+        "gen2"
+      ],
+      "license": "MIT",
+      "repo": "https://github.com/gmarcmods/gmarcs_gen2_voxel_mod",
+      "github": "gmarcmods/gmarcs_gen2_voxel_mod",
+      "automatic_version_check": true,
+      "api": 2,
+      "game_version": ">=0.1.37 <2.0.0",
+      "profile": "content",
+      "permissions": [
+        "engine_internals"
+      ],
+      "affects_link": false,
+      "update_check": "ok",
+      "description_url": "data/mods/gmarcs@gmarcs_gen2_voxel_mod/description.md",
+      "thumbnail": "data/mods/gmarcs@gmarcs_gen2_voxel_mod/thumbnail.png",
+      "latest": {
+        "name": "1.0.0",
+        "prerelease": false,
+        "published_at": "2026-10-19T20:37:28Z",
+        "tag": "v1.0.0",
+        "version": "1.0.0",
+        "zip": {
+          "name": "gmarcs_gen2_voxel_mod-1.0.0.zip",
+          "size": 7372210,
+          "url": "https://github.com/gmarcmods/gmarcs_gen2_voxel_mod/releases/download/v1.0.0/gmarcs_gen2_voxel_mod-1.0.0.zip"
+        }
+      }
+    },
+    {
+      "id": "gmarcs_gen2_johto_in_first_person",
+      "folder": "gmarcs@gmarcs_gen2_johto_in_first_person",
+      "title": "gmarcs Gen 2 Johto in First Person",
+      "author": "gmarcs",
+      "summary": "First-person companion for Gen 2 using the active voxel renderer.",
+      "version": "1.0.10",
+      "categories": [
+        "ART",
+        "UI"
+      ],
+      "tags": [
+        "first-person",
+        "3d",
+        "graphics",
+        "companion"
+      ],
+      "games": [
+        "gen2"
+      ],
+      "license": "MIT",
+      "repo": "https://github.com/gmarcmods/gmarcs_gen2_johto_in_first_person",
+      "github": "gmarcmods/gmarcs_gen2_johto_in_first_person",
+      "automatic_version_check": true,
+      "api": 2,
+      "game_version": ">=0.1.37 <2.0.0",
+      "profile": "content",
+      "permissions": [
+        "engine_internals"
+      ],
+      "affects_link": false,
+      "dependencies": [
+        "gmarcs_gen2_voxel_mod"
+      ],
+      "update_check": "ok",
+      "description_url": "data/mods/gmarcs@gmarcs_gen2_johto_in_first_person/description.md",
+      "thumbnail": "data/mods/gmarcs@gmarcs_gen2_johto_in_first_person/thumbnail.png",
+      "latest": {
+        "name": "1.0.10",
+        "prerelease": false,
+        "published_at": "2026-10-20T00:00:00Z",
+        "tag": "v1.0.10",
+        "version": "1.0.10",
+        "zip": {
+          "name": "gmarcs_gen2_johto_in_first_person-1.0.10.zip",
+          "size": 16271484,
+          "url": "https://github.com/gmarcmods/gmarcs_gen2_johto_in_first_person/releases/download/v1.0.10/gmarcs_gen2_johto_in_first_person-1.0.10.zip"
+        }
+      }
     }
   ],
   "carts": [
