@@ -1,0 +1,21 @@
+{
+  "id": "PkMultiplayer",
+  "title": "PkMultiplayer (Online Co-op)",
+  "author": "Mochx-007",
+  "summary": "Two players, one Johto: see each other walk, chat, emote, share the story and fight trainers as 2-vs-2 double battles over LAN or ZeroTier.",
+  "version": "1.2.0",
+  "categories": ["GAMEPLAY", "CONTENT"],
+  "tags": ["co-op", "multiplayer", "online", "double battles", "chat", "zerotier"],
+  "repo": "https://github.com/Mochx-007/PkMultiplayer",
+  "github": "Mochx-007/PkMultiplayer",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": "0.0.0-dev || >=0.7.6 <2.0.0",
+  "games": ["gen1", "gen2"],
+  "profile": "overhaul",
+  "affects_link": false,
+  "permissions": ["network", "engine_internals"],
+  "dependencies": [],
+  "conflicts": [],
+  "license": "MIT"
+}
