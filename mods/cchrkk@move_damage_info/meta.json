@@ -1,0 +1,17 @@
+{
+  "id": "move_damage_info",
+  "title": "Move Damage Info",
+  "author": "cchrkk",
+  "summary": "Shows the damage the highlighted move would deal, its power, accuracy and type matchup, and a short description of what it does, in the move-select box.",
+  "version": "1.2.0",
+  "categories": ["UI", "QOL"],
+  "tags": ["battle", "damage", "moves", "italian", "spanish", "portuguese"],
+  "repo": "https://github.com/cchrkk/gen1recomp-move-damage-info",
+  "github": "cchrkk/gen1recomp-move-damage-info",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "profile": "content",
+  "permissions": ["engine_internals"],
+  "license": "MIT"
+}
