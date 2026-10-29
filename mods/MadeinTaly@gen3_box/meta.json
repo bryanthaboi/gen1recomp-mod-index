@@ -9,14 +9,16 @@
   ],
   "repo": "https://github.com/MadeinTaly/gen1recomp-gen3-boxes",
   "github": "MadeinTaly/gen1recomp-gen3-boxes",
-  "summary": "A Gen 3-style storage screen: a 5x4 grid, a cursor that picks a Pokemon up and puts it down, and ninety-one wallpapers across sixteen places.",
+  "summary": "A Gen 3-style box screen for Red/Blue/Yellow and Gold. On Ruby/Sapphire/Emerald: 18 more wallpapers, skins, pointers, touch and an all-boxes view that fits phone and desktop.",
   "tags": [
     "boxes",
     "storage",
     "pc",
     "qol",
     "ui",
-    "wallpapers"
+    "wallpapers",
+    "gen-3",
+    "touch"
   ],
   "permissions": [
     "engine_internals"
