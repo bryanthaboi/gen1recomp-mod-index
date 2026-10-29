@@ -1,0 +1,19 @@
+{
+  "id": "dv_viewer",
+  "title": "DV Viewer",
+  "author": "mfsierpe",
+  "summary": "See every Pokemon's DVs and Stat Exp on a third STATS page, graded GREAT/GOOD/OK/POOR, and opened right after each catch.",
+  "version": "1.0.0",
+  "categories": ["UI", "QOL"],
+  "tags": ["ui", "stats", "dvs", "quality-of-life", "catching"],
+  "repo": "https://github.com/mfsierpe/gen1recomp-dv-viewer",
+  "github": "mfsierpe/gen1recomp-dv-viewer",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.3.97 <2.0.0",
+  "games": ["gen1"],
+  "profile": "content",
+  "affects_link": false,
+  "permissions": ["engine_internals"],
+  "license": "MIT"
+}
