@@ -1,0 +1,30 @@
+{
+  "id": "facets",
+  "title": "Facets",
+  "author": "ElvieBlooms",
+  "version": "0.6.1",
+  "categories": [
+    "ART",
+    "UI"
+  ],
+  "repo": "https://github.com/ElvieBlooms/facets",
+  "summary": "New looks for the Gen 3 games: every NPC, trainer and Pokémon, battle boxes, windows, battle scenes and Game Boy filters.",
+  "tags": [
+    "sprites",
+    "npc sprites",
+    "trainer sprites",
+    "pokemon sprites",
+    "battle ui",
+    "gbc",
+    "filters",
+    "gen3"
+  ],
+  "github": "ElvieBlooms/facets",
+  "game_version": ">=0.3.91",
+  "license": "MIT",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
