@@ -16,14 +16,15 @@
   "github": "FadeyMods/Definitiv-German-Gen-3",
   "automatic_version_check": true,
   "api": 2,
-  "game_version": ">=0.3.74",
+  "game_version": ">=0.3.97 <2.0.0",
   "profile": "content",
   "permissions": [
     "engine_internals"
   ],
   "dependencies": [],
   "conflicts": [
-    "deutsch-gen3"
+    "deutsch-gen3",
+    "definitiv-german"
   ],
   "games": [
     "emerald",

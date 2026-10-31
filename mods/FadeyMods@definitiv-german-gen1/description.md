@@ -4,7 +4,8 @@ Komplett deutsche **Rote, Blaue und Gelbe Edition** - so, als wäre die englisch
 - Deutsche Schrift (Umlaute, ß und Sonderzeichen)
 - Deutsche Grafiken (Titelbild (ROTE / BLAUE / GELBE EDITION), Copyright-Zeile, Spielautomat, Pokédex-Einheiten, Gelb: Surf-Minigame, Druckerdiplom und Drucker)
 - Menüs und Kästen wie im deutschen Original angeordnet
-- Zusätze von gen1recomp (Mod-Verwaltung, Optionen, Link- und Online-Bereich) auf Deutsch
+- Zusätze von gen1recomp (Mod-Verwaltung, Optionen, Link-Meldungen) auf Deutsch
+- Online-Spiel (KONNEX-Klub online, Arenen, Turniere) nur mit abgeschaltetem Mod (Vorgabe von gen1recomp, siehe README)
 
 **Benötigt deine eigene deutsche ROM** der Edition, die du spielen willst. Der Mod selbst enthält keine ROM-Inhalte, er liest alles beim Start aus deiner ROM.
 
