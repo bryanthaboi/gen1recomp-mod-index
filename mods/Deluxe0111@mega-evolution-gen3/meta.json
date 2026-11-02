@@ -1,0 +1,18 @@
+{
+  "id": "mega-evolution-gen3",
+  "title": "Mega Evolution Gen 3",
+  "author": "Deluxe0111",
+  "version": "1.0.0",
+  "categories": [
+    "CONTENT"
+  ],
+  "repo": "https://github.com/Deluxe0111/Mega-Evolution-Gen-3",
+  "summary": "Mega Evolution has arrived in Pokémon FireRed, LeafGreen, Ruby, Sapphire and Emerald!",
+  "tags": [
+    "mega"
+  ],
+  "github": "Deluxe0111/Mega-Evolution-Gen-3",
+  "fixed_release_tag": "v1.0.0",
+  "api": 2,
+  "profile": "content"
+}
