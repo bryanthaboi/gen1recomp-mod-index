@@ -101,6 +101,13 @@ test('a complete entry validates', () => {
   assert.deepEqual(validate(GOOD_META, schema), []);
 });
 
+test('mod API 3 is accepted while unsupported API versions stay rejected', () => {
+  assert.deepEqual(validate({ ...GOOD_META, api: 3 }, schema), []);
+  assert.notDeepEqual(validate({ ...GOOD_META, api: 4 }, schema), []);
+  const browserSchema = JSON.parse(readFileSync(join(repoRoot, 'site/data/mod.schema.json'), 'utf8'));
+  assert.deepEqual(browserSchema, schema);
+});
+
 test('worker compute permission is accepted without allowing unknown permissions', () => {
   const permissions = ['engine_internals', 'network', 'compute'];
   assert.deepEqual(validate({ ...GOOD_META, permissions }, schema), []);

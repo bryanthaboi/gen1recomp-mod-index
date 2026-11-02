@@ -173,8 +173,8 @@ class ApiAnalyzer:
             api_number = float(api) if not isinstance(api, bool) else None
         except (TypeError, ValueError, OverflowError):
             api_number = None
-        if api_number is None or not api_number.is_integer() or not 1 <= api_number <= 2:
-            add("api", "API005", f"Unsupported mod API version {api!r}; this checker targets API 1 and 2.",
+        if api_number is None or not api_number.is_integer() or api_number not in (1, 2, 3):
+            add("api", "API005", f"Unsupported mod API version {api!r}; this checker targets API 1, 2 and 3.",
                 "Use a supported API version, or validate against a newer engine.")
         permissions = manifest.get("permissions", [])
         if not isinstance(permissions, list) or any(not isinstance(p, str) for p in permissions):
@@ -184,7 +184,7 @@ class ApiAnalyzer:
             for permission in sorted(set(permissions) - PERMISSIONS):
                 add("permissions", "API006", f"Unknown permission '{permission}'.",
                     "Use a permission supported by the engine manifest.",
-                    severity="error" if api_number == 2 else "warning")
+                    severity="error" if api_number in (2, 3) else "warning")
         return findings
 
     @staticmethod
