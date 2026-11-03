@@ -1,0 +1,31 @@
+{
+  "id": "emerald_lens",
+  "title": "Emerald Lens",
+  "author": "ElvieBlooms",
+  "version": "1.0.0",
+  "categories": [
+    "CONTENT",
+    "ART"
+  ],
+  "repo": "https://github.com/ElvieBlooms/emerald_lens",
+  "summary": "Player and rival sprite replacements for all eleven games, Gen 1 to 3",
+  "tags": [
+    "sprites",
+    "player sprite",
+    "rival",
+    "kris",
+    "girl",
+    "gen1",
+    "gen2",
+    "gen3"
+  ],
+  "github": "ElvieBlooms/emerald_lens",
+  "downloadURL": "https://github.com/ElvieBlooms/emerald_lens/releases/download/v1.0.0/emerald_lens-1.0.0.zip",
+  "game_version": ">=0.3.9",
+  "license": "MIT",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
