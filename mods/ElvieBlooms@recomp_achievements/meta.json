@@ -1,0 +1,32 @@
+{
+  "id": "recomp_achievements",
+  "title": "Recomp Achievements",
+  "author": "ElvieBlooms",
+  "version": "2.6.2",
+  "categories": [
+    "GAMEPLAY",
+    "UI",
+    "LIBRARY"
+  ],
+  "repo": "https://github.com/ElvieBlooms/recomp_achievements",
+  "summary": "Achievements for all eleven games, from the lists RetroAchievements publishes. Checked as you play, saved in your game, and your old saves count",
+  "tags": [
+    "achievements",
+    "trophies",
+    "retroachievements",
+    "leaderboard",
+    "challenges",
+    "gen1",
+    "gen2",
+    "gen3"
+  ],
+  "github": "ElvieBlooms/recomp_achievements",
+  "downloadURL": "https://github.com/ElvieBlooms/recomp_achievements/releases/download/v2.6.2/recomp_achievements-2.6.2.zip",
+  "game_version": ">=0.3.97",
+  "license": "MIT",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
