@@ -1,0 +1,31 @@
+{
+  "id": "facets",
+  "title": "Facets",
+  "author": "ElvieBlooms",
+  "version": "1.0.0",
+  "categories": [
+    "ART",
+    "UI"
+  ],
+  "repo": "https://github.com/ElvieBlooms/facets",
+  "summary": "New looks for all eleven games: every NPC, trainer and Pokémon, battle scenes and boxes, windows and Game Boy screen filters.",
+  "tags": [
+    "sprites",
+    "npc sprite",
+    "trainer sprite",
+    "pokemon sprite",
+    "battle ui",
+    "filters",
+    "gbc",
+    "achievements"
+  ],
+  "github": "ElvieBlooms/facets",
+  "downloadURL": "https://github.com/ElvieBlooms/facets/releases/download/v1.0.0/emerald_lens-1.0.0.zip",
+  "game_version": ">=0.3.98",
+  "license": "MIT",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
