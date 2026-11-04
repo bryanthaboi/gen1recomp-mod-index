@@ -6,11 +6,6 @@
       "version": null,
       "reason": "Previously quarantined entry requires explicit approval of this artifact"
     },
-    "mods/DarioMelo@Music1_HGSS": {
-      "sha256": "",
-      "version": "26.09.05",
-      "reason": "Previously quarantined entry requires explicit approval of this artifact"
-    },
     "mods/DarioMelo@Music1_LGPE": {
       "sha256": "",
       "version": "26.09.05",
@@ -33,6 +28,11 @@
     },
     "mods/DarioMelo@Music1_FRLG": {
       "sha256": "c841418c6b72e4726fde0a4a08d83bd9ac006a572f685c46ff9c076f1236a749",
+      "version": "26.09.05",
+      "reason": "Previously quarantined entry requires explicit approval of this artifact"
+    },
+    "mods/DarioMelo@Music1_HGSS": {
+      "sha256": "abf49096a609cb671da4191c4c5d22fc99352104da1a09565cb918afcf19d3e3",
       "version": "26.09.05",
       "reason": "Previously quarantined entry requires explicit approval of this artifact"
     }
