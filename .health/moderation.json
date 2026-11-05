@@ -32,8 +32,8 @@
       "reason": "Previously quarantined entry requires explicit approval of this artifact"
     },
     "mods/Dgray66@crystal": {
-      "sha256": "e5ecc80eda70e2e0cc8e52ad717e94c10f8f4ac2ff856b8938871a9531c86efb",
-      "version": "2.1.0",
+      "sha256": "d0376fe904e4e72067648c28ed56c22c419c39d66111ffd8575b5d39a6b57f4f",
+      "version": "2.2.0",
       "reason": "Previously quarantined entry requires explicit approval of this artifact"
     }
   },
