@@ -1,9 +1,9 @@
 {
   "id": "gmarcs_gen2_johto_in_first_person",
-  "title": "gmarcs Gen 2 Johto in First Person",
+  "title": "Gmarc's Gen 2 Johto in First Person",
   "author": "gmarcs",
   "summary": "First-person companion for Gen 2 using the active voxel renderer.",
-  "version": "1.0.8",
+  "version": "1.0.14",
   "categories": [
     "ART",
     "UI"
@@ -18,7 +18,7 @@
   "github": "gmarcmods/gmarcs_gen2_johto_in_first_person",
   "automatic_version_check": true,
   "api": 2,
-  "game_version": ">=0.1.37 <2.0.0",
+  "game_version": "0.0.0-dev || >=0.1.37 <2.0.0",
   "games": [
     "gen2"
   ],
@@ -30,5 +30,6 @@
   "license": "MIT",
   "dependencies": [
     "gmarcs_gen2_voxel_mod"
-  ]
+  ],
+  "conflicts": []
 }
