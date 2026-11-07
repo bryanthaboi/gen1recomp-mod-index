@@ -35,11 +35,14 @@ jobs:
       - name: Scan release assets and API usage
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          EVENT_NAME: ${{ github.event_name }}
           REFERENCE_IMAGES: /references
         run: |
           args=()
-          if [ -n "$BASE_SHA" ]; then args+=(--base "$BASE_SHA"); fi
+          # A PR checks out its merge commit, whose first parent is main as it
+          # stands now. pull_request.base.sha can be days stale, which made the
+          # scan re-check every entry merged since the PR was opened.
+          if [ "$EVENT_NAME" = "pull_request" ]; then args+=(--base "$(git rev-parse HEAD^1)"); fi
           python /opt/scanner/cli.py --root "$GITHUB_WORKSPACE" --cache /scan-cache --output "$RUNNER_TEMP/scan-report.json" "${args[@]}"
       - name: Save review evidence
         if: always()
