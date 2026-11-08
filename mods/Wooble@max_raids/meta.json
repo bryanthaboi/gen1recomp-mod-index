@@ -12,8 +12,8 @@
   "repo": "https://github.com/poooooby/max-raids",
   "github": "poooooby/max-raids",
   "dependencies": [
-    "national_dex_gen3",
-    "g9-battle-sprites-gen3"
+    "national_dex_gen3@>=1.6.3",
+    "g9-battle-sprites-gen3@>=1.5.4"
   ],
   "permissions": [
     "engine_internals"
