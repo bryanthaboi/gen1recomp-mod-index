@@ -1,0 +1,21 @@
+{
+  "id": "TERRARIUM",
+  "title": "Terrarium",
+  "author": "Wooble",
+  "version": "1.52.3",
+  "categories": [
+    "ART",
+    "UI"
+  ],
+  "repo": "https://github.com/poooooby/Terrarium",
+  "tags": [
+    "voxel"
+  ],
+  "github": "poooooby/Terrarium",
+  "permissions": [
+    "filesystem",
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
