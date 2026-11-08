@@ -1,0 +1,30 @@
+{
+  "id": "gmarcs_gen2_celebi_time_travel",
+  "title": "Gmarc's Gen 2 Celebi Through Time",
+  "author": "gmarcs",
+  "summary": "Celebi GS Ball event plus HGSS time-travel in Gen 2.",
+  "version": "0.0.19",
+  "categories": [
+    "CONTENT"
+  ],
+  "tags": [
+    "celebi",
+    "quest",
+    "story",
+    "event"
+  ],
+  "repo": "https://github.com/gmarcmods/gmarcs_gen2_celebi_time_travel",
+  "github": "gmarcmods/gmarcs_gen2_celebi_time_travel",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "games": [
+    "gen2"
+  ],
+  "profile": "content",
+  "permissions": [
+    "engine_internals"
+  ],
+  "affects_link": false,
+  "license": "MIT"
+}

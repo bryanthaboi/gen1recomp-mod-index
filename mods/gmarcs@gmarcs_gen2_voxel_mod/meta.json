@@ -1,0 +1,31 @@
+{
+  "id": "gmarcs_gen2_voxel_mod",
+  "title": "Gmarc's Gen 2 Voxel Mod",
+  "author": "gmarcs",
+  "summary": "3D voxel overworld for Gen 2 (Gold/Silver/Crystal).",
+  "version": "1.0.19",
+  "categories": [
+    "ART"
+  ],
+  "tags": [
+    "voxel",
+    "3d",
+    "graphics",
+    "overhaul"
+  ],
+  "repo": "https://github.com/gmarcmods/gmarcs_gen2_voxel_mod",
+  "github": "gmarcmods/gmarcs_gen2_voxel_mod",
+  "automatic_version_check": true,
+  "api": 2,
+  "games": [
+    "gen2"
+  ],
+  "profile": "content",
+  "permissions": [
+    "engine_internals"
+  ],
+  "affects_link": false,
+  "license": "MIT",
+  "dependencies": [],
+  "conflicts": []
+}
