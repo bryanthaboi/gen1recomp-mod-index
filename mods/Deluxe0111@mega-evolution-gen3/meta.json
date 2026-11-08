@@ -14,5 +14,11 @@
   "github": "Deluxe0111/Mega-Evolution-Gen-3",
   "fixed_release_tag": "v1.0.0",
   "api": 2,
-  "profile": "content"
+  "profile": "content",
+  "games": [
+    "gen3"
+  ],
+  "permissions": [
+    "engine_internals"
+  ]
 }
