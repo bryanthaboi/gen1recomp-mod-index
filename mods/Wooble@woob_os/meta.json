@@ -1,0 +1,17 @@
+{
+  "id": "woob_os",
+  "title": "WoobOS",
+  "author": "Wooble",
+  "version": "0.5.3",
+  "categories": [
+    "QOL",
+    "TOOL"
+  ],
+  "repo": "https://github.com/poooooby/woob_os",
+  "github": "poooooby/woob_os",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
