@@ -1,0 +1,31 @@
+{
+  "id": "g9-battle-sprites-gen3",
+  "name": "WoobleSpritePack",
+  "version": "1.5.8",
+  "api": 2,
+  "entry": "main.lua",
+  "profile": "content",
+  "games": [
+    "gen3"
+  ],
+  "category": "OTHER",
+  "priority": 250,
+  "permissions": [
+    "engine_internals"
+  ],
+  "dependencies": [
+    "national_dex_gen3"
+  ],
+  "optional_dependencies": [
+    "gen3-hd-sprites"
+  ],
+  "conflicts": [
+    "1025Dex"
+  ],
+  "incompatible": [],
+  "description": "Animated, true-colour battle, Pokedex and summary pics for every National Dex species (#1-1025) and party icons for #387-1025 on FireRed, LeafGreen, Ruby, Sapphire and Emerald. Drawn from packed atlases.",
+  "github": "poooooby/g9-battle-sprites-gen3",
+  "dependency_sources": {
+    "national_dex_gen3": "https://github.com/poooooby/national_dex_gen3"
+  }
+}
