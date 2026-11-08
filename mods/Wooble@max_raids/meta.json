@@ -1,0 +1,23 @@
+{
+  "id": "max_raids",
+  "title": "Galar Rising",
+  "author": "Wooble",
+  "version": "0.4.0",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT",
+    "UI",
+    "TOOL"
+  ],
+  "repo": "https://github.com/poooooby/max-raids",
+  "github": "poooooby/max-raids",
+  "dependencies": [
+    "national_dex_gen3",
+    "g9-battle-sprites-gen3"
+  ],
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
