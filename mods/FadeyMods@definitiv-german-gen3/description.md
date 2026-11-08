@@ -4,6 +4,7 @@ Komplett deutsche **Rubin-, Saphir-, Smaragd-, Feuerrote und Blattgrüne Edition
 - Deutsche Schrift (Umlaute, ß und Sonderzeichen)
 - Deutsche Grafiken (Titelbild, Statusseiten, Pokédex, Trainerpass, PokéNav, Wettbewerb, PC-Boxen, Schilder an Pokémon-Center, Laden und Arena, Teachy-TV, Abspann)
 - Menüs und Kästen wie im deutschen Original angeordnet
+- Kurzes Intro der Edition beim Spielstart (Rubin, Saphir, Smaragd, Feuerrot, Blattgrün), mit jeder Taste überspringbar und unter MODS → OPTIONEN.. abschaltbar
 - Zusätze von gen1recomp (Mod-Verwaltung, Optionen, Link-Meldungen) auf Deutsch
 - Online-Spiel (KONNEX-Klub online, Arenen, Turniere) nur mit abgeschaltetem Mod (Vorgabe von gen1recomp, siehe README)
 

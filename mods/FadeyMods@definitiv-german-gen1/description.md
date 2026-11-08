@@ -4,6 +4,7 @@ Komplett deutsche **Rote, Blaue und Gelbe Edition** - so, als wäre die englisch
 - Deutsche Schrift (Umlaute, ß und Sonderzeichen)
 - Deutsche Grafiken (Titelbild (ROTE / BLAUE / GELBE EDITION), Copyright-Zeile, Spielautomat, Pokédex-Einheiten, Gelb: Surf-Minigame, Druckerdiplom und Drucker)
 - Menüs und Kästen wie im deutschen Original angeordnet
+- Kurzes Intro der Edition beim Spielstart (Rot, Blau, Gelb), mit jeder Taste überspringbar und unter MODS → OPTIONEN.. abschaltbar
 - Zusätze von gen1recomp (Mod-Verwaltung, Optionen, Link-Meldungen) auf Deutsch
 - Online-Spiel (KONNEX-Klub online, Arenen, Turniere) nur mit abgeschaltetem Mod (Vorgabe von gen1recomp, siehe README)
 
