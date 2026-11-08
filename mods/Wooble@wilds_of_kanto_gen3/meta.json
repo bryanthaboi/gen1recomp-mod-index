@@ -9,6 +9,7 @@
   "repo": "https://github.com/poooooby/wilds-of-kanto-gen-3",
   "github": "poooooby/wilds-of-kanto-gen-3",
   "license": "MIT",
+  "permissions": ["engine_internals"],
   "conflicts": [
     "overworld_wild_spawns",
     "SHINY_POKEMON"
