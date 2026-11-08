@@ -1,0 +1,20 @@
+{
+  "id": "national_dex_gen3",
+  "title": "WoobleDex",
+  "author": "Wooble",
+  "version": "1.8.0",
+  "categories": [
+    "CONTENT"
+  ],
+  "repo": "https://github.com/poooooby/national_dex_gen3",
+  "github": "poooooby/national_dex_gen3",
+  "license": "MIT",
+  "conflicts": [
+    "1025dex"
+  ],
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
