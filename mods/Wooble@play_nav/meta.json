@@ -1,0 +1,20 @@
+{
+  "id": "play_nav",
+  "title": "NaviPlay",
+  "author": "Wooble",
+  "version": "1.1.0",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT",
+    "UI",
+    "TOOL"
+  ],
+  "repo": "https://github.com/poooooby/PlayNav",
+  "github": "poooooby/PlayNav",
+  "license": "MIT",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
