@@ -1,0 +1,24 @@
+{
+  "id": "woob_os",
+  "title": "WoobOS",
+  "author": "Wooble",
+  "version": "0.7.2",
+  "categories": [
+    "UI"
+  ],
+  "repo": "https://github.com/poooooby/woob_os",
+  "summary": "Every PC in a Pokémon Center, and the one in your bedroom, opens a desktop in a sleek monitor instead of a text menu.",
+  "tags": [
+    "ui",
+    "pc",
+    "wooble"
+  ],
+  "github": "poooooby/woob_os",
+  "game_version": ">=0.3.95",
+  "license": "MIT",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "overhaul"
+}
