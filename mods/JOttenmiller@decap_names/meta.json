@@ -2,7 +2,7 @@
   "id": "decap_names",
   "title": "Decapitalize Names",
   "author": "JOttenmiller",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "categories": [
     "GAMEPLAY",
     "UI",
@@ -10,10 +10,10 @@
   ],
   "repo": "https://github.com/JOttenmiller/Gen3-Decap",
   "github": "JOttenmiller/Gen3-Decap",
-  "downloadURL": "https://github.com/JOttenmiller/Gen3-Decap/releases/download/0.1.0/decap.zip",
+  "downloadURL": "https://github.com/JOttenmiller/Gen3-Decap/releases/download/0.2.1/decap-0.2.1.zip",
   "permissions": [
     "engine_internals"
   ],
-  "api": 2,
+  "api": 3,
   "profile": "content"
 }
