@@ -1,0 +1,23 @@
+{
+  "id": "g9-battle-sprites-gen3",
+  "title": "WoobleSpritePack",
+  "author": "Wooble",
+  "version": "1.5.8",
+  "categories": [
+    "OTHER"
+  ],
+  "repo": "https://github.com/poooooby/g9-battle-sprites-gen3",
+  "github": "poooooby/g9-battle-sprites-gen3",
+  "license": "GNU",
+  "dependencies": [
+    "national_dex_gen3"
+  ],
+  "conflicts": [
+    "1025Dex"
+  ],
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
