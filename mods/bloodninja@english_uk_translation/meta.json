@@ -1,0 +1,17 @@
+{
+  "id": "english_uk_translation",
+  "title": "English (UK) Translation",
+  "author": "bloodninja",
+  "version": "0.2.0",
+  "categories": [
+    "TRANSLATION"
+  ],
+  "repo": "https://github.com/Bloodninj/g1r-uk-english-translation",
+  "summary": "English (UK) text translation mod",
+  "github": "Bloodninj/g1r-uk-english-translation",
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 3,
+  "profile": "content"
+}
