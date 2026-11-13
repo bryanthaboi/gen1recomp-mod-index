@@ -26,6 +26,6 @@
   "permissions": [
     "network"
   ],
-  "api": 2,
+  "api": 3,
   "profile": "content"
 }
