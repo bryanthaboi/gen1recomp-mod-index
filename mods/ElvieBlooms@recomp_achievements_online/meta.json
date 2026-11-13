@@ -1,0 +1,31 @@
+{
+  "id": "recomp_achievements_online",
+  "title": "Recomp Achievements Online",
+  "author": "ElvieBlooms",
+  "version": "2.8.0",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "repo": "https://github.com/ElvieBlooms/recomp_achievements",
+  "summary": "Optional add-on for Recomp Achievements that sends your score to the community leaderboard every time you save",
+  "tags": [
+    "achievements",
+    "leaderboard",
+    "online",
+    "discord",
+    "addon"
+  ],
+  "github": "ElvieBlooms/recomp_achievements",
+  "downloadURL": "https://github.com/ElvieBlooms/recomp_achievements/releases/download/v2.8.0/recomp_achievements_online-2.8.0.zip",
+  "game_version": ">=0.3.97",
+  "license": "MIT",
+  "dependencies": [
+    "recomp_achievements@>=2.7.1"
+  ],
+  "permissions": [
+    "network"
+  ],
+  "api": 2,
+  "profile": "content"
+}
