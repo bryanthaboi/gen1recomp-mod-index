@@ -1,0 +1,26 @@
+{
+  "id": "max_raids",
+  "title": "Galar Rising",
+  "author": "Wooble",
+  "version": "0.6.0",
+  "categories": [
+    "OTHER"
+  ],
+  "repo": "https://github.com/poooooby/max-raids",
+  "summary": "Sword and Shield's Max Raid Battles in 3D",
+  "tags": [
+    "dynamax",
+    "battle",
+    "3d"
+  ],
+  "github": "poooooby/max-raids",
+  "dependencies": [
+    "national_dex_gen3@>=1.6.3",
+    "g9-battle-sprites-gen3@>=1.5.4"
+  ],
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
