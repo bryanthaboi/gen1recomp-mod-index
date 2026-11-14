@@ -1,0 +1,26 @@
+{
+  "id": "name_tags",
+  "title": "Name Tags",
+  "author": "ElvieBlooms",
+  "version": "1.3.0",
+  "categories": [
+    "GAMEPLAY",
+    "QOL"
+  ],
+  "repo": "https://github.com/ElvieBlooms/name_tags",
+  "summary": "Every Pokémon you catch gets a name of its own from themed sets you can switch on and off, and gym leaders bring their canon names into battle",
+  "tags": [
+    "nicknames",
+    "names",
+    "nuzlocke",
+    "trainers",
+    "canon",
+    "achievements"
+  ],
+  "github": "ElvieBlooms/name_tags",
+  "downloadURL": "https://github.com/ElvieBlooms/name_tags/releases/download/v1.3.0/name_tags-1.3.0.zip",
+  "game_version": ">=0.4.4",
+  "license": "MIT",
+  "api": 2,
+  "profile": "content"
+}
