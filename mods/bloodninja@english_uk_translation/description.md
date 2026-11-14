@@ -1,0 +1,1 @@
+Changes Crystal's dialogue, UI, move names and descriptions, Pokédex entries, items and their descriptions and general battle text to use English (UK) spelling (sometimes called British English). Also changes the floor numbering on signs in buildings with multiple floors: mostly Celadon and Goldenrod Dept. Stores.
