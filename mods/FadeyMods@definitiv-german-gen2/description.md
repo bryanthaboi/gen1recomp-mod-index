@@ -4,6 +4,7 @@ Komplett deutsche **Goldene, Silberne und Kristall-Edition** - so, als wäre die
 - Deutsche Schrift (Umlaute, ß und Sonderzeichen)
 - Deutsche Grafiken (Titelbild, Beutel, PokéCOM, Trainerpass, Pokédex, Diplom, Intro und Icognito-Szenen, Kristall: Geheimgabe)
 - Menüs und Kästen wie im deutschen Original angeordnet
+- Kurzes Intro der Edition beim Spielstart (Gold, Silber, Kristall), mit jeder Taste überspringbar und unter MODS → OPTIONEN.. abschaltbar
 - Zusätze von gen1recomp (Mod-Verwaltung, Optionen, Link-Meldungen) auf Deutsch
 - Online-Spiel (KONNEX-Klub online, Arenen, Turniere) nur mit abgeschaltetem Mod (Vorgabe von gen1recomp, siehe README)
 
