@@ -1,0 +1,21 @@
+{
+  "id": "gen1_music_frlg",
+  "title": "Gen 1 Music for FireRed",
+  "author": "kennethreitz",
+  "summary": "Red/Blue music in FireRed and LeafGreen, synthesized live from your own imported Red. No ROM or audio distributed.",
+  "version": "0.1.0",
+  "categories": ["AUDIO"],
+  "tags": ["audio", "music", "firered", "leafgreen"],
+  "repo": "https://github.com/kennethreitz/gen1-music-frlg",
+  "github": "kennethreitz/gen1-music-frlg",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.4.1 <0.5.0",
+  "games": ["firered", "leafgreen"],
+  "profile": "content",
+  "experimental": true,
+  "permissions": ["engine_internals"],
+  "dependencies": [],
+  "conflicts": [],
+  "license": "MIT"
+}
