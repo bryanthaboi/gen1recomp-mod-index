@@ -1,8 +1,8 @@
 {
   "id": "wilds_of_hoenn",
-  "title": "Wilds of Hoenn",
+  "title": "Vivid Worlds",
   "author": "Wooble",
-  "version": "1.10.1",
+  "version": "2.1.2",
   "categories": [
     "GAMEPLAY",
     "CONTENT",
@@ -10,7 +10,7 @@
     "OTHER"
   ],
   "repo": "https://github.com/poooooby/wilds-of-hoenn",
-  "summary": "Wild Pokémon in the overworld for all Gen3 games.",
+  "summary": "Visible, reactive wild Pokémon that live like their kind, plus a partner that follows, forages and battles. For Ruby, Sapphire, Emerald, FireRed and LeafGreen (formerly Wilds of Hoenn).",
   "tags": [
     "gen3",
     "wild",
@@ -21,8 +21,7 @@
   "conflicts": [
     "wildfollowers",
     "wilds_of_firered",
-    "untamed_advanced",
-    "wilds_of_kanto_gen3"
+    "untamed_advanced"
   ],
   "permissions": [
     "engine_internals"
