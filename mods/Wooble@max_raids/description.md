@@ -1,0 +1,1 @@
+Sword and Shield's Max Raid Battles in 3D. Pokémon Dens appear along the routes once you've earned your first Gym Badge. Step up to one, choose four of your Pokémon, and take on a giant Dynamax or Gigantamax Pokémon on Sword and Shield's raid battlefield in 3D, then try to catch it.
