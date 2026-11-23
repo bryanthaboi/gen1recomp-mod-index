@@ -1,0 +1,31 @@
+{
+  "id": "vivid_worlds_og",
+  "title": "Vivid Worlds: OG",
+  "author": "Wooble",
+  "version": "1.1.1",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT"
+  ],
+  "repo": "https://github.com/poooooby/vivid-worlds-og",
+  "summary": "Overworld spawning with battling and foragers",
+  "tags": [
+    "overworld",
+    "battle",
+    "forage"
+  ],
+  "github": "poooooby/vivid-worlds-og",
+  "license": "MIT",
+  "conflicts": [
+    "wilds_of_kanto_gen3",
+    "overworld_wild_spawns",
+    "overworldmons",
+    "SHINY_POKEMON",
+    "wildfollowers"
+  ],
+  "permissions": [
+    "engine_internals"
+  ],
+  "api": 2,
+  "profile": "content"
+}
