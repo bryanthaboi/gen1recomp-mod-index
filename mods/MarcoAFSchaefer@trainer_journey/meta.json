@@ -1,0 +1,34 @@
+{
+  "id": "trainer_journey",
+  "title": "Trainer Journey",
+  "author": "MarcoAFSchaefer",
+  "summary": "Where to go next in FireRed/LeafGreen: story steps, HMs and key items, obstacles, post-game and Pokédex rewards, read from your save. Spoiler-free by default.",
+  "version": "0.3.1",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "tags": [
+    "guide",
+    "walkthrough",
+    "objectives",
+    "frlg"
+  ],
+  "repo": "https://github.com/MarcoAFSchaefer/trainer-journey",
+  "github": "MarcoAFSchaefer/trainer-journey",
+  "automatic_version_check": true,
+  "api": 3,
+  "game_version": "0.0.0-dev || >=0.3.93 <2.0.0",
+  "games": [
+    "firered",
+    "leafgreen"
+  ],
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "dependencies": [],
+  "conflicts": [],
+  "license": "MIT"
+}

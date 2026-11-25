@@ -1,0 +1,35 @@
+{
+  "id": "trainer_tactics",
+  "title": "Trainer Tactics",
+  "author": "MarcoAFSchaefer",
+  "summary": "A battle brain: the best play each turn with real damage numbers, shown as advice on the battle screen or played for you (moves, status, set-up, switches). Trainer Pilot uses it when installed.",
+  "version": "0.1.0",
+  "categories": [
+    "GAMEPLAY",
+    "QOL"
+  ],
+  "tags": [
+    "battle",
+    "ai",
+    "advisor",
+    "damage-calc",
+    "frlg"
+  ],
+  "repo": "https://github.com/MarcoAFSchaefer/trainer-tactics",
+  "github": "MarcoAFSchaefer/trainer-tactics",
+  "automatic_version_check": true,
+  "api": 3,
+  "game_version": "0.0.0-dev || >=0.3.93 <2.0.0",
+  "games": [
+    "firered",
+    "leafgreen"
+  ],
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "dependencies": [],
+  "conflicts": [],
+  "license": "MIT"
+}
