@@ -1,0 +1,36 @@
+{
+  "id": "trainer_pilot",
+  "title": "Trainer Pilot",
+  "author": "MarcoAFSchaefer",
+  "summary": "A training and hunting bot that plays with the game's own buttons: routes, healing, EV training, shiny and IV hunting, catching, reset hunting.",
+  "version": "0.34.1",
+  "categories": [
+    "GAMEPLAY",
+    "QOL",
+    "TOOL"
+  ],
+  "tags": [
+    "bot",
+    "training",
+    "shiny hunting",
+    "ev training",
+    "frlg"
+  ],
+  "repo": "https://github.com/MarcoAFSchaefer/trainer-pilot",
+  "github": "MarcoAFSchaefer/trainer-pilot",
+  "automatic_version_check": true,
+  "api": 3,
+  "game_version": "0.0.0-dev || >=0.3.93 <2.0.0",
+  "games": [
+    "firered",
+    "leafgreen"
+  ],
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "dependencies": [],
+  "conflicts": [],
+  "license": "MIT"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "trainer_lens",
+  "title": "Trainer Lens",
+  "author": "MarcoAFSchaefer",
+  "summary": "18 panels for FireRed/LeafGreen: catch chances, area Pokémon, IV/EV sheets, held items, maps, Pokédex, PC sorting, field tools and more.",
+  "version": "2.14.3",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "tags": [
+    "panels",
+    "ivs",
+    "evs",
+    "pokedex",
+    "maps",
+    "frlg"
+  ],
+  "repo": "https://github.com/MarcoAFSchaefer/trainer-lens",
+  "github": "MarcoAFSchaefer/trainer-lens",
+  "automatic_version_check": true,
+  "api": 3,
+  "game_version": "0.0.0-dev || >=0.3.93 <2.0.0",
+  "games": [
+    "firered",
+    "leafgreen"
+  ],
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals",
+    "compute"
+  ],
+  "dependencies": [],
+  "conflicts": [],
+  "license": "MIT"
+}
